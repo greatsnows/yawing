@@ -6,71 +6,74 @@
   <configuration>
     <name>CC2500 Sensor Demo-Access Point</name>
     <outputs>
-      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_frame.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_api.pbi</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.c</file>
+      <file>$TOOLKIT_DIR$\inc\msp430x22x4.h</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\Sensor_Demo_AP_as_Data_Hub.pbd</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_globals.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_driver_defs.h</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board.c</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.h</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_drivers.c</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_QMgmt.pbi</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_button_defs.h</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_radio.c</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\mrfi.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_globals.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\List\Sensor_Demo_AP_as_Data_Hub.map</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_buttons.h</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\main_AP.pbi</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\main_AP.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_mgmt.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\bsp.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\mcus\bsp_msp430_defs.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_frame.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\bsp.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board_defs.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_security.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_buttons.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_led_defs.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_link.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_buttons.h</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_leds.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_ioctl.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_button_defs.h</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_config.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_join.pbi</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board.c</file>
+      <file>$PROJ_DIR$\Components\mrfi\smartrf\CC2500\smartrf_CC2500.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk430F2274.xcl</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_freq.r43</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_ioctl.pbi</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board_defs.h</file>
-      <file>$PROJ_DIR$\Configuration\smpl_nwk_config.dat</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_freq.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_globals.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_leds.c</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_buttons.c</file>
-      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_api.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_security.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\mrfi.r43</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_mgmt.r43</file>
       <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
       <file>$PROJ_DIR$\Components\mrfi\radios\common\mrfi_f1f2.c</file>
-      <file>$PROJ_DIR$\Components\mrfi\smartrf\CC2500\smartrf_CC2500.h</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\virtual_com_cmds.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_ping.pbi</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\common\mrfi_f1f2.h</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_join.r43</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_ping.r43</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.c</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Exe\Sensor_Demo_AP_as_Data_Hub.d43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\vlo_rand.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_led_defs.h</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_buttons.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_link.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_leds.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_ioctl.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_api.r43</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl430f.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\mcus\bsp_msp430_defs.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_freq.pbi</file>
       <file>$PROJ_DIR$\Configuration\Access_Point\smpl_config.dat</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\virtual_com_cmds.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_ping.pbi</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_leds.h</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_link.pbi</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_QMgmt.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_security.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\mrfi.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_QMgmt.pbi</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.h</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_leds.h</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_radio.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\mrfi.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_drivers.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Exe\Sensor_Demo_AP_as_Data_Hub.txt</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_globals.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_driver_defs.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_ioctl.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\msp430x22x4.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\vlo_rand.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_api.r43</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_freq.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_leds.c</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\virtual_com_cmds.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_frame.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_config.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_buttons.c</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_security.r43</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_mgmt.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_frame.pbi</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\common\mrfi_f1f2.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\bsp.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board_defs.h</file>
+      <file>$PROJ_DIR$\Configuration\smpl_nwk_config.dat</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\nwk_join.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Obj\bsp.pbi</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board_defs.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_ping.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_ping.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_security.c</file>
@@ -78,21 +81,17 @@
       <file>$PROJ_DIR$\Applications\virtual_com_cmds.c</file>
       <file>$PROJ_DIR$\Applications\virtual_com_cmds.h</file>
       <file>$PROJ_DIR$\Applications\main_AP.c</file>
-      <file>$PROJ_DIR$\Applications\main_ED.c</file>
-      <file>$PROJ_DIR$\Applications\vlo_rand.h</file>
       <file>$PROJ_DIR$\Applications\vlo_rand.s43</file>
-      <file>$PROJ_DIR$\Projects\Configuration\Access_Point\smpl_config.dat</file>
-      <file>$PROJ_DIR$\Projects\Configuration\End_Device\smpl_config.dat</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.c</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.c</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.c</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.h</file>
-      <file>$PROJ_DIR$\Components\bsp\bsp_macros.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_types.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_freq.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_freq.h</file>
+      <file>$PROJ_DIR$\Components\bsp\bsp_macros.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_ioctl.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_ioctl.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_join.c</file>
@@ -101,11 +100,6 @@
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_link.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_mgmt.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_mgmt.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\List\Sensor_Demo_AP_as_Data_Hub.map</file>
-      <file>$TOOLKIT_DIR$\config\lnk430F2274.xcl</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Exe\Sensor_Demo_AP_as_Data_Hub.d43</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl430f.r43</file>
-      <file>$PROJ_DIR$\Projects\Configuration\smpl_nwk_config.dat</file>
       <file>$PROJ_DIR$\Components\bsp\bsp.h</file>
       <file>$PROJ_DIR$\Components\bsp\bsp.c</file>
       <file>$PROJ_DIR$\Components\mrfi\mrfi_defs.h</file>
@@ -122,7 +116,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 8 5 54 24 50 2 10 27 28 59 23 45 7 38 47 36</file>
+          <file> 66 15 10 23 7 24 60 45 11 22 65 49 59 47 25 30</file>
         </tool>
       </inputs>
     </file>
@@ -131,284 +125,31 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 97 95</file>
+          <file> 35 13</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Exe\Sensor_Demo_AP_as_Data_Hub.d43</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 19 62 16 26 12 50 42 53 20 2 41 31 39 27 32 57 52 36 43</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_ping.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 41</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 78 106 66 80 108 86 68</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 78 106 66 80 108 86 68</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_security.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
           <file> 47</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 13</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 105 100 25 9 0 63 22 83 102 84 68 78 106</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 105 100 25 9 0 60 31 63 22 83 102 84 68 78 106</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Applications\virtual_com_cmds.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 36</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 43</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 70</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 70</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Applications\main_AP.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 6</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 52 16 19 18 21 14 84 108 78 106 70</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 52 16 19 18 21 14 84 108 78 106 70</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Applications\vlo_rand.s43</name>
-      <outputs>
-        <tool>
-          <name>A430</name>
-          <file> 61</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>A430</name>
-          <file> 60</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 1</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 78 106 109 86 66 92 94 90 68 88 82 80</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 78 106 109 86 66 92 94 90 68 88 82 80</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 28</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 57</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 80</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 80</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 50</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 46</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 63 33 15 100 25 9 0 22 83 105 102 84 106 78 82 94</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 63 33 15 100 25 9 0 60 31 22 83 105 102 84 106 78 82 94</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_freq.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 27</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 64</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 106 78 86 80 108 68</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 106 78 86 80 108 68</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_ioctl.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 59</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 20</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 78 106 88 80 68</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 78 106 88 80 68 90</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_join.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 23</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 40</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 108 78 106 92 90 80 86 68 94</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 108 78 106 92 90 80 86 68 94</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_link.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 17</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 108 78 106 92 80 68</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 108 78 106 92 80 68</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_mgmt.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 7</file>
         </tool>
         <tool>
           <name>ICC430</name>
@@ -418,26 +159,279 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 108 78 106 94 90 80 82</file>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 77 100 69 79 102 84 71</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 108 78 106 94 90 80 82</file>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 77 100 69 79 102 84 71</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\CC2500 Sensor Demo-Access Point\Exe\Sensor_Demo_AP_as_Data_Hub.d43</name>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_security.c</name>
       <outputs>
         <tool>
-          <name>XLINK</name>
-          <file> 95</file>
+          <name>BICOMP</name>
+          <file> 25</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 57</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>XLINK</name>
-          <file> 96 11 6 48 44 46 62 1 64 57 20 40 17 32 41 13 43 61 98</file>
+          <name>BICOMP</name>
+          <file> 28 58 99 94 67 44 34 21 54 85 96 82 71 77 100</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 99 94 67 44 34 0 55 21 54 85 96 82 71 77 100</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Applications\virtual_com_cmds.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 73</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 73</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Applications\main_AP.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 16</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 40 37 48 38 8 14 82 102 77 100 73</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 40 37 48 38 8 14 82 102 77 100 73</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Applications\vlo_rand.s43</name>
+      <outputs>
+        <tool>
+          <name>A430</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>A430</name>
+          <file> 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 60</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 53</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 77 100 103 84 69 91 93 89 71 87 81 79</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 77 100 103 84 69 91 93 89 71 87 81 79</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 79</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 79</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 50</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 28 58 94 67 44 34 54 85 99 96 82 100 77 81 93</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 21 28 58 94 67 44 34 0 55 54 85 99 96 82 100 77 81 93</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_freq.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 100 77 84 79 102 71</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 100 77 84 79 102 71</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_ioctl.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 77 100 87 79 71</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 77 100 87 79 71 89</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_join.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 102 77 100 91 89 79 84 71 93</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 102 77 100 91 89 79 84 71 93</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_link.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 39</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 102 77 100 91 79 71</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 102 77 100 91 79 71</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_mgmt.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 102 77 100 93 89 79 81</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 102 77 100 93 89 79 81</file>
         </tool>
       </inputs>
     </file>
@@ -446,76 +440,7 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 8</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 100 25 9 0 63 22 83 58</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 100 25 9 0 60 31 63 22 83 58 37 55 52 16 19 18 21 14 29 30</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 24</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 44</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 78 106 109 86 66 92 94 90 68 88 80 82</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 78 106 109 86 66 92 94 90 68 88 80 82</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\mrfi\mrfi.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 54</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 48</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 102 100 25 9 0 63 22 83 53 33 15 105 12 51 39 35 3 34 49</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 42 26 102 100 25 9 0 60 31 63 22 83 53 33 15 105 12 51 39 35 3 34 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_api.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2</file>
+          <file> 66</file>
         </tool>
         <tool>
           <name>ICC430</name>
@@ -525,11 +450,80 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 33 15 100 25 9 0 63 22 83 105 102 84 108 78 106 109 86 66 92 94 90 68 88 80</file>
+          <file> 94 67 44 34 21 54 85 3</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 42 26 33 15 100 25 9 0 60 31 63 22 83 105 102 84 108 78 106 109 86 66 92 94 90 68 88 80</file>
+          <file> 46 64 94 67 44 34 0 55 21 54 85 3 17 6 40 37 48 38 8 14 51 56</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 77 100 103 84 69 91 93 89 71 87 79 81</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 77 100 103 84 69 91 93 89 71 87 79 81</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\mrfi\mrfi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 96 94 67 44 34 21 54 85 9 28 58 99 63 5 61 18 33 29 4</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 96 94 67 44 34 0 55 21 54 85 9 28 58 99 63 5 61 18 33 29 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_api.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 42</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28 58 94 67 44 34 21 54 85 99 96 82 102 77 100 103 84 69 91 93 89 71 87 79</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 46 64 28 58 94 67 44 34 0 55 21 54 85 99 96 82 102 77 100 103 84 69 91 93 89 71 87 79</file>
         </tool>
       </inputs>
     </file>
@@ -537,69 +531,74 @@
   <configuration>
     <name>CC2500 Sensor Demo-End Device</name>
     <outputs>
-      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_globals.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\mcus\bsp_msp430_defs.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_link.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board_defs.h</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_buttons.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_led_defs.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_QMgmt.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_globals.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\bsp.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_frame.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_buttons.h</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_leds.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430x22x4.h</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_driver_defs.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ping.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_link.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\vlo_rand.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_frame.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_freq.r43</file>
+      <file>$PROJ_DIR$\Configuration\End_Device\smpl_config.dat</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board.c</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.h</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_drivers.c</file>
       <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_button_defs.h</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_config.h</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board_defs.h</file>
-      <file>$PROJ_DIR$\Configuration\smpl_nwk_config.dat</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\main_ED.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_QMgmt.pbi</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_radio.c</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_api.pbi</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_mgmt.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ping.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\virtual_com_cmds.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\vlo_rand.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_freq.r43</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_leds.c</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_buttons.c</file>
-      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_buttons.h</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board.c</file>
+      <file>$PROJ_DIR$\Components\mrfi\smartrf\CC2500\smartrf_CC2500.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk430F2274.xcl</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_security.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\List\Sensor_Demo_AP_as_Data_Hub.map</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\Sensor_Demo_AP_as_Data_Hub.pbd</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\virtual_com_cmds.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_api.r43</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\mrfi.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_freq.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\main_ED.r43</file>
       <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
       <file>$PROJ_DIR$\Components\mrfi\radios\common\mrfi_f1f2.c</file>
-      <file>$PROJ_DIR$\Components\mrfi\smartrf\CC2500\smartrf_CC2500.h</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_frame.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_api.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\bsp.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_link.r43</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.c</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_led_defs.h</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_buttons.h</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_leds.h</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl430f.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\mcus\bsp_msp430_defs.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_globals.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\main_ED.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_frame.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\bsp.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ping.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_mgmt.r43</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_join.pbi</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\common\mrfi_f1f2.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\virtual_com_cmds.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ioctl.pbi</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_join.r43</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_security.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ioctl.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\Sensor_Demo_AP_as_Data_Hub.pbd</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ioctl.r43</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Exe\Sensor_Demo_AP_as_Data_Hub.d43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ping.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_mgmt.r43</file>
       <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\mrfi.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_freq.pbi</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_spi.h</file>
-      <file>$PROJ_DIR$\Components\bsp\drivers\bsp_leds.h</file>
-      <file>$PROJ_DIR$\Components\mrfi\radios\family1\mrfi_radio.c</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_drivers.c</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\bsp.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\main_ED.r43</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_link.pbi</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\mrfi.pbi</file>
-      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_driver_defs.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430x22x4.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_globals.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_ioctl.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_QMgmt.r43</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_QMgmt.pbi</file>
+      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\virtual_com_cmds.r43</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_generic_leds.h</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_leds.c</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_config.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\Components\bsp\drivers\code\bsp_buttons.c</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\Components\mrfi\radios\common\mrfi_f1f2.h</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_external\mrfi_board_defs.h</file>
+      <file>$PROJ_DIR$\Configuration\smpl_nwk_config.dat</file>
+      <file>$PROJ_DIR$\Components\bsp\boards\EZ430RF\bsp_board_defs.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_ping.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_ping.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_security.c</file>
@@ -612,16 +611,17 @@
       <file>$PROJ_DIR$\Applications\vlo_rand.s43</file>
       <file>$PROJ_DIR$\Projects\Configuration\Access_Point\smpl_config.dat</file>
       <file>$PROJ_DIR$\Projects\Configuration\End_Device\smpl_config.dat</file>
+      <file>$PROJ_DIR$\Projects\Configuration\smpl_nwk_config.dat</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.c</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.c</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.c</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.h</file>
-      <file>$PROJ_DIR$\Components\bsp\bsp_macros.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_types.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_freq.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_freq.h</file>
+      <file>$PROJ_DIR$\Components\bsp\bsp_macros.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_ioctl.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_ioctl.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_join.c</file>
@@ -630,10 +630,6 @@
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_link.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_mgmt.c</file>
       <file>$PROJ_DIR$\Components\SimpliciTI\nwk_applications\nwk_mgmt.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\Obj\nwk_security.r43</file>
-      <file>$TOOLKIT_DIR$\config\lnk430F2274.xcl</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl430f.r43</file>
-      <file>$PROJ_DIR$\Projects\Configuration\smpl_nwk_config.dat</file>
       <file>$PROJ_DIR$\Components\bsp\bsp.h</file>
       <file>$PROJ_DIR$\Components\bsp\bsp.c</file>
       <file>$PROJ_DIR$\Components\mrfi\mrfi_defs.h</file>
@@ -644,15 +640,13 @@
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_api.c</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_api.h</file>
       <file>$PROJ_DIR$\Components\simpliciti\nwk\nwk_app.h</file>
-      <file>$PROJ_DIR$\CC2500 Sensor Demo-End Device\List\Sensor_Demo_AP_as_Data_Hub.map</file>
-      <file>$PROJ_DIR$\Configuration\End_Device\smpl_config.dat</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 46 107</file>
+          <file> 50 21</file>
         </tool>
       </outputs>
     </file>
@@ -661,7 +655,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 12 20 59 3 21 22 13 51 2 43 38 58 23 47 42 40</file>
+          <file> 31 41 26 54 56 14 42 27 52 47 46 4 15 44 49 23</file>
         </tool>
       </inputs>
     </file>
@@ -670,13 +664,13 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 107</file>
+          <file> 21</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 94 56 57 50 27 10 37 36 28 11 45 41 5 49 24 93 25 26 95</file>
+          <file> 19 43 28 51 2 55 24 6 7 40 53 48 32 45 3 20 57 5 38</file>
         </tool>
       </inputs>
     </file>
@@ -685,21 +679,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 47</file>
+          <file> 44</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 24</file>
+          <file> 3</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 76 103 64 78 105 84 66</file>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 82 105 69 84 107 89 71</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 76 103 64 78 105 84 66</file>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 82 105 69 84 107 89 71</file>
         </tool>
       </inputs>
     </file>
@@ -708,21 +702,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 42</file>
+          <file> 49</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 93</file>
+          <file> 20</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 32 8 102 97 18 4 0 62 17 81 99 82 66 76 103</file>
+          <file> 29 63 104 99 67 39 34 25 60 90 101 87 71 82 105</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 32 8 102 97 18 4 0 61 31 62 17 81 99 82 66 76 103</file>
+          <file> 8 66 29 63 104 99 67 39 34 0 61 25 60 90 101 87 71 82 105</file>
         </tool>
       </inputs>
     </file>
@@ -731,30 +725,7 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 40</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 25</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 68</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 68</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Applications\main_ED.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 20</file>
+          <file> 23</file>
         </tool>
         <tool>
           <name>ICC430</name>
@@ -764,104 +735,20 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 97 18 4 0 62 17 81 102 99 82 105 53 9 15 14 16 7 71</file>
+          <file> 29 63 99 67 39 34 25 60 90 73</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 97 18 4 0 61 31 62 17 81 102 99 82 105 53 9 15 14 16 7 71</file>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 73</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Applications\vlo_rand.s43</name>
-      <outputs>
-        <tool>
-          <name>A430</name>
-          <file> 26</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>A430</name>
-          <file> 61</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.c</name>
+      <name>$PROJ_DIR$\Applications\main_ED.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 13</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 36</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 76 103 106 84 64 90 92 88 66 86 80 78</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 76 103 106 84 64 90 92 88 66 86 80 78</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 78</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 78</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 21</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 10</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 62 32 8 97 18 4 0 17 81 102 99 82 103 76 80 92</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 108 19 62 32 8 97 18 4 0 61 31 17 81 102 99 82 103 76 80 92</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_freq.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 51</file>
+          <file> 41</file>
         </tool>
         <tool>
           <name>ICC430</name>
@@ -871,11 +758,118 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 103 76 84 78 105 66</file>
+          <file> 99 67 39 34 25 60 90 104 101 87 107 37 35 58 36 12 16 76</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 103 76 84 78 105 66</file>
+          <file> 8 66 99 67 39 34 0 61 25 60 90 104 101 87 107 37 35 58 36 12 16 76</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Applications\vlo_rand.s43</name>
+      <outputs>
+        <tool>
+          <name>A430</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>A430</name>
+          <file> 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_frame.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 82 105 108 89 69 96 98 94 71 92 86 84</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 82 105 108 89 69 96 98 94 71 92 86 84</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_globals.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 52</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 84</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 84</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk\nwk_QMgmt.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 55</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 29 63 99 67 39 34 60 90 104 101 87 105 82 86 98</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 66 25 29 63 99 67 39 34 0 61 60 90 104 101 87 105 82 86 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_freq.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 105 82 89 84 107 71</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 105 82 89 84 107 71</file>
         </tool>
       </inputs>
     </file>
@@ -884,7 +878,76 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 43</file>
+          <file> 47</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 53</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 82 105 92 84 71</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 82 105 92 84 71</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_join.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 48</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 107 82 105 96 94 84 89 71 98</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 107 82 105 96 94 84 89 71 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_link.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 107 82 105 96 84 71</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 107 82 105 96 84 71</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_mgmt.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
         </tool>
         <tool>
           <name>ICC430</name>
@@ -894,80 +957,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 76 103 86 78 66</file>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 107 82 105 98 94 84 86</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 76 103 86 78 66</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_join.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 41</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 105 76 103 90 88 78 84 66 92</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 105 76 103 90 88 78 84 66 92</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_link.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 58</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 5</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 105 76 103 90 78 66</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 105 76 103 90 78 66</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Components\simpliciti\nwk_applications\nwk_mgmt.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 23</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 49</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 105 76 103 92 88 78 80</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 105 76 103 92 88 78 80</file>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 107 82 105 98 94 84 86</file>
         </tool>
       </inputs>
     </file>
@@ -976,21 +970,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 12</file>
+          <file> 31</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 56</file>
+          <file> 43</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 97 18 4 0 62 17 81 60</file>
+          <file> 99 67 39 34 25 60 90 1</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 97 18 4 0 61 31 62 17 81 60 35 55 53 9 15 14 16 7 29 30</file>
+          <file> 8 66 99 67 39 34 0 61 25 60 90 1 17 11 37 35 58 36 12 16 59 62</file>
         </tool>
       </inputs>
     </file>
@@ -999,21 +993,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 3</file>
+          <file> 54</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 27</file>
+          <file> 2</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 76 103 106 84 64 90 92 88 66 86 78 80</file>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 82 105 108 89 69 96 98 94 71 92 84 86</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 76 103 106 84 64 90 92 88 66 86 78 80</file>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 82 105 108 89 69 96 98 94 71 92 84 86</file>
         </tool>
       </inputs>
     </file>
@@ -1022,21 +1016,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 59</file>
+          <file> 26</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 50</file>
+          <file> 51</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 99 97 18 4 0 62 17 81 54 32 8 102 6 52 39 34 1 33 48</file>
+          <file> 101 99 67 39 34 25 60 90 13 29 63 104 65 10 64 18 33 30 9</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 99 97 18 4 0 61 31 62 17 81 54 32 8 102 6 52 39 34 1 33 48</file>
+          <file> 8 66 101 99 67 39 34 0 61 25 60 90 13 29 63 104 65 10 64 18 33 30 9</file>
         </tool>
       </inputs>
     </file>
@@ -1045,21 +1039,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 22</file>
+          <file> 14</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 37</file>
+          <file> 24</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 32 8 97 18 4 0 62 17 81 102 99 82 105 76 103 106 84 64 90 92 88 66 86 78</file>
+          <file> 29 63 99 67 39 34 25 60 90 104 101 87 107 82 105 108 89 69 96 98 94 71 92 84</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 108 19 32 8 97 18 4 0 61 31 62 17 81 102 99 82 105 76 103 106 84 64 90 92 88 66 86 78</file>
+          <file> 8 66 29 63 99 67 39 34 0 61 25 60 90 104 101 87 107 82 105 108 89 69 96 98 94 71 92 84</file>
         </tool>
       </inputs>
     </file>
