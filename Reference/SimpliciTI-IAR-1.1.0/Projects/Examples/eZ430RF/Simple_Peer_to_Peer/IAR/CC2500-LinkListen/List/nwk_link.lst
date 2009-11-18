@@ -1,0 +1,1003 @@
+###############################################################################
+#                                                                             #
+#                                                       13/May/2009  06:55:12 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\si #
+#                     mpliciti\nwk_applications\nwk_link.c                    #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\ #
+#                     nwk_applications\nwk_link.c" -D MRFI_CC2500 -lcN        #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen #
+#                     \List\" -o "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\P #
+#                     rojects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500 #
+#                     -LinkListen\Obj\" --require_prototypes --debug          #
+#                     -D__MSP430F2274__ -e --double=32 -I "C:\Texas           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proj #
+#                     ects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\ #
+#                     ..\..\Components\bsp\drivers\" -I "C:\Texas             #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\boards\EZ430RF\" -I "C:\Texas                        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\m #
+#                     rfi\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Pro #
+#                     jects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\.. #
+#                     \..\..\Components\SimpliciTI\nwk\" -I "C:\Texas         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     List\nwk_link.lst                                       #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     Obj\nwk_link.r43                                        #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk_applications\nwk_link.c
+      1          /**************************************************************************************************
+      2            Filename:       nwk_link.c
+      3            Revised:        $Date: 2008-12-23 13:54:27 -0800 (Tue, 23 Dec 2008) $
+      4            Revision:       $Revision: 18652 $
+      5            Author:         $Author: lfriedman $
+      6          
+      7            Description:    This file supports the SimpliciTI Link network application.
+      8          
+      9            Copyright 2007-2008 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     12            the terms of a software license agreement between the user who downloaded the software,
+     13            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     14            "License"). You may not use this Software unless you agree to abide by the terms of the
+     15            License. The License limits your use, and you acknowledge, that the Software may not be
+     16            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     18            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     19            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     20            perform, display or sell this Software and/or its documentation for any purpose.
+     21          
+     22            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     23            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     24            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     25            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     26            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     27            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     28            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     29            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     30            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     31          
+     32            Should you have any questions regarding your right to use this Software,
+     33            contact Texas Instruments Incorporated at www.TI.com.
+     34          **************************************************************************************************/
+     35          
+     36          
+     37          /******************************************************************************
+     38           * INCLUDES
+     39           */
+     40          
+     41          #include <string.h>
+     42          #include "bsp.h"
+     43          #include "mrfi.h"
+     44          #include "nwk_types.h"
+     45          #include "nwk_api.h"
+     46          #include "nwk_frame.h"
+     47          #include "nwk.h"
+     48          #include "nwk_link.h"
+     49          #include "nwk_globals.h"
+     50          #include "nwk_security.h"
+     51          
+     52          /******************************************************************************
+     53           * MACROS
+     54           */
+     55          
+     56          /******************************************************************************
+     57           * CONSTANTS AND DEFINES
+     58           */
+     59          
+     60          /******************************************************************************
+     61           * TYPEDEFS
+     62           */
+     63          
+     64          /******************************************************************************
+     65           * LOCAL VARIABLES
+     66           */
+     67          static uint32_t          sLinkToken = 0;
+     68          static volatile uint8_t  sListenActive = 0;
+     69          #if NUM_CONNECTIONS > 0
+     70          static volatile linkID_t sServiceLinkID[NUM_CONNECTIONS];
+     71          #endif
+     72          static volatile uint8_t  sNumLinkers = 0;
+     73          static volatile uint8_t  sTid = 0;
+     74          
+     75          /******************************************************************************
+     76           * LOCAL FUNCTIONS
+     77           */
+     78          
+     79          #define  SENT_REPLY       1
+     80          #define  SENT_NO_REPLY    2
+     81          static uint8_t    smpl_send_link_reply(mrfiPacket_t *);
+     82          static fhStatus_t handleLinkRequest(mrfiPacket_t *);
+     83          #if defined(EXTENDED_API)
+     84          static void       smpl_send_unlink_reply(mrfiPacket_t *);
+     85          #endif
+     86          
+     87          
+     88          /******************************************************************************
+     89           * GLOBAL VARIABLES
+     90           */
+     91          
+     92          /******************************************************************************
+     93           * GLOBAL FUNCTIONS
+     94           */
+     95          
+     96          /******************************************************************************
+     97           * @fn          nwk_linkInit
+     98           *
+     99           * @brief       Initialize link app. Set link token to the default.
+    100           *
+    101           * input parameters
+    102           *
+    103           * output parameters
+    104           *
+    105           * @return   void
+    106           */
+    107          void nwk_linkInit(void)
+    108          {
+    109            if (!sLinkToken)
+    110            {
+    111              /* if the link token has not been set externally by the time we get here
+    112               * (such as by the ioctl token-setting interface) assign the default
+    113               */
+    114              sLinkToken = DEFAULT_LINK_TOKEN;
+    115            }
+    116          
+    117            /* set a non-zero TID. */
+    118            while (!(sTid = MRFI_RandomByte()))  ;
+    119          
+    120          #if NUM_CONNECTIONS > 0
+    121            memset((void *)&sServiceLinkID, 0x0, sizeof(sServiceLinkID));
+    122          #endif
+    123          
+    124            return;
+    125          }
+    126          
+    127          /******************************************************************************
+    128           * @fn          nwk_setLinkToken
+    129           *
+    130           * @brief       Sets the link token received in a Join reply.
+    131           *
+    132           * input parameters
+    133           * @param   token   - Link token to be used on this network to link to any peer.
+    134           *
+    135           * output parameters
+    136           *
+    137           * @return   void
+    138           */
+    139          void nwk_setLinkToken(uint32_t token)
+    140          {
+    141            /* only set if the supplied token is non-zero. */
+    142            if (token)
+    143            {
+    144              sLinkToken = token;
+    145            }
+    146          
+    147            return;
+    148          }
+    149          
+    150          /******************************************************************************
+    151           * @fn          nwk_getLinkToken
+    152           *
+    153           * @brief       Gets the current link token.
+    154           *
+    155           * input parameters
+    156           *
+    157           * output parameters
+    158           * @param   pToken   - pointer to the returned value.
+    159           *
+    160           * @return   Current link token
+    161           */
+    162          void nwk_getLinkToken(uint32_t *pToken)
+    163          {
+    164            /* only set if the supplied token is non-zero. */
+    165            if (pToken)
+    166            {
+    167              *pToken = sLinkToken;
+    168            }
+    169          
+    170            return;
+    171          }
+    172          
+    173          #if defined(EXTENDED_API)
+    174          /******************************************************************************
+    175           * @fn          nwk_unlink
+    176           *
+    177           * @brief       Called from the application level to tear down a link.
+    178           *
+    179           * input parameters
+    180           *
+    181           * output parameters
+    182           * @param   lid     - Link ID assigned for this link
+    183           *
+    184           * @return   Status of the operation.
+    185           *           SMPL_SUCCESS
+    186           *           SMPL_BAD_PARAM       No connection table entry for this Link ID;
+    187           *                                SMPL_LINKID_USER_UUD not valid since it is not
+    188           *                                connection-based.
+    189           *           SMPL_TIMEOUT         No reply from peer.
+    190           *           SMPL_NO_PEER_UNLINK  Peer did not have a Connection Table entry for me.
+    191           */
+    192          smplStatus_t nwk_unlink(linkID_t lid)
+    193          {
+    194            uint8_t      msg[UNLINK_FRAME_SIZE];
+    195            connInfo_t  *pCInfo = nwk_getConnInfo(lid);
+    196            smplStatus_t rc     = SMPL_SUCCESS;
+    197            addr_t       addr;
+    198            union
+    199            {
+    200              ioctlRawSend_t    send;
+    201              ioctlRawReceive_t recv;
+    202            } ioctl_info;
+    203          
+    204            /* is there connection info? */
+    205             if (!pCInfo || (lid == SMPL_LINKID_USER_UUD))
+    206            {
+    207              return SMPL_BAD_PARAM;
+    208            }
+    209          
+    210            /* set request byte */
+    211            msg[LB_REQ_OS] = LINK_REQ_UNLINK;
+    212          
+    213            /* set the transaction ID. this allows target to figure out duplicates */
+    214            msg[LB_TID_OS] = sTid;
+    215          
+    216            /* remote port to be sent in message to help match connection */
+    217            msg[UL_RMT_PORT_OS] = pCInfo->portRx;
+    218          
+    219            /* setup for ioctl raw I/O */
+    220            memcpy(addr.addr, pCInfo->peerAddr, NET_ADDR_SIZE);
+    221            ioctl_info.send.addr = &addr;
+    222            ioctl_info.send.msg  = msg;
+    223            ioctl_info.send.len  = sizeof(msg);
+    224            ioctl_info.send.port = SMPL_PORT_LINK;
+    225          
+    226            SMPL_Ioctl(IOCTL_OBJ_RAW_IO, IOCTL_ACT_WRITE, &ioctl_info.send);
+    227          
+    228            {
+    229              uint8_t spin       = NWK_RX_RETRY_COUNT;
+    230              uint8_t radioState = MRFI_GetRadioState();
+    231          
+    232              ioctl_info.recv.port = SMPL_PORT_LINK;
+    233              ioctl_info.recv.msg  = msg;
+    234              ioctl_info.recv.addr = (addr_t *)0;
+    235          
+    236              do
+    237              {
+    238                NWK_CHECK_FOR_SETRX(radioState);
+    239                NWK_REPLY_DELAY();
+    240                NWK_CHECK_FOR_RESTORE_STATE(radioState);
+    241          
+    242                if (SMPL_SUCCESS == SMPL_Ioctl(IOCTL_OBJ_RAW_IO, IOCTL_ACT_READ, &ioctl_info.recv))
+    243                {
+    244                  if ((msg[LB_REQ_OS] & (~NWK_APP_REPLY_BIT)) == LINK_REQ_UNLINK)
+    245                  {
+    246                    rc = (smplStatus_t)msg[ULR_RESULT_OS];
+    247                    break;
+    248                  }
+    249                }
+    250                if (!spin)
+    251                {
+    252                  rc = SMPL_TIMEOUT;
+    253                  break;
+    254                }
+    255                --spin;
+    256              } while (1);
+    257          
+    258             /* it's ok to unconditionally invalidate connection object */
+    259              nwk_freeConnection(pCInfo);
+    260            }
+    261            return rc;
+    262          }
+    263          #endif  /* EXTENDED_API */
+    264          
+    265          /******************************************************************************
+    266           * @fn          nwk_link
+    267           *
+    268           * @brief       Called from the application level to accomplish the link
+    269           *
+    270           * input parameters
+    271           *
+    272           * output parameters
+    273           * @param   lid     - pointer to Link ID (port) assigned for this link
+    274           *
+    275           * @return   Status of the operation.
+    276           */
+    277          smplStatus_t nwk_link(linkID_t *lid)
+    278          {
+    279            uint8_t       msg[LINK_FRAME_SIZE];
+    280            connInfo_t   *pCInfo = nwk_getNextConnection();
+    281            smplStatus_t  rc;
+    282          
+    283            if (pCInfo)
+    284            {
+    285              addr_t              addr;
+    286              union
+    287              {
+    288                ioctlRawSend_t    send;
+    289                ioctlRawReceive_t recv;
+    290              } ioctl_info;
+    291          
+    292              if (!nwk_allocateLocalRxPort(LINK_SEND, pCInfo))
+    293              {
+    294                nwk_freeConnection(pCInfo);
+    295                return SMPL_NOMEM;
+    296              }
+    297          
+    298              memcpy(addr.addr, nwk_getBCastAddress(), NET_ADDR_SIZE);
+    299              ioctl_info.send.addr = &addr;
+    300              ioctl_info.send.msg  = msg;
+    301              ioctl_info.send.len  = sizeof(msg);
+    302              ioctl_info.send.port = SMPL_PORT_LINK;
+    303          
+    304              /* Put link token in */
+    305              nwk_putNumObjectIntoMsg((void *)&sLinkToken, msg+L_LINK_TOKEN_OS, sizeof(sLinkToken));
+    306          
+    307              /* set port to which the remote device should send */
+    308              msg[L_RMT_PORT_OS] = pCInfo->portRx;
+    309          
+    310              /* set the transaction ID. this allows target to figure out duplicates */
+    311              msg[LB_TID_OS] = sTid;
+    312          
+    313              /* set my Rx type */
+    314              msg[L_MY_RXTYPE_OS] = nwk_getMyRxType();
+    315          
+    316              /* set request byte */
+    317              msg[LB_REQ_OS] = LINK_REQ_LINK;
+    318          
+    319              /* protocol version number */
+    320              msg[L_PROTOCOL_VERSION_OS] = nwk_getProtocolVersion();
+    321          
+    322          #if defined(SMPL_SECURE)
+    323              pCInfo->connTxCTR = MRFI_RandomByte()                   | \
+    324                                  ((uint32_t)(MRFI_RandomByte())<<8)  | \
+    325                                  ((uint32_t)(MRFI_RandomByte())<<16) | \
+    326                                  ((uint32_t)(MRFI_RandomByte())<<24);
+    327          
+    328              nwk_putNumObjectIntoMsg((void *)&pCInfo->connTxCTR, (void *)&msg[L_CTR_OS], 4);
+    329          #endif
+    330          
+    331          
+    332              if (SMPL_SUCCESS != (rc=SMPL_Ioctl(IOCTL_OBJ_RAW_IO, IOCTL_ACT_WRITE, &ioctl_info.send)))
+    333              {
+    334                return rc;
+    335              }
+    336          
+    337              {
+    338                uint8_t radioState = MRFI_GetRadioState();
+    339          
+    340                ioctl_info.recv.port = SMPL_PORT_LINK;
+    341                ioctl_info.recv.msg  = msg;
+    342                ioctl_info.recv.addr = (addr_t *)pCInfo->peerAddr;
+    343          
+    344                NWK_CHECK_FOR_SETRX(radioState);
+    345                NWK_REPLY_DELAY();
+    346                NWK_CHECK_FOR_RESTORE_STATE(radioState);
+    347          
+    348                if (SMPL_SUCCESS == SMPL_Ioctl(IOCTL_OBJ_RAW_IO, IOCTL_ACT_READ, &ioctl_info.recv))
+    349                {
+    350                  uint8_t firstByte = msg[LB_REQ_OS] & (~NWK_APP_REPLY_BIT);
+    351          
+    352                  /* Sanity check for correct reply frame. Older version
+    353                   * has the length instead of the request as the first byte.
+    354                   */
+    355                  if ((firstByte != LINK_REQ_LINK) &&
+    356                      (firstByte != LINK_REPLY_LEGACY_MSG_LENGTH)
+    357                     )
+    358                  {
+    359                    /* invalidate connection object */
+    360                    nwk_freeConnection(pCInfo);
+    361                    return SMPL_NO_LINK;
+    362          
+    363                  }
+    364                }
+    365                else
+    366                {
+    367                  /* no successful receive */
+    368                  nwk_freeConnection(pCInfo);
+    369                  return SMPL_TIMEOUT;
+    370                }
+    371          
+    372                pCInfo->connState = CONNSTATE_CONNECTED;
+    373                pCInfo->portTx    = msg[LR_RMT_PORT_OS];    /* link reply returns remote port */
+    374                *lid              = pCInfo->thisLinkID;     /* return our local port number */
+    375          
+    376                /* Set hop count. If it's a polling device set the count to the
+    377                 * distance to the AP. Otherwise, set it to the max less the remaining
+    378                 * which will be the path taken for this frame. It will be no worse
+    379                 * then tha max and probably will be better.
+    380                 */
+    381                if (F_RX_TYPE_POLLS == msg[LR_MY_RXTYPE_OS])
+    382                {
+    383                  pCInfo->hops2target = MAX_HOPS_FROM_AP;
+    384                }
+    385                else
+    386                {
+    387                  /* Can't really use this trick because the device could move. If the
+    388                   * devices are all static this may work unless the initial reception
+    389                   * was marginal.
+    390                   */
+    391          #if defined(DEVICE_DOES_NOT_MOVE)
+    392                  pCInfo->hops2target = MAX_HOPS - ioctl_info.recv.hopCount;
+    393          #else
+    394                  pCInfo->hops2target = MAX_HOPS;
+    395          #endif
+    396                }
+    397          
+    398          #if defined(SMPL_SECURE)
+    399                nwk_getNumObjectFromMsg((void *)&msg[LR_CTR_OS], (void *)&pCInfo->connRxCTR, 4);
+    400          #endif
+    401              }
+    402          
+    403              /* guard against duplicates... */
+    404              ++sTid;
+    405              if (!sTid)
+    406              {
+    407                sTid = 1;
+    408              }
+    409              return SMPL_SUCCESS;
+    410            }
+    411          
+    412            return SMPL_NOMEM;
+    413          }
+    414          
+    415          #if defined(EXTENDED_API)
+    416          /******************************************************************************
+    417           * @fn          smpl_send_unlink_reply
+    418           *
+    419           * @brief       Send the unlink reply to the device trying to unlink
+    420           *
+    421           * input parameters
+    422           * @param   frame   - frame received from linker
+    423           *
+    424           * output parameters
+    425           *
+    426           * @return   void
+    427           */
+    428          static void smpl_send_unlink_reply(mrfiPacket_t *frame)
+    429          {
+    430            connInfo_t  *pCInfo;
+    431            frameInfo_t *pOutFrame;
+    432            uint8_t      msg[UNLINK_REPLY_FRAME_SIZE];
+    433            smplStatus_t rc = SMPL_NO_PEER_UNLINK;
+    434          
+    435            /* match the remote port and source address with a connection table entry */
+    436            if (pCInfo = nwk_findPeer((addr_t *)MRFI_P_SRC_ADDR(frame), *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+UL_RMT_PORT_OS)))
+    437            {
+    438              /* Note we unconditionally free the connection resources */
+    439              nwk_freeConnection(pCInfo);
+    440              rc = SMPL_SUCCESS;
+    441            }
+    442          
+    443            /* set reply bit */
+    444            msg[LB_REQ_OS] = LINK_REQ_UNLINK | NWK_APP_REPLY_BIT;
+    445          
+    446            /* sender's TID */
+    447            msg[LB_TID_OS] = *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+LB_TID_OS);
+    448          
+    449            /* result of freeing local connection */
+    450            msg[ULR_RESULT_OS] = rc;
+    451          
+    452            if (pOutFrame = nwk_buildFrame(SMPL_PORT_LINK, msg, sizeof(msg), MAX_HOPS))
+    453            {
+    454              /* destination address is the source adddress of the received frame. */
+    455              memcpy(MRFI_P_DST_ADDR(&pOutFrame->mrfiPkt), MRFI_P_SRC_ADDR(frame), NET_ADDR_SIZE);
+    456          #if defined(SMPL_SECURE)
+    457              nwk_setSecureFrame(&pOutFrame->mrfiPkt, sizeof(msg), 0);
+    458          #endif  /* SMPL_SECURE */
+    459              nwk_sendFrame(pOutFrame, MRFI_TX_TYPE_FORCED);
+    460            }
+    461          }
+    462          #endif  /* EXTENDED_API */
+    463          
+    464          /******************************************************************************
+    465           * @fn          smpl_send_link_reply
+    466           *
+    467           * @brief       Send the link reply to the device trying to link. This routine
+    468           *              will handle duplicates.
+    469           *
+    470           * input parameters
+    471           * @param   frame   - frame received from linker
+    472           *
+    473           * output parameters
+    474           *
+    475           * @return   Returns SENT_REPLY if reply sent, else SENT_NO_REPLY.
+    476           *           The return value is used as this routine unwinds to know
+    477           *           whether to replay the frame. An RE or AP can host an ED
+    478           *           object in which case it might send a reply (possibly from
+    479           *           a duplicate frame). If we do reply we do not want to replay.
+    480           */
+    481          static uint8_t smpl_send_link_reply(mrfiPacket_t *frame)
+    482          {
+    483          #if NUM_CONNECTIONS > 0
+    484            frameInfo_t *pOutFrame;
+    485            connInfo_t  *pCInfo;
+    486            uint8_t      remotePort;
+    487            uint8_t      msg[LINK_REPLY_FRAME_SIZE];
+    488          
+    489            /* Is this a legacy frame? If so continue. Otherwise check version.*/
+    490            if ((MRFI_GET_PAYLOAD_LEN(frame) - F_APP_PAYLOAD_OS) > LINK_LEGACY_MSG_LENGTH)
+    491            {
+    492              /* see if protocol version is correct... */
+    493              if (*(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+L_PROTOCOL_VERSION_OS) != nwk_getProtocolVersion())
+    494              {
+    495                /* Accommodation of protocol version differences can be noted or accomplished here.
+    496                 * This field was also checked in the join transaction but it is checked again here
+    497                 * because that check may not have occurred if thre is no AP in this topology.
+    498                 * Otherwise, no match and the board goes back
+    499                 */
+    500                return SENT_NO_REPLY;
+    501              }
+    502            }
+    503          
+    504            /* see if token is correct */
+    505            {
+    506              uint32_t lt;
+    507          
+    508              nwk_getNumObjectFromMsg(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+L_LINK_TOKEN_OS, &lt, sizeof(lt));
+    509              if (lt != sLinkToken)
+    510              {
+    511                return SENT_NO_REPLY;
+    512              }
+    513            }
+    514          
+    515            /* if we get here the token matched. */
+    516          
+    517            /* is this a duplicate request? */
+    518            remotePort = *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+L_RMT_PORT_OS);
+    519            if (pCInfo=nwk_isLinkDuplicate(MRFI_P_SRC_ADDR(frame), remotePort))
+    520            {
+    521              /* resend reply */
+    522              msg[LB_REQ_OS] = LINK_REQ_LINK | NWK_APP_REPLY_BIT;
+    523          
+    524              /* sender's TID */
+    525              msg[LB_TID_OS] = *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+LB_TID_OS);
+    526          
+    527              /* Send reply with the local port number so the remote device knows where to
+    528               * send packets.
+    529               */
+    530              msg[LR_RMT_PORT_OS] = pCInfo->portRx;
+    531          
+    532              /* put my Rx type in there. used to know how to set hops when sending back. */
+    533              msg[LR_MY_RXTYPE_OS] = nwk_getMyRxType();
+    534          #if defined(SMPL_SECURE)
+    535              /* Set the Tx counter value for peer's Rx counter object */
+    536              nwk_putNumObjectIntoMsg((void *)&pCInfo->connTxCTR, (void *)&msg[LR_CTR_OS], 4);
+    537              /* We also need to save the newly generated Rx counter value. */
+    538              nwk_getNumObjectFromMsg((void *)(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+L_CTR_OS), (void *)&pCInfo->connRxCTR, 4);
+    539          #endif
+    540              if (pOutFrame = nwk_buildFrame(SMPL_PORT_LINK, msg, sizeof(msg), MAX_HOPS-(GET_FROM_FRAME(MRFI_P_PAYLOAD(frame),F_HOP_COUNT))))
+    541              {
+    542                /* destination address is the source adddress of the received frame. */
+    543                memcpy(MRFI_P_DST_ADDR(&pOutFrame->mrfiPkt), MRFI_P_SRC_ADDR(frame), NET_ADDR_SIZE);
+    544          #if defined(SMPL_SECURE)
+    545                nwk_setSecureFrame(&pOutFrame->mrfiPkt, sizeof(msg), 0);
+    546          #endif  /* SMPL_SECURE */
+    547                nwk_sendFrame(pOutFrame, MRFI_TX_TYPE_FORCED);
+    548              }
+    549              return SENT_REPLY;
+    550            }
+    551          
+    552            if (!sListenActive)
+    553            {
+    554              /* We've checked for duplicate and resent reply. In that case we weren't listening
+    555               * so just go back`.
+    556               */
+    557              return SENT_NO_REPLY;
+    558            }
+    559          
+    560            /* room to link? */
+    561          #if defined(AP_IS_DATA_HUB)
+    562            pCInfo = nwk_findAlreadyJoined(frame);
+    563          
+    564            if (!pCInfo)
+    565          #endif
+    566            {
+    567              pCInfo = nwk_getNextConnection();
+    568            }
+    569          
+    570            if (pCInfo)
+    571            {
+    572              /* yes there's room and it's not a dup. address. */
+    573              memcpy(&pCInfo->peerAddr, MRFI_P_SRC_ADDR(frame), NET_ADDR_SIZE);
+    574          
+    575              if (!nwk_allocateLocalRxPort(LINK_REPLY, pCInfo))
+    576              {
+    577                nwk_freeConnection(pCInfo);
+    578                /* we're done with the packet */
+    579                return SENT_REPLY;
+    580              }
+    581          
+    582              /* The local Rx port is the one returned in the connection structure. The
+    583               * caller is waiting on this to be set. The code here is running in an ISR
+    584               * thread so the caller will see this change after RETI.
+    585               */
+    586              if (NUM_CONNECTIONS == sNumLinkers)
+    587              {
+    588                /* Something is wrong -- no room to stack Link request */
+    589                nwk_freeConnection(pCInfo);
+    590                /* we're done with the packet */
+    591                return SENT_REPLY;
+    592              }
+    593              sServiceLinkID[sNumLinkers++] = pCInfo->thisLinkID;
+    594          
+    595              /* save the remote Tx port */
+    596              pCInfo->portTx = remotePort;
+    597          
+    598              /* connection is valid... */
+    599              pCInfo->connState = CONNSTATE_CONNECTED;
+    600          
+    601              /* Set hop count. If it's a polling device set the count to the
+    602               * distance to the AP. otherwise, set it to the max less the remaining
+    603               * which will be the path taken for this frame. It will be no worse
+    604               * then tha max and probably will be better.
+    605               */
+    606              if (F_RX_TYPE_POLLS == *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+L_MY_RXTYPE_OS))
+    607              {
+    608                /* It polls. so. we'll be sending to the AP which will store the
+    609                 * frame. The AP is only MAX_HOPS_FROM_AP hops away from us.
+    610                 */
+    611                pCInfo->hops2target = MAX_HOPS_FROM_AP;
+    612              }
+    613              else
+    614              {
+    615                /* Can't really use this trick because the device could move. If the
+    616                 * devices are all static this may work unless the initial reception
+    617                 * was marginal.
+    618                 */
+    619          #if defined(DEVICE_DOES_NOT_MOVE)
+    620                pCInfo->hops2target = MAX_HOPS - GET_FROM_FRAME(MRFI_P_PAYLOAD(frame), F_HOP_COUNT);
+    621          #else
+    622                pCInfo->hops2target = MAX_HOPS;
+    623          #endif
+    624              }
+    625              /* Send reply with the local port number so the remote device knows where to
+    626               * send packets.
+    627               */
+    628              msg[LR_RMT_PORT_OS]  = pCInfo->portRx;
+    629          
+    630              /* put my Rx type in there. used to know how to set hops when sending back. */
+    631              msg[LR_MY_RXTYPE_OS] = nwk_getMyRxType();
+    632          
+    633              msg[LB_REQ_OS] = LINK_REQ_LINK | NWK_APP_REPLY_BIT;
+    634          
+    635              /* sender's TID */
+    636              msg[LB_TID_OS] = *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+LB_TID_OS);
+    637          #if defined(SMPL_SECURE)
+    638              nwk_getNumObjectFromMsg((void *)(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+L_CTR_OS), (void *)&pCInfo->connRxCTR, 4);
+    639              pCInfo->connTxCTR = MRFI_RandomByte()                   | \
+    640                                  ((uint32_t)(MRFI_RandomByte())<<8)  | \
+    641                                  ((uint32_t)(MRFI_RandomByte())<<16) | \
+    642                                  ((uint32_t)(MRFI_RandomByte())<<24);
+    643          
+    644              nwk_putNumObjectIntoMsg((void *)&pCInfo->connTxCTR, (void *)&msg[LR_CTR_OS], 4);
+    645          #endif
+    646              if (pOutFrame = nwk_buildFrame(SMPL_PORT_LINK, msg, sizeof(msg), MAX_HOPS-(GET_FROM_FRAME(MRFI_P_PAYLOAD(frame),F_HOP_COUNT))))
+    647              {
+    648                /* destination address is the source adddress of the received frame. */
+    649                memcpy(MRFI_P_DST_ADDR(&pOutFrame->mrfiPkt), MRFI_P_SRC_ADDR(frame), NET_ADDR_SIZE);
+    650          #if defined(SMPL_SECURE)
+    651                nwk_setSecureFrame(&pOutFrame->mrfiPkt, sizeof(msg), 0);
+    652          #endif
+    653                if (SMPL_SUCCESS != nwk_sendFrame(pOutFrame, MRFI_TX_TYPE_FORCED))
+    654                {
+    655                  /* better release the connection structure */
+    656                  nwk_freeConnection(pCInfo);
+    657                }
+    658              }
+    659              else
+    660              {
+    661                /* better release the connection structure */
+    662                nwk_freeConnection(pCInfo);
+    663              }
+    664            }
+    665            /* we're done with the packet */
+    666            return SENT_REPLY;
+    667          #else
+    668            return SENT_NO_REPLY;
+    669          #endif  /* NUM_CONNECTIONS */
+    670          }
+    671          
+    672          /******************************************************************************
+    673           * @fn          nwk_processLink
+    674           *
+    675           * @brief       Process Link frame. Just save the frame for the Link app if it
+    676           *              a reply. If it isn't a reply, send the reply in this thread.
+    677           *
+    678           * input parameters
+    679           * @param   frame   - pointer to frame to be processed
+    680           *
+    681           * output parameters
+    682           *
+    683           * @return   Keep frame for application, release frame, or replay frame..
+    684           */
+    685          fhStatus_t nwk_processLink(mrfiPacket_t *frame)
+    686          {
+    687            fhStatus_t   rc;
+    688            uint8_t      replyType;
+    689          
+    690            /* If we sent this then this is the reply. Validate the
+    691             * packet for reception by client app. If we didn't send
+    692             * it then we are the target. send the reply.
+    693             */
+    694            if (SMPL_MY_REPLY == (replyType=nwk_isValidReply(frame, sTid, LB_REQ_OS, LB_TID_OS)))
+    695            {
+    696              /* It's a match and it's a reply. Validate the received packet by
+    697               * returning a 1 so it can be received by the client app.
+    698               */
+    699              MRFI_PostKillSem();
+    700              rc = FHS_KEEP;
+    701            }
+    702          #if !defined( END_DEVICE )
+    703            else if (SMPL_A_REPLY == replyType)
+    704            {
+    705              /* no match. if i'm not an ED this is a reply that should be passed on. */
+    706              rc = FHS_REPLAY;
+    707            }
+    708          #endif  /* !END_DEVICE */
+    709            else
+    710            {
+    711              /* No, we didn't send it. Process request assuming it's
+    712               * intended for us.
+    713               */
+    714              rc = handleLinkRequest(frame);
+    715            }
+    716          
+    717            (void) replyType;  /* keep compiler happy when ED built... */
+    718          
+    719            return rc;
+    720          }
+    721          
+    722          /******************************************************************************
+    723           * @fn          nwk_getLocalLinkID
+    724           *
+    725           * @brief       This routine checks to see if a service port has been assigned
+    726           *              as a result of a link reply frame being received. It is the means
+    727           *              by which the user thread knows that the waiting is over for the
+    728           *              link listen. the value is set in an interrupt thread.
+    729           *
+    730           * input parameters
+    731           *
+    732           * output parameters
+    733           *
+    734           * @return   Local port assigned when the link reply was received.
+    735           */
+    736          linkID_t nwk_getLocalLinkID(void)
+    737          {
+    738            linkID_t    lid = 0;
+    739          #if NUM_CONNECTIONS > 0
+    740            uint8_t     i;
+    741            bspIState_t intState;
+    742          
+    743          
+    744            BSP_ENTER_CRITICAL_SECTION(intState);
+    745            if (sNumLinkers)
+    746            {
+    747              sNumLinkers--;
+    748              BSP_EXIT_CRITICAL_SECTION(intState);
+    749          
+    750              nwk_setListenContext(LINK_LISTEN_OFF);
+    751              lid = sServiceLinkID[0];
+    752              /* If more than one Link frame has been processed without an intervening
+    753               * Listen assume that there will be another Link Listen call that will
+    754               * poll for completion which has already occurred. Age any existing entries.
+    755               * This code was added to deal with the possibility of mulitple EDs being
+    756               * activated simultaneously in the AP-as-data-hub example. This opens a
+    757               * window of opportunity for a "typical" scenario to get hosed. But for
+    758               * a "typical" scenario to get hosed a number of improbable events have to
+    759               * occur. These are deemed far less likely than the multiple-ED-activation
+    760               * scenario in the AP-as-dat-hub case.
+    761               */
+    762              for (i=0; i<sNumLinkers; ++i)
+    763              {
+    764                sServiceLinkID[i] = sServiceLinkID[i+1];
+    765              }
+    766            }
+    767            else
+    768            {
+    769              BSP_EXIT_CRITICAL_SECTION(intState);
+    770            }
+    771          #endif  /* NUM_CONNECTIONS */
+    772          
+    773            return lid;
+    774          }
+    775          
+    776          /******************************************************************************
+    777           * @fn          nwk_setListenContext
+    778           *
+    779           * @brief       Sets the context when a LinkListen is executed. This prevents
+    780           *              processing other link frames from being confused with the real
+    781           *              one. Without this semaphore other broadcast link messages
+    782           *              could wait int the input queue and accidently be processed if
+    783           *              a listen is done later.
+    784           *
+    785           * input parameters
+    786           *
+    787           * @param   context - listen on or off
+    788           *
+    789           * output parameters
+    790           *
+    791           * @return   void
+    792           */
+    793          void nwk_setListenContext(uint8_t context)
+    794          {
+    795            sListenActive = (context == LINK_LISTEN_ON) ? 1 : 0;
+    796          }
+    797          
+    798          /******************************************************************************
+    799           * @fn          handleLinkRequest
+    800           *
+    801           * @brief       Dispatches handler for specfic link request
+    802           *
+    803           * input parameters
+    804           *
+    805           * @param   frame - Link frame received
+    806           *
+    807           * output parameters
+    808           *
+    809           * @return   void
+    810           */
+    811          static fhStatus_t handleLinkRequest(mrfiPacket_t *frame)
+    812          {
+    813            fhStatus_t rc = FHS_RELEASE;
+    814            uint8_t    isReplySent;
+    815          
+    816            if (LINK_LEGACY_MSG_LENGTH == (MRFI_GET_PAYLOAD_LEN(frame) - F_APP_PAYLOAD_OS))
+    817            {
+    818              /* Legacy frame. Spoof a link request */
+    819              *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS) = LINK_REQ_LINK;
+    820            }
+    821          
+    822            switch (*(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS))
+    823            {
+    824              case LINK_REQ_LINK:
+    825                isReplySent = smpl_send_link_reply(frame);
+    826          #if !defined(END_DEVICE)
+    827                /* If I am an AP or RE and not listening I need to replay frame.
+    828                 * The exception is if I am an AP or RE hosting an End Device
+    829                 * object and I just sent a reply frame to a duplicate link frame
+    830                 * for which I was not listening. In this case don't replay.
+    831                 */
+    832                if (!sListenActive && (SENT_REPLY != isReplySent))
+    833                {
+    834                  rc = FHS_REPLAY;
+    835                }
+    836          #endif   /* !END_DEVICE */
+    837                break;
+    838          
+    839          #if defined(EXTENDED_API)
+    840              case LINK_REQ_UNLINK:
+    841                smpl_send_unlink_reply(frame);
+    842                break;
+    843          #endif
+    844          
+    845              default:
+    846                break;
+    847            }
+    848          
+    849            /* keep compiler happy if I'm compiled as an End Device */
+    850            (void) isReplySent;
+    851          
+    852            return rc;
+    853          }
+
+   Maximum stack usage in bytes:
+
+     Function                     CSTACK
+     --------                     ------
+     nwk_getLinkToken                 2
+     nwk_getLocalLinkID               2
+       -> nwk_setListenContext        2
+     nwk_link                        34
+       -> nwk_getNextConnection      34
+       -> nwk_allocateLocalRxPort    34
+       -> nwk_freeConnection         34
+       -> nwk_getBCastAddress        34
+       -> memcpy                     34
+       -> nwk_putNumObjectIntoMsg    34
+       -> nwk_getMyRxType            34
+       -> nwk_getProtocolVersion     34
+       -> SMPL_Ioctl                 34
+       -> MRFI_GetRadioState         34
+       -> MRFI_WakeUp                34
+       -> MRFI_RxOn                  34
+       -> MRFI_ReplyDelay            34
+       -> MRFI_Sleep                 34
+       -> MRFI_RxIdle                34
+       -> SMPL_Ioctl                 34
+       -> nwk_freeConnection         34
+       -> nwk_freeConnection         34
+     nwk_linkInit                     2
+       -> MRFI_RandomByte             2
+       -> memset                      2
+     nwk_processLink                  4
+       -> nwk_isValidReply            4
+       -> MRFI_PostKillSem            4
+       -> smpl_send_link_reply        4
+     nwk_setLinkToken                 2
+     nwk_setListenContext             2
+     smpl_send_link_reply            18
+       -> nwk_getProtocolVersion     18
+       -> nwk_getNumObjectFromMsg    18
+       -> nwk_isLinkDuplicate        18
+       -> nwk_getMyRxType            18
+       -> nwk_buildFrame             18
+       -> memcpy                     18
+       -> nwk_sendFrame              18
+       -> nwk_getNextConnection      18
+       -> memcpy                     18
+       -> nwk_allocateLocalRxPort    18
+       -> nwk_freeConnection         18
+       -> nwk_getMyRxType            18
+       -> nwk_buildFrame             18
+       -> memcpy                     18
+       -> nwk_sendFrame              18
+
+
+   Segment part sizes:
+
+     Function/Label       Bytes
+     --------------       -----
+     sLinkToken              4
+     sListenActive           1
+     sServiceLinkID          2
+     sNumLinkers             1
+     sTid                    1
+     nwk_linkInit           48
+     nwk_setLinkToken       18
+     nwk_getLinkToken       18
+     nwk_link              330
+     smpl_send_link_reply  284
+     ?Subroutine2           18
+     ?Subroutine1           20
+     ?Subroutine0           14
+     nwk_processLink        62
+     nwk_getLocalLinkID     52
+     nwk_setListenContext   16
+
+ 
+ 880 bytes in segment CODE
+   9 bytes in segment DATA16_Z
+ 
+ 880 bytes of CODE memory
+   9 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,378 @@
+###############################################################################
+#                                                                             #
+#                                                       11/May/2009  06:36:08 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+# Time limited license: 29 days left                                          #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\si #
+#                     mpliciti\nwk\nwk_globals.c                              #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\ #
+#                     nwk\nwk_globals.c" -D MRFI_CC2500 -lcN "C:\Texas        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List\" -o     #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj #
+#                     \" --require_prototypes --debug -D__MSP430F2274__ -e    #
+#                     --double=32 -I "C:\Texas Instruments\SimpliciTI-IAR-1.1 #
+#                     .0\Projects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\.. #
+#                     \..\..\..\..\Components\bsp\" -I "C:\Texas              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\drivers\" -I "C:\Texas Instruments\SimpliciTI-IAR-1. #
+#                     1.0\Projects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\. #
+#                     .\..\..\..\..\Components\bsp\boards\EZ430RF\" -I        #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Co #
+#                     mponents\mrfi\" -I "C:\Texas                            #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk\" -I "C:\Texas                            #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List #
+#                     \nwk_globals.lst                                        #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj\ #
+#                     nwk_globals.r43                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk\nwk_globals.c
+      1          /**************************************************************************************************
+      2            Filename:       nwk_globals.c
+      3            Revised:        $Date: 2009-03-10 17:01:56 -0700 (Tue, 10 Mar 2009) $
+      4            Revision:       $Revision: 19372 $
+      5            Author:         $Author: lfriedman $
+      6          
+      7            Description:    This file manages global NWK data.
+      8          
+      9            Copyright 2007-2008 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     12            the terms of a software license agreement between the user who downloaded the software,
+     13            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     14            "License"). You may not use this Software unless you agree to abide by the terms of the
+     15            License. The License limits your use, and you acknowledge, that the Software may not be
+     16            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     18            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     19            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     20            perform, display or sell this Software and/or its documentation for any purpose.
+     21          
+     22            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     23            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     24            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     25            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     26            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     27            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     28            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     29            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     30            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     31          
+     32            Should you have any questions regarding your right to use this Software,
+     33            contact Texas Instruments Incorporated at www.TI.com.
+     34          **************************************************************************************************/
+     35          
+     36          
+     37          /******************************************************************************
+     38           * INCLUDES
+     39           */
+     40          #include <string.h>
+     41          #include "bsp.h"
+     42          #include "mrfi.h"
+     43          #include "nwk_types.h"
+     44          #include "nwk_globals.h"
+     45          
+     46          /******************************************************************************
+     47           * MACROS
+     48           */
+     49          
+     50          /******************************************************************************
+     51           * CONSTANTS AND DEFINES
+     52           */
+     53          
+     54          /******************************************************************************
+     55           * TYPEDEFS
+     56           */
+     57          
+     58          /******************************************************************************
+     59           * LOCAL VARIABLES
+     60           */
+     61          static const addr_t   sMyROMAddress = THIS_DEVICE_ADDRESS;
+     62          static addr_t         sAPAddress;
+     63          static addr_t         sMyRAMAddress;
+     64          static uint8_t        sRAMAddressIsSet = 0;
+     65          /* Version number set as a 2 byte quantity. Each nibble is a revision number
+     66           * in the form w.x.y.z. The subfields are each limited to values 0x0-0xF.
+     67           */
+     68          static const smplVersionInfo_t sVersionInfo = {
+     69                                                          0x02,  /* protocol version */
+     70                                                          0x01,  /* major revision number */
+     71                                                          0x01,  /* minor revision number */
+     72                                                          0x00,  /* maintenance release number */
+     73                                                          0x00   /* special release */
+     74                                                         };
+     75          
+     76          /******************************************************************************
+     77           * LOCAL FUNCTIONS
+     78           */
+     79          
+     80          /******************************************************************************
+     81           * GLOBAL VARIABLES
+     82           */
+     83          
+     84          /******************************************************************************
+     85           * GLOBAL FUNCTIONS
+     86           */
+     87          
+     88          /******************************************************************************
+     89           * @fn          nwk_globalsInit
+     90           *
+     91           * @brief       Initialization of global symbols
+     92           *
+     93           * input parameters
+     94           *
+     95           * output parameters
+     96           *
+     97           * @return   void
+     98           */
+     99          void nwk_globalsInit(void)
+    100          {
+    101          
+    102            memset(&sAPAddress, 0x00, sizeof(addr_t));
+    103            memset(&sMyRAMAddress, 0x00, sizeof(addr_t));
+    104          
+    105            /* populate RAM address from ROM default if it hasn't laready been set
+    106             * using the IOCTL interface.
+    107             */
+    108            if (!sRAMAddressIsSet)
+    109            {
+    110              memcpy(&sMyRAMAddress, &sMyROMAddress, sizeof(addr_t));
+    111              sRAMAddressIsSet = 1;  /* RAM address is now valid */
+    112            }
+    113          
+    114            return;
+    115          }
+    116          
+    117          /******************************************************************************
+    118           * @fn          nwk_getMyAddress
+    119           *
+    120           * @brief       Return a pointer to my address. It comes either from ROM as
+    121           *              set in the configuration file or it was set using the IOCTL
+    122           *              interface -- probably from random bytes.
+    123           *
+    124           * input parameters
+    125           *
+    126           * output parameters
+    127           *
+    128           * @return   pointer to a constant address type object.
+    129           */
+    130          addr_t const *nwk_getMyAddress(void)
+    131          {
+    132            /* This call supports returning a valid pointer before either the
+    133             * initialization or external setting of the address. But caller needs
+    134             * to be careful -- if this routine is called immediately it will return
+    135             * the ROM address. If the application then sets the address using the
+    136             * IOCTL before doing the SMPL_Init() the original pointer is no longer
+    137             * valid as it points to the wrong address.
+    138             */
+    139            return sRAMAddressIsSet ? &sMyRAMAddress : &sMyROMAddress;
+    140          }
+    141          
+    142          /******************************************************************************
+    143           * @fn          nwk_getFWVersion
+    144           *
+    145           * @brief       Return a pointer to the current firmware version string.
+    146           *
+    147           * input parameters
+    148           *
+    149           * output parameters
+    150           *
+    151           * @return   pointer to a constant uint16_t object.
+    152           */
+    153          uint8_t const *nwk_getFWVersion()
+    154          {
+    155            return sVersionInfo.fwVerString;
+    156          }
+    157          
+    158          /******************************************************************************
+    159           * @fn          nwk_getProtocolVersion
+    160           *
+    161           * @brief       Return the current protocol version.
+    162           *
+    163           * input parameters
+    164           *
+    165           * output parameters
+    166           *
+    167           * @return   Protocol version.
+    168           */
+    169          uint8_t nwk_getProtocolVersion(void)
+    170          {
+    171            return sVersionInfo.protocolVersion;
+    172          }
+    173          
+    174          /******************************************************************************
+    175           * @fn          nwk_setMyAddress
+    176           *
+    177           * @brief       Set my address object if it hasn't already been set. This call
+    178           *              is referenced by the IOCTL support used to change the device
+    179           *              address. It is effective only if the address has not already
+    180           *              been set.
+    181           *
+    182           * input parameters
+    183           *
+    184           * @param   addr  - pointer to the address object to be used to set my address.
+    185           *
+    186           * output parameters
+    187           *
+    188           * @return   Returns non-zero if request is respected, otherwise returns 0.
+    189           */
+    190          uint8_t nwk_setMyAddress(addr_t *addr)
+    191          {
+    192            uint8_t rc = 0;
+    193          
+    194            if (!sRAMAddressIsSet)
+    195            {
+    196              memcpy(&sMyRAMAddress, addr, sizeof(addr_t));
+    197              sRAMAddressIsSet = 1;  /* RAM address is now valid */
+    198              rc = 1;
+    199            }
+    200          
+    201            return rc;
+    202          }
+    203          
+    204          /******************************************************************************
+    205           * @fn          nwk_setAPAddress
+    206           *
+    207           * @brief       Set the AP's address. Called after the AP address is gleaned
+    208           *              from the Join reply.
+    209           *
+    210           * input parameters
+    211           *
+    212           * output parameters
+    213           *
+    214           * @return   void
+    215           */
+    216          void nwk_setAPAddress(addr_t *addr)
+    217          {
+    218          
+    219            memcpy((void *)&sAPAddress, (void *)addr, NET_ADDR_SIZE);
+    220          
+    221            return;
+    222          }
+    223          
+    224          /******************************************************************************
+    225           * @fn          nwk_getAPAddress
+    226           *
+    227           * @brief       Get the AP's address.
+    228           *
+    229           * input parameters
+    230           *
+    231           * output parameters
+    232           *
+    233           * @return   Pointer to a constant address object or null if the address has not
+    234           *           yet been set.
+    235           */
+    236          addr_t const *nwk_getAPAddress(void)
+    237          {
+    238            addr_t addr;
+    239          
+    240            memset(&addr, 0x0, sizeof(addr));
+    241          
+    242            return !memcmp(&sAPAddress, &addr, NET_ADDR_SIZE) ? 0 : &sAPAddress;
+    243          }
+    244          
+    245          /******************************************************************************
+    246           * @fn          nwk_getBCastAddress
+    247           *
+    248           * @brief       Get the network broadcast address.
+    249           *
+    250           * input parameters
+    251           *
+    252           * output parameters
+    253           *
+    254           * @return   Pointer to a constant address object.
+    255           */
+    256          addr_t const *nwk_getBCastAddress(void)
+    257          {
+    258            return (addr_t const *)mrfiBroadcastAddr;
+    259          }
+
+   Maximum stack usage in bytes:
+
+     Function               CSTACK
+     --------               ------
+     nwk_getAPAddress           6
+       -> memset                6
+       -> memcmp                6
+     nwk_getBCastAddress        2
+     nwk_getFWVersion           2
+     nwk_getMyAddress           2
+     nwk_getProtocolVersion     2
+     nwk_globalsInit            2
+       -> memset                2
+       -> memset                2
+       -> memcpy                2
+     nwk_setAPAddress           2
+       -> memcpy                2
+     nwk_setMyAddress           2
+       -> memcpy                2
+
+
+   Segment part sizes:
+
+     Function/Label         Bytes
+     --------------         -----
+     sMyROMAddress             4
+     sAPAddress                4
+     sMyRAMAddress             4
+     sRAMAddressIsSet          1
+     sVersionInfo              5
+     nwk_globalsInit          42
+     ?Subroutine0             14
+     nwk_getMyAddress         18
+     nwk_getFWVersion          6
+     nwk_getProtocolVersion    4
+     nwk_setMyAddress         22
+     nwk_setAPAddress         12
+     nwk_getAPAddress         40
+     nwk_getBCastAddress       6
+
+ 
+ 164 bytes in segment CODE
+   9 bytes in segment DATA16_C
+   9 bytes in segment DATA16_Z
+ 
+ 164 bytes of CODE  memory
+   9 bytes of CONST memory
+   9 bytes of DATA  memory
+
+Errors: none
+Warnings: none

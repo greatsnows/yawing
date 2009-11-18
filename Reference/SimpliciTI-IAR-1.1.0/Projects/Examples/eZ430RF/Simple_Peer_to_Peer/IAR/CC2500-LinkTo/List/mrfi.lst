@@ -1,0 +1,384 @@
+###############################################################################
+#                                                                             #
+#                                                       11/May/2009  06:36:05 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+# Time limited license: 29 days left                                          #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\mr #
+#                     fi\mrfi.c                                               #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\mrfi\mrfi.c #
+#                     " -D MRFI_CC2500 -lcN "C:\Texas                         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List\" -o     #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj #
+#                     \" --require_prototypes --debug -D__MSP430F2274__ -e    #
+#                     --double=32 -I "C:\Texas Instruments\SimpliciTI-IAR-1.1 #
+#                     .0\Projects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\.. #
+#                     \..\..\..\..\Components\bsp\" -I "C:\Texas              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\drivers\" -I "C:\Texas Instruments\SimpliciTI-IAR-1. #
+#                     1.0\Projects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\. #
+#                     .\..\..\..\..\Components\bsp\boards\EZ430RF\" -I        #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Co #
+#                     mponents\mrfi\" -I "C:\Texas                            #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk\" -I "C:\Texas                            #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List #
+#                     \mrfi.lst                                               #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj\ #
+#                     mrfi.r43                                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\mrfi\mrfi.c
+      1          /**************************************************************************************************
+      2            Revised:        $Date: 2007-07-06 11:19:00 -0700 (Fri, 06 Jul 2007) $
+      3            Revision:       $Revision: 13579 $
+      4          
+      5            Copyright 2007 Texas Instruments Incorporated.  All rights reserved.
+      6          
+      7            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+      8            the terms of a software license agreement between the user who downloaded the software,
+      9            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     10            "License"). You may not use this Software unless you agree to abide by the terms of the
+     11            License. The License limits your use, and you acknowledge, that the Software may not be
+     12            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     13            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     14            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     15            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     16            perform, display or sell this Software and/or its documentation for any purpose.
+     17          
+     18            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     19            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     20            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     21            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     22            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     23            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     24            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     25            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     26            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     27          
+     28            Should you have any questions regarding your right to use this Software,
+     29            contact Texas Instruments Incorporated at www.TI.com.
+     30          **************************************************************************************************/
+     31          
+     32          /* ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+     33           *   MRFI (Minimal RF Interface)
+     34           *   Top-level code file.
+     35           * ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+     36           */
+     37          
+     38          /* ------------------------------------------------------------------------------------------------
+     39           *                                          Includes
+     40           * ------------------------------------------------------------------------------------------------
+     41           */
+     42          #include "mrfi_defs.h"
+     43          
+     44          
+     45          /* ------------------------------------------------------------------------------------------------
+     46           *                                       C Code Includes
+     47           * ------------------------------------------------------------------------------------------------
+     48           */
+     49          
+     50          /* ----- Radio Family 1 ----- */
+     51          #if (defined MRFI_RADIO_FAMILY1)
+     52          #include "radios/family1/mrfi_radio.c"
+     53          #include "radios/family1/mrfi_spi.c"
+     54          #include "radios/common/mrfi_f1f2.c"
+     55          #include "bsp_external/mrfi_board.c"
+     56          
+     57          /* ----- Radio Family 2 ----- */
+     58          #elif (defined MRFI_RADIO_FAMILY2)
+     59          #include "radios/family2/mrfi_radio.c"
+     60          #include "radios/common/mrfi_f1f2.c"
+     61          
+     62          /* ----- Radio Family 3 ----- */
+     63          #elif (defined MRFI_RADIO_FAMILY3)
+     64          #include "bsp_external/mrfi_board.c"
+     65          #include "radios/family3/mrfi_spi.c"
+     66          #include "radios/family3/mrfi_radio.c"
+     67          
+     68          /* ----- Radio Family 4 ----- */
+     69          #elif (defined MRFI_RADIO_FAMILY4)
+     70          #include "radios/family4/mrfi_radio.c"
+     71          
+     72          /* ----- Radio Family 5 ----- */
+     73          #elif (defined MRFI_RADIO_FAMILY5)
+     74          #include "radios/family5/mrfi_radio.c"
+     75          #include "radios/family5/mrfi_radio_interface.c"
+     76          
+     77          /* ----- Radio Family 6 ----- */
+     78          #elif (defined MRFI_RADIO_FAMILY6)
+     79          #include "radios/family6/mrfi_radio.c"
+     80          
+     81          #else
+     82          #error "ERROR: Radio family is not defined."
+     83          #endif
+     84          
+     85          
+     86          /**************************************************************************************************
+     87           */
+
+   Maximum stack usage in bytes:
+
+     Function                    CSTACK
+     --------                    ------
+     BSP_GpioPort1Isr               12
+       -> MRFI_GpioIsr              12
+     MRFI_DelayMs                    4
+       -> Mrfi_DelayUsec             4
+     MRFI_DisableRxAddrFilter        2
+       -> mrfiSpiWriteReg            2
+     MRFI_EnableRxAddrFilter         2
+       -> mrfiSpiWriteReg            2
+     MRFI_GetRadioState              2
+     MRFI_GpioIsr                    2
+       -> Mrfi_SyncPinRxIsr          2
+     MRFI_Init                       6
+       -> memset                     6
+       -> mrfiSpiInit                6
+       -> Mrfi_DelayUsec             6
+       -> Mrfi_DelayUsec             6
+       -> mrfiSpiWriteReg            6
+       -> mrfiSpiReadReg             6
+       -> mrfiSpiReadReg             6
+       -> mrfiSpiReadReg             6
+       -> mrfiSpiWriteReg            6
+       -> MRFI_SetLogicalChannel     6
+       -> MRFI_SetRFPwr              6
+       -> mrfiSpiCmdStrobe           6
+       ->   Indirect call            6
+       -> Mrfi_DelayUsec             6
+       ->   Indirect call            6
+       -> Mrfi_RxModeOff             6
+       -> memset                     6
+       -> memset                     6
+       -> mrfiSpiWriteReg            6
+     MRFI_PostKillSem                2
+     MRFI_RandomByte                 2
+     MRFI_Receive                    2
+     MRFI_ReplyDelay                 8
+       -> BSP_Delay                  8
+     MRFI_Rssi                       4
+       -> mrfiSpiReadReg             4
+       -> Mrfi_DelayUsec             4
+       -> mrfiSpiReadReg             4
+       -> Mrfi_CalculateRssi         4
+     MRFI_RxAddrIsFiltered           6
+     MRFI_RxIdle                     2
+       -> Mrfi_RxModeOff             2
+     MRFI_RxOn                       2
+       -> Mrfi_RxModeOn              2
+     MRFI_SetLogicalChannel          2
+       -> Mrfi_RxModeOff             2
+       -> mrfiSpiWriteReg            2
+       -> Mrfi_RxModeOn              2
+     MRFI_SetRFPwr                   2
+       -> Mrfi_RxModeOff             2
+       -> mrfiSpiWriteReg            2
+       -> Mrfi_RxModeOn              2
+     MRFI_SetRxAddrFilter            2
+       -> mrfiSpiWriteReg            2
+     MRFI_Sleep                      2
+       -> MRFI_RxIdle                2
+       -> mrfiSpiCmdStrobe           2
+     MRFI_Transmit                  10
+       -> Mrfi_RxModeOff            10
+       -> mrfiSpiWriteTxFifo        10
+       -> mrfiSpiCmdStrobe          10
+       -> mrfiSpiWriteReg           10
+       -> MRFI_RandomByte           10
+       -> Mrfi_DelayUsec            10
+       ->   Indirect call           10
+       -> mrfiSpiReadReg            10
+       -> Mrfi_DelayUsec            10
+       ->   Indirect call           10
+       -> Mrfi_DelayUsec            10
+       ->   Indirect call           10
+       ->   Indirect call           10
+       ->   Indirect call           10
+       -> mrfiSpiCmdStrobe          10
+       -> mrfiSpiWriteReg           10
+       -> Mrfi_RxModeOn             10
+     MRFI_WakeUp                     2
+       -> mrfiSpiWriteReg            2
+       -> mrfiSpiWriteReg            2
+       -> mrfiSpiWriteReg            2
+       -> mrfiSpiCmdStrobe           2
+       -> mrfiSpiCmdStrobe           2
+     Mrfi_CalculateRssi              2
+     Mrfi_DelayUsec                  6
+       -> BSP_Delay                  6
+     Mrfi_RxModeOff                  2
+       -> mrfiSpiCmdStrobe           2
+       -> mrfiSpiCmdStrobe           2
+       -> mrfiSpiCmdStrobe           2
+     Mrfi_RxModeOn                   2
+       -> mrfiSpiCmdStrobe           2
+     Mrfi_SyncPinRxIsr               8
+       -> mrfiSpiReadReg             8
+       -> mrfiSpiReadReg             8
+       -> mrfiSpiReadRxFifo          8
+       -> mrfiSpiCmdStrobe           8
+       ->   Indirect call            8
+       -> mrfiSpiCmdStrobe           8
+       -> mrfiSpiCmdStrobe           8
+       -> memset                     8
+       -> mrfiSpiReadRxFifo          8
+       -> mrfiSpiReadRxFifo          8
+       -> MRFI_RxAddrIsFiltered      8
+       -> Mrfi_CalculateRssi         8
+       -> MRFI_RxCompleteISR         8
+     mrfiSpiCmdStrobe                2
+     mrfiSpiInit                     2
+     mrfiSpiReadReg                  2
+       -> spiRegAccess               2
+     mrfiSpiReadRxFifo               2
+       -> spiBurstFifoAccess         2
+     mrfiSpiWriteReg                 2
+       -> spiRegAccess               2
+     mrfiSpiWriteTxFifo              2
+       -> spiBurstFifoAccess         2
+     spiBurstFifoAccess              2
+     spiRegAccess                    2
+
+
+   Segment part sizes:
+
+     Function/Label                      Bytes
+     --------------                      -----
+     IFG2                                   1
+     P2IN                                   1
+     P2IFG                                  1
+     P2IES                                  1
+     P2IE                                   1
+     P2SEL                                  1
+     P3IN                                   1
+     P3OUT                                  1
+     P3DIR                                  1
+     P3SEL                                  1
+     UCB0CTL0                               1
+     UCB0CTL1                               1
+     UCB0BR0                                1
+     UCB0BR1                                1
+     UCB0RXBUF                              1
+     UCB0TXBUF                              1
+     mrfiRadioCfg                          60
+     mrfiRadioState                         1
+     mrfiIncomingPacket                    24
+     mrfiRndSeed                            1
+     sKillSem                               1
+     sReplyDelayContext                     1
+     sReplyDelayScalar                      2
+     sBackoffHelper                         2
+     ?Subroutine19                         10
+     ?Subroutine12                          8
+     ?Subroutine14                          4
+     ??Subroutine21_0                      10
+     ?Subroutine15                          8
+     ?Subroutine2                           6
+     ?Subroutine16                          8
+     MRFI_Init                            314
+     ?Subroutine3                          16
+     ?Subroutine7                          10
+     ?Subroutine13                         18
+     MRFI_Transmit                        230
+     ?Subroutine17                         14
+     MRFI_Receive                          12
+     Mrfi_SyncPinRxIsr                    188
+     Mrfi_RxModeOn                         20
+     MRFI_RxOn                             18
+     ?Subroutine6                          20
+     Mrfi_RxModeOff                        18
+     ?Subroutine11                         24
+     MRFI_RxIdle                           16
+     MRFI_Sleep                            32
+     MRFI_WakeUp                           66
+     MRFI_GpioIsr                          26
+     MRFI_Rssi                             44
+     Mrfi_CalculateRssi                    40
+     MRFI_RandomByte                       22
+     Mrfi_DelayUsec                        32
+     ?Subroutine9                          12
+     MRFI_DelayMs                          24
+     MRFI_ReplyDelay                       82
+     MRFI_PostKillSem                      12
+     MRFI_GetRadioState                     6
+     mrfiSpiInit                           52
+     mrfiSpiCmdStrobe                      26
+     ?Subroutine0                           8
+     ??Subroutine20_0                       8
+     ?Subroutine4                           4
+     ?Subroutine8                          14
+     ?Subroutine18                         16
+     mrfiSpiReadReg                        24
+     mrfiSpiWriteReg                       18
+     spiRegAccess                          22
+     mrfiSpiWriteTxFifo                    12
+     mrfiSpiReadRxFifo                     10
+     spiBurstFifoAccess                    90
+     mrfiBroadcastAddr                      4
+     mrfiLogicalChanTable                   4
+     mrfiRFPowerTable                       3
+     mrfiRxFilterEnabled                    1
+     mrfiRxFilterAddr                       4
+     MRFI_SetLogicalChannel                18
+     ?Subroutine5                          12
+     MRFI_SetRFPwr                         18
+     MRFI_SetRxAddrFilter                  42
+     MRFI_EnableRxAddrFilter               22
+     MRFI_DisableRxAddrFilter              14
+     MRFI_RxAddrIsFiltered                 62
+     BSP_GpioPort1Isr                      22
+     ??BSP_GpioPort1Isr??INTVEC 6           2
+     ?<Initializer for mrfiRxFilterAddr>    4
+
+ 
+ 1 884 bytes in segment CODE
+    16 bytes in segment DATA16_AN
+    71 bytes in segment DATA16_C
+     4 bytes in segment DATA16_I
+     4 bytes in segment DATA16_ID
+    33 bytes in segment DATA16_Z
+     2 bytes in segment INTVEC
+ 
+ 1 884 bytes of CODE  memory
+    75 bytes of CONST memory (+  2 bytes shared)
+    37 bytes of DATA  memory (+ 16 bytes shared)
+
+Errors: none
+Warnings: none

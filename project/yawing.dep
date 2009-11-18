@@ -1,0 +1,3390 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2281902502</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Obj\TI_CC_spi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_18.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_11.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_08.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_1_vlo.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_10.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_12.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_14.r43</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_13.r43</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_08.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_19.r43</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_09.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_07.c</file>
+      <file>$PROJ_DIR$\include.h</file>
+      <file>$PROJ_DIR$\CC1100-CC2500.h</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_18.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_19.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_18.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_19.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_20.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_temp.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_20.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_06.pbi</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_01.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_10.r43</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_lpm3_vlo.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_nmi.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_09.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_10.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_115k.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_115k_lpm.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_19200.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_19200_2.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_9600.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_05_9600.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_06_9600.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_07_9600.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_08.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_09.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_10.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_11.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_12.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_13.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_14.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_15.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_irda_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_irda_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_irda_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_08.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_09.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_10.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_11.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_12.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_13.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_14.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_15.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_16.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_17.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_08_9600.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_05.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_06.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_07.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_08.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_09.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_10.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_11.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_12.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_13.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_14.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_spi_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_spi_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_05.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_06.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_08.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_11.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_12.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_13.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_05.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_15.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_05.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_09.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_08.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_07.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_06.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_06.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_lpm3_vlo.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_lpm3.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_10.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_hfxtal_nmi.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_hfxtal.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_fll_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_fll_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_clks.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_flashwrite_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_flashwrite_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_flashwrite_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_dco_flashcal.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_temp.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_09.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_12.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_rosc.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_09.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_spi_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_18.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\yawing.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_14.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_07.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_06.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_05.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_16.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_17.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_19.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_20.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_21.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_22.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_06.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_13.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_115k.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_spi_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_09.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_19200_2.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_08.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_08.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_115k_lpm.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_07.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_10.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_9600.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_irda_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_19200.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_12.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_11.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_05_9600.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_15.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_14.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_14.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_irda_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_irda_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_08_9600.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_09.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_10.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_115k_lpm.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_06.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_06_9600.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_07_9600.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_1.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_09.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_05.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_19200.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_19200_2.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_07.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_08.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_10.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_11.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_13.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_14.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_spi_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_05.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_06.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_09.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_10.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_11.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_12.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_13.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_14.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_15.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_16.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_22.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_17.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_18.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_19.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_20.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_temp.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_clks.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_fll_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_fll_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_dco_flashcal.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_flashwrite_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_flashwrite_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_flashwrite_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_hfxtal.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_hfxtal_nmi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_lpm3.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_lpm3_vlo.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_nmi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_05.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_06.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_07.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_08.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_09.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_10.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_rosc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_05.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_07.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_08.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_09.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_10.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_11.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_12.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_13.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_07.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_15.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_16.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_17.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_18.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_19.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_20.pbi</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_1.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_01.pbi</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_1_vlo.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_ta_21.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_05.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_06.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_08.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_09.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_10.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_11.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_12.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_13.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_14.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_tb_15.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_115k.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\msp430x22x4.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_irda_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_irda_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_irda_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_03.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_09.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_spi_10.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_05_9600.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_01_9600.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_06_9600.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_07_9600.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_01.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscia0_uart_08_9600.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_05.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_06.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_07.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_08.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_09.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_10.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_11.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_12.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_13.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_i2c_14.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_uscib0_spi_02.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_05.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_wdt_06.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\yawing.d43</file>
+      <file>$TOOLKIT_DIR$\inc\msp430x22x2.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk430F2274.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_oa_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\CC1100-CC2500.r43</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_10.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_clks.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_rosc.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_05.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_06.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_05.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_06.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_07.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_08.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_09.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_10.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_11.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_12.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_13.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_07.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_06.r43</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_dco_flashcal.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_flashwrite_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_flashwrite_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_flashwrite_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_fll_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_fll_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_hfxtal.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_hfxtal_nmi.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_lpm3.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_07.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_05.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_02.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_01.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_1_vlo.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_1.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_03.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_p1_04.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\CC1100-CC2500.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_04.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_nmi.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_17.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_16.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_15.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\msp430x22x4_adc10_05.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\TI_CC_spi.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_14.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_15.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_16.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_17.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_05.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_06.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_07.c</file>
+      <file>$PROJ_DIR$\TI_CC_CC1100-CC2500.h</file>
+      <file>$PROJ_DIR$\TI_CC_hardware_board.h</file>
+      <file>$PROJ_DIR$\TI_CC_msp430.h</file>
+      <file>$PROJ_DIR$\TI_CC_spi.h</file>
+      <file>$PROJ_DIR$\CC1100-CC2500.c</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\TI_CC_spi.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_20.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_21.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_22.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_01.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_02.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_03.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_04.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_05.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_06.c</file>
+      <file>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_07.c</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 310</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_08.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 232</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_09.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 233</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 98</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_07.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 244</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 129</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_18.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 255</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 126</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_19.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 256</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 135</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_18.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 209</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_19.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 210</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_20.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 211</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 22</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_temp.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 212</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 118</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 353</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_lpm3_vlo.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 223</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 103</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_nmi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 224</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 360</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 225</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 313</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 282</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 169</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_09.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 283</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 170</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 284</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 171</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_115k.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 275</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 147</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_115k_lpm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 153</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 172</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_19200.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 182</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 158</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_19200_2.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 183</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 150</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_01_9600.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 286</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 156</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_05_9600.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 285</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 161</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_06_9600.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 287</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 174</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_07_9600.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 289</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 177</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_08.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 267</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 152</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_09.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 268</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 123</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 269</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 155</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_11.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 270</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 160</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_12.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 271</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 159</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_13.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 272</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 146</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_14.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 273</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 163</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_15.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 274</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 162</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_irda_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 277</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 165</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_irda_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 278</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 157</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_irda_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 279</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 166</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 280</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 167</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_spi_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 281</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 104</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_08.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 245</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 87</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_09.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 246</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 119</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 247</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_11.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 248</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 88</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_12.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 249</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 89</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_13.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 250</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 90</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_14.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 164</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 128</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_15.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 252</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 92</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_16.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 253</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 133</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_17.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 254</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 134</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscia0_uart_08_9600.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 291</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 168</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 95</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 175</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 293</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 124</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 184</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 181</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 295</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 176</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_05.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 296</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 180</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_06.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 297</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 173</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_07.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 298</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 185</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_08.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 299</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 186</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_09.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 300</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 179</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 301</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 187</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_11.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 302</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 188</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_12.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 303</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 120</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_13.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 304</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 189</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 311 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 311 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_i2c_14.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 305</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 190</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 311 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 311 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_spi_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 191</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_uscib0_spi_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 306</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 148</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 290</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 192</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 294</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 193</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 307</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 194</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_05.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 308</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 195</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_wdt_06.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 309</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 196</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\yawing.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 358 0 367</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_1.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 178</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 355</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_1_vlo.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 354</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\yawing.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 312 314 366 365 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 234</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 106</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_clks.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 213</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 113</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 235</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 107</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 236</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 108</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 356</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_p1_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 237</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 357</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_rosc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 238</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 121</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 239</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 122</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 240</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 145</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 241</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 144</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 242</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 132</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_05.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 243</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 131</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_06.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 102</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 130</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_05.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 364</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 349</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_06.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 338</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_07.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 337</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 348</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_08.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 151</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_09.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 199</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 149</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_10.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 200</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_11.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 201</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_12.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 202</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_13.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 203</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_dco_flashcal.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 216</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 117</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_flashwrite_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 217</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 116</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_flashwrite_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 218</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 115</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_flashwrite_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 219</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 114</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_fll_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 214</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 112</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_fll_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 215</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 111</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_hfxtal.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 220</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 110</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_hfxtal_nmi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 221</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 109</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_lpm3.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 222</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 105</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 197</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 352</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 198</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 351</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 359</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 350</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_14.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 204</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_15.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 205</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 363</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_16.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 206</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 362</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_adc10_17.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 208</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 361</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_05.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 229</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 97</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_06.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 230</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 101</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_07.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 231</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 100</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\CC1100-CC2500.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 358</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 314</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14 378 380 276 292 288 381 379 15</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 14 378 380 276 292 288 381 379 15</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 367</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 365</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14 378 380 276 292 288 381 379 15</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 14 378 380 276 292 288 381 379 15</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\TI_CC_spi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 366</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14 378 380 276 292 288 381 379 15</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 14 378 380 276 292 288 381 379 15</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 226</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 93</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 227</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_oa_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 228</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 96</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_20.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 257</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 136</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_21.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 261</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 137</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_ta_22.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 207</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 138</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_01.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 259</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 139</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_02.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 262</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 141</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_03.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 263</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 140</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_04.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 264</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 142</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_05.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 265</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 91</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_06.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 266</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 143</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\MSP430F22x2, MSP430F22x4 Code Examples\C\msp430x22x4_tb_07.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 251</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 154</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 276 292 288</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 276 292 288</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

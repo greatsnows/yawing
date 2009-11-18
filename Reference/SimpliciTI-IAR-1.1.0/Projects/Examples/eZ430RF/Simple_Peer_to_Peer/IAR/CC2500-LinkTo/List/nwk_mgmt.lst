@@ -1,0 +1,453 @@
+###############################################################################
+#                                                                             #
+#                                                       11/May/2009  06:36:09 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+# Time limited license: 29 days left                                          #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\si #
+#                     mpliciti\nwk_applications\nwk_mgmt.c                    #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\ #
+#                     nwk_applications\nwk_mgmt.c" -D MRFI_CC2500 -lcN        #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Lis #
+#                     t\" -o "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proje #
+#                     cts\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-Lin #
+#                     kTo\Obj\" --require_prototypes --debug                  #
+#                     -D__MSP430F2274__ -e --double=32 -I "C:\Texas           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proj #
+#                     ects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\ #
+#                     ..\..\Components\bsp\drivers\" -I "C:\Texas             #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\boards\EZ430RF\" -I "C:\Texas                        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\m #
+#                     rfi\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Pro #
+#                     jects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\.. #
+#                     \..\..\Components\SimpliciTI\nwk\" -I "C:\Texas         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List #
+#                     \nwk_mgmt.lst                                           #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj\ #
+#                     nwk_mgmt.r43                                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk_applications\nwk_mgmt.c
+      1          /**************************************************************************************************
+      2            Filename:       nwk_mgmt.c
+      3            Revised:        $Date: 2009-01-06 15:45:54 -0800 (Tue, 06 Jan 2009) $
+      4            Revision:       $Revision: 18697 $
+      5            Author:         $Author: lfriedman $
+      6          
+      7            Description:    This file supports the SimpliciTI Mgmt network application.
+      8          
+      9            Copyright 2007-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     12            the terms of a software license agreement between the user who downloaded the software,
+     13            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     14            "License"). You may not use this Software unless you agree to abide by the terms of the
+     15            License. The License limits your use, and you acknowledge, that the Software may not be
+     16            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     18            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     19            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     20            perform, display or sell this Software and/or its documentation for any purpose.
+     21          
+     22            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     23            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     24            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     25            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     26            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     27            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     28            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     29            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     30            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     31          
+     32            Should you have any questions regarding your right to use this Software,
+     33            contact Texas Instruments Incorporated at www.TI.com.
+     34          **************************************************************************************************/
+     35          
+     36          
+     37          /******************************************************************************
+     38           * INCLUDES
+     39           */
+     40          #include <string.h>
+     41          #include "bsp.h"
+     42          #include "mrfi.h"
+     43          #include "nwk_types.h"
+     44          #include "nwk_api.h"
+     45          #include "nwk_frame.h"
+     46          #include "nwk.h"
+     47          #include "nwk_mgmt.h"
+     48          #include "nwk_join.h"
+     49          #include "nwk_globals.h"
+     50          #include "nwk_QMgmt.h"
+     51          
+     52          /******************************************************************************
+     53           * MACROS
+     54           */
+     55          
+     56          /******************************************************************************
+     57           * CONSTANTS AND DEFINES
+     58           */
+     59          
+     60          /******************************************************************************
+     61           * TYPEDEFS
+     62           */
+     63          
+     64          /******************************************************************************
+     65           * LOCAL VARIABLES
+     66           */
+     67          #ifndef ACCESS_POINT
+     68          static addr_t const *sAPAddr = NULL;
+     69          #else
+     70          static uint8_t sSFMarker[NUM_STORE_AND_FWD_CLIENTS] = {0};
+     71          #endif
+     72          
+     73          static volatile uint8_t sTid = 0;
+     74          
+     75          /******************************************************************************
+     76           * LOCAL FUNCTIONS
+     77           */
+     78          static void  smpl_send_mgmt_reply(mrfiPacket_t *);
+     79          #ifdef ACCESS_POINT
+     80          static void  send_poll_reply(mrfiPacket_t *);
+     81          #endif
+     82          
+     83          /******************************************************************************
+     84           * GLOBAL VARIABLES
+     85           */
+     86          
+     87          /******************************************************************************
+     88           * GLOBAL FUNCTIONS
+     89           */
+     90          
+     91          /******************************************************************************
+     92           * @fn          nwk_mgmtInit
+     93           *
+     94           * @brief       Initialize Management functions.
+     95           *
+     96           * input parameters
+     97           *
+     98           * output parameters
+     99           *
+    100           * @return   void
+    101           */
+    102          
+    103          void nwk_mgmtInit(void)
+    104          {
+    105            sTid = MRFI_RandomByte();
+    106          
+    107          #ifdef ACCESS_POINT
+    108            memset(&sSFMarker, 0x0, sizeof(sSFMarker));
+    109          #endif
+    110          
+    111            return;
+    112          }
+    113          
+    114          /******************************************************************************
+    115           * @fn          nwk_processMgmt
+    116           *
+    117           * @brief       Process Management frame. Just save the frame for the Management
+    118           *              app it it is a reply. If it isn't a reply, send the reply in this
+    119           *              thread.
+    120           *
+    121           * input parameters
+    122           * @param   frame   - pointer to frame to be processed
+    123           *
+    124           * output parameters
+    125           *
+    126           * @return   Keep frame for application, release frame, or replay frame.
+    127           */
+    128          fhStatus_t nwk_processMgmt(mrfiPacket_t *frame)
+    129          {
+    130            fhStatus_t   rc;
+    131            uint8_t      replyType;
+    132          
+    133            /* If we sent this then this is the reply. Validate the
+    134             * packet for reception by client app. If we didn't send
+    135             * it then we are the target. send the reply.
+    136             */
+    137            if (SMPL_MY_REPLY == (replyType=nwk_isValidReply(frame, sTid, MB_APP_INFO_OS, MB_TID_OS)))
+    138            {
+    139              /* It's a match and it's a reply. Validate the received packet by
+    140               * returning a 1 so it can be received by the client app.
+    141               */
+    142              MRFI_PostKillSem();
+    143              rc = FHS_KEEP;
+    144            }
+    145          #if !defined( END_DEVICE )
+    146            else if (SMPL_A_REPLY == replyType)
+    147            {
+    148              /* no match. if i'm not an ED this is a reply that should be passed on. */
+    149              rc = FHS_REPLAY;
+    150            }
+    151          #endif  /* !END_DEVICE */
+    152            else
+    153            {
+    154              /* no, we didn't send it. send reply if it's intended for us */
+    155              if (!memcmp(MRFI_P_DST_ADDR(frame), nwk_getMyAddress(), NET_ADDR_SIZE))
+    156              {
+    157                smpl_send_mgmt_reply(frame);
+    158          
+    159                /* we're done with the frame. */
+    160                rc = FHS_RELEASE;
+    161              }
+    162              else
+    163              {
+    164                rc = FHS_REPLAY;
+    165              }
+    166            }
+    167          
+    168            (void) replyType;  /* keep compiler happy */
+    169          
+    170            return rc;
+    171          }
+    172          
+    173          /******************************************************************************
+    174           * @fn          smpl_send_mgmt_reply
+    175           *
+    176           * @brief       Send appropriate reply to Management frame.
+    177           *
+    178           * input parameters
+    179           * @param  frame  - Pointer to frame for which reply required.
+    180           *
+    181           * output parameters
+    182           *
+    183           * @return   void
+    184           */
+    185          static void smpl_send_mgmt_reply(mrfiPacket_t *frame)
+    186          {
+    187          #ifdef ACCESS_POINT
+    188            /* what kind of management frame is this? */
+    189            switch (*(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+MB_APP_INFO_OS))
+    190            {
+    191              case MGMT_REQ_POLL:
+    192                send_poll_reply(frame);
+    193                break;
+    194          
+    195              default:
+    196                break;
+    197            }
+    198          #endif  /* ACCESS_POINT */
+    199            return;
+    200          }
+    201          
+    202          
+    203          #ifdef ACCESS_POINT
+    204          /******************************************************************************
+    205           * @fn          send_poll_reply
+    206           *
+    207           * @brief       Send reply to polling frame.
+    208           *
+    209           * input parameters
+    210           * @param  frame  - Pointer to frame for which reply required.
+    211           *
+    212           * output parameters
+    213           *
+    214           * @return   void
+    215           */
+    216          static void send_poll_reply(mrfiPacket_t *frame)
+    217          {
+    218            uint8_t         msgtid = *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+MB_TID_OS);
+    219            frameInfo_t    *pOutFrame;
+    220            sfClientInfo_t *pClientInfo;
+    221            uint8_t         loc;
+    222          
+    223            /* Make sure this guy is really a client. We can tell from the source address. */
+    224            if (!(pClientInfo=nwk_isSandFClient(MRFI_P_SRC_ADDR(frame), &loc)))
+    225            {
+    226              /* TODO: maybe send an error frame? */
+    227              return;
+    228            }
+    229          
+    230            /* If we have to resync the TID then do it based on the first
+    231             * poll frame we see
+    232            */
+    233            if (!sSFMarker[loc])
+    234            {
+    235              /* If the marker flag is null then it has been initialized, i.e.,
+    236               * there has been a reset. In this case infer that we need to update
+    237               * a (probably) stale last TID. The test will always be true the first
+    238               * time through after a client is established even when an NV restore
+    239               * did not take place but this does no harm.
+    240               */
+    241              pClientInfo->lastTID = msgtid;
+    242              sSFMarker[loc]       = 1;
+    243            }
+    244            /* If we've seen this poll frame before ignore it. Otherwise we
+    245             * may send a stored frame when we shouldn't.
+    246             */
+    247            else if (nwk_checkAppMsgTID(pClientInfo->lastTID, msgtid))
+    248            {
+    249              pClientInfo->lastTID = msgtid;
+    250            }
+    251            else
+    252            {
+    253              return;
+    254            }
+    255          
+    256            if (pOutFrame = nwk_getSandFFrame(frame, M_POLL_PORT_OS))
+    257            {
+    258              /* We need to adjust the order in the queue in this case. Currently
+    259               * we know it is in the input queue and that this adjustment is safe
+    260               * because we're in an ISR thread. This is a fragile fix, though, and
+    261               * should be revisited when time permits.
+    262               */
+    263              nwk_QadjustOrder(INQ, pOutFrame->orderStamp);
+    264          
+    265              /* reset hop count... */
+    266              PUT_INTO_FRAME(MRFI_P_PAYLOAD(&pOutFrame->mrfiPkt), F_HOP_COUNT, MAX_HOPS_FROM_AP);
+    267              /* It's gonna be a forwarded frame. */
+    268              PUT_INTO_FRAME(MRFI_P_PAYLOAD(&pOutFrame->mrfiPkt), F_FWD_FRAME, 0x80);
+    269          
+    270              nwk_sendFrame(pOutFrame, MRFI_TX_TYPE_FORCED);
+    271            }
+    272            else
+    273            {
+    274              nwk_SendEmptyPollRspFrame(frame);
+    275            }
+    276          
+    277            return;
+    278          }
+    279          
+    280          /******************************************************************************
+    281           * @fn          nwk_resetSFMarker
+    282           *
+    283           * @brief       Reset S&F cklient marker so the TIDs resync.
+    284           *
+    285           * input parameters
+    286           * @param  idx  - index of the client that should be reset.
+    287           *
+    288           * output parameters
+    289           *
+    290           * @return   void
+    291           */
+    292          void nwk_resetSFMarker(uint8_t idx)
+    293          {
+    294            sSFMarker[idx] = 0;
+    295          
+    296            return;
+    297          }
+    298          
+    299          #else  /* ACCESS_POINT */
+    300          
+    301          /******************************************************************************
+    302           * @fn          nwk_poll
+    303           *
+    304           * @brief       Poll S&F server for any waiting frames.
+    305           *
+    306           * input parameters
+    307           * @param  port  - Port on peer.
+    308           * @param  addr  - SimpliciTI address of peer.
+    309           *
+    310           * output parameters
+    311           *
+    312           * @return   SMPL_SUCCESS
+    313           *           SMPL_NO_AP_ADDRESS - We don't know Access Point's address
+    314           *           SMPL_NOMEM         - no room in output frame queue
+    315           *           SMPL_TX_CCA_FAIL   - CCA failure
+    316           */
+    317          smplStatus_t nwk_poll(uint8_t port, uint8_t *addr)
+    318          {
+    319            uint8_t        msg[MGMT_POLL_FRAME_SIZE];
+    320            ioctlRawSend_t send;
+    321          
+    322            msg[MB_APP_INFO_OS] = MGMT_REQ_POLL;
+    323            msg[MB_TID_OS]      = sTid;
+    324            msg[M_POLL_PORT_OS] = port;
+    325            memcpy(msg+M_POLL_ADDR_OS, addr, NET_ADDR_SIZE);
+    326          
+    327            /* it's OK to increment the TID here because the reply will not be
+    328             * matched based on this number. The reply to the poll comes back
+    329             * to the client port, not the Management port.
+    330             */
+    331            sTid++;
+    332          
+    333            if (!sAPAddr)
+    334            {
+    335              sAPAddr = nwk_getAPAddress();
+    336              if (!sAPAddr)
+    337              {
+    338                return SMPL_NO_AP_ADDRESS;
+    339              }
+    340            }
+    341            send.addr = (addr_t *)sAPAddr;
+    342            send.msg  = msg;
+    343            send.len  = sizeof(msg);
+    344            send.port = SMPL_PORT_MGMT;
+    345          
+    346            return SMPL_Ioctl(IOCTL_OBJ_RAW_IO, IOCTL_ACT_WRITE, &send);
+    347          }
+    348          
+    349          #endif /* ACCESS_POINT */
+
+   Maximum stack usage in bytes:
+
+     Function              CSTACK
+     --------              ------
+     nwk_mgmtInit              2
+       -> MRFI_RandomByte      2
+     nwk_poll                 16
+       -> memcpy              16
+       -> nwk_getAPAddress    16
+       -> SMPL_Ioctl          16
+     nwk_processMgmt           4
+       -> nwk_isValidReply     4
+       -> MRFI_PostKillSem     4
+       -> nwk_getMyAddress     4
+       -> memcmp               4
+
+
+   Segment part sizes:
+
+     Function/Label  Bytes
+     --------------  -----
+     sAPAddr            2
+     sTid               1
+     nwk_mgmtInit      10
+     nwk_processMgmt   58
+     nwk_poll         104
+
+ 
+ 172 bytes in segment CODE
+   3 bytes in segment DATA16_Z
+ 
+ 172 bytes of CODE memory
+   3 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,993 @@
+###############################################################################
+#                                                                             #
+#                                                       13/May/2009  06:55:11 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\si #
+#                     mpliciti\nwk\nwk_api.c                                  #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\ #
+#                     nwk\nwk_api.c" -D MRFI_CC2500 -lcN "C:\Texas            #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\List\"    #
+#                     -o "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkLis #
+#                     ten\Obj\" --require_prototypes --debug                  #
+#                     -D__MSP430F2274__ -e --double=32 -I "C:\Texas           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proj #
+#                     ects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\ #
+#                     ..\..\Components\bsp\drivers\" -I "C:\Texas             #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\boards\EZ430RF\" -I "C:\Texas                        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\m #
+#                     rfi\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Pro #
+#                     jects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\.. #
+#                     \..\..\Components\SimpliciTI\nwk\" -I "C:\Texas         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     List\nwk_api.lst                                        #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     Obj\nwk_api.r43                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk\nwk_api.c
+      1          /**************************************************************************************************
+      2            Filename:       nwk_api.c
+      3            Revised:        $Date: 2009-01-28 18:27:38 -0800 (Wed, 28 Jan 2009) $
+      4            Revision:       $Revision: 18875 $
+      5            Author:         $Author: lfriedman $
+      6          
+      7            Description:    This file supports the SimpliciTI appliction layer API.
+      8          
+      9            Copyright 2007-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     12            the terms of a software license agreement between the user who downloaded the software,
+     13            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     14            "License"). You may not use this Software unless you agree to abide by the terms of the
+     15            License. The License limits your use, and you acknowledge, that the Software may not be
+     16            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     18            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     19            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     20            perform, display or sell this Software and/or its documentation for any purpose.
+     21          
+     22            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     23            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     24            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     25            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     26            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     27            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     28            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     29            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     30            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     31          
+     32            Should you have any questions regarding your right to use this Software,
+     33            contact Texas Instruments Incorporated at www.TI.com.
+     34          **************************************************************************************************/
+     35          
+     36          /******************************************************************************
+     37           * INCLUDES
+     38           */
+     39          
+     40          #include <string.h>
+     41          #include "bsp.h"
+     42          #include "mrfi.h"
+     43          #include "nwk_types.h"
+     44          #include "nwk_api.h"
+     45          #include "nwk_frame.h"
+     46          #include "nwk.h"
+     47          #include "nwk_app.h"
+     48          #include "mrfi.h"
+     49          #include "nwk_globals.h"
+     50          #include "nwk_freq.h"
+     51          
+     52          /******************************************************************************
+     53           * MACROS
+     54           */
+     55          
+     56          /******************************************************************************
+     57           * CONSTANTS AND DEFINES
+     58           */
+     59          
+     60          /* These defines are in support an application listening for a link frame to
+     61           * terminate after some amount of time. The intention is that this guard be
+     62           * the exception. The intention of the SimpliciTI design is that the
+     63           * temporal contiguity between the listen and the reception of the link frame
+     64           * from the peer be very tight. The SMPL_LinkListen() should be termninated
+     65           * by the reception of the link frame. But in case it does not receive the frame
+     66           * the support below allows intervention by the application.
+     67           */
+     68          
+     69          /* The intention is for user to modify just the following single value */
+     70          #define LINKLISTEN_MILLISECONDS_2_WAIT    (5000)
+     71          
+     72          #define LINKLISTEN_POLL_PERIOD_MS         (10)
+     73          #define LINKLISTEN_POLL_COUNT             ( (LINKLISTEN_MILLISECONDS_2_WAIT) / (LINKLISTEN_POLL_PERIOD_MS) )
+     74          
+     75          /******************************************************************************
+     76           * TYPEDEFS
+     77           */
+     78          
+     79          /******************************************************************************
+     80           * LOCAL VARIABLES
+     81           */
+     82          static uint8_t sInit_done = 0;
+     83          
+     84          /******************************************************************************
+     85           * LOCAL FUNCTIONS
+     86           */
+     87          static uint8_t ioctlPreInitAccessIsOK(ioctlObject_t);
+     88          
+     89          /******************************************************************************
+     90           * GLOBAL VARIABLES
+     91           */
+     92          
+     93          /******************************************************************************
+     94           * GLOBAL FUNCTIONS
+     95           */
+     96          
+     97          /***********************************************************************************
+     98           * @fn          SMPL_Init
+     99           *
+    100           * @brief       Initialize the SimpliciTI stack.
+    101           *
+    102           * input parameters
+    103           * @param   f  - Pointer to call back function. Function called by NWK when
+    104           *               user application frame received. The callback is done in the
+    105           *               ISR thread. Argument is Link ID associated with frame. Function
+    106           *               returns 0 if frame is to be kept by NWK, otherwise 1. Frame
+    107           *               should be kept if application will do a SMPL_Receive() in the
+    108           *               user thread (recommended). Pointer may be NULL.
+    109           *
+    110           * output parameters
+    111           *
+    112           * @return   Status of operation:
+    113           *             SMPL_SUCCESS
+    114           *             SMPL_NO_JOIN     No Join reply. AP possibly not yet up.
+    115           *             SMPL_NO_CHANNEL  Only if Frequency Agility enabled. Channel scan
+    116           *                              failed. AP possibly not yet up.
+    117           */
+    118          smplStatus_t SMPL_Init(uint8_t (*f)(linkID_t))
+    119          {
+    120            smplStatus_t rc;
+    121          
+    122            if (!sInit_done)
+    123            {
+    124              /* set up radio. */
+    125              MRFI_Init();
+    126          
+    127              /* initialize network */
+    128              if ((rc=nwk_nwkInit(f)) != SMPL_SUCCESS)
+    129              {
+    130                return rc;
+    131              }
+    132          
+    133              MRFI_WakeUp();
+    134          #if defined( FREQUENCY_AGILITY )
+    135              {
+    136                freqEntry_t chan;
+    137          
+    138                chan.logicalChan = 0;
+    139                /* ok to set default channel explicitly now that MRFI initialized. */
+    140                nwk_setChannel(&chan);
+    141              }
+    142          #endif
+    143              /* don't turn Rx on if we're an end device that isn't always on. */
+    144          #if !defined( END_DEVICE )
+    145              MRFI_RxOn();
+    146          #endif
+    147          
+    148          #if defined( END_DEVICE )
+    149              /* All except End Devices are in promiscuous mode */
+    150              MRFI_SetRxAddrFilter((uint8_t *)nwk_getMyAddress());
+    151              MRFI_EnableRxAddrFilter();
+    152          #endif
+    153            }
+    154            sInit_done = 1;
+    155          
+    156            /* Join. if no AP or Join fails that status is returned. */
+    157            rc = nwk_join();
+    158          
+    159            return rc;
+    160          }
+    161          
+    162          /******************************************************************************
+    163           * @fn          SMPL_LinkListen
+    164           *
+    165           * @brief       Listen for a link frame from a 'client' device.
+    166           *
+    167           * input parameters
+    168           *
+    169           * output parameters
+    170           * @param   linkID     - pointer to Link ID to be used by application to
+    171           *                       read and write to the linked peer.
+    172           *
+    173           * @return   status of operation.
+    174           *             SMPL_SUCCESS
+    175           *             SMPL_TIMEOUT  No link frame received during listen interval.
+    176          *                            Interval set in #defines above. linkID not valid.
+    177           *
+    178           */
+    179          
+    180          smplStatus_t SMPL_LinkListen(linkID_t *linkID)
+    181          {
+    182            uint8_t  radioState = MRFI_GetRadioState();
+    183            uint16_t i;
+    184            linkID_t locLinkID;
+    185          
+    186            /* Set the context. We want to reject any link frames received if
+    187             * we're not listening. For example if we're an AP we are in
+    188             * promiscuous mode and we'll see any broadcast link frames.
+    189             */
+    190            nwk_setListenContext(LINK_LISTEN_ON);
+    191          
+    192            NWK_CHECK_FOR_SETRX(radioState);
+    193          
+    194            for (i=0; i<LINKLISTEN_POLL_COUNT; ++i)
+    195            {
+    196              /* check the semaphore. local port is assigned when the reply is sent. */
+    197              if ((locLinkID=nwk_getLocalLinkID()))
+    198              {
+    199                break;
+    200              }
+    201              NWK_DELAY(LINKLISTEN_POLL_PERIOD_MS);
+    202            }
+    203          
+    204            NWK_CHECK_FOR_RESTORE_STATE(radioState);
+    205          
+    206            /* If the listen is terminated without hearing a message and setting a
+    207             * link ID the listen context must be explicitly turned off.
+    208             */
+    209            if (!(locLinkID))
+    210            {
+    211              nwk_setListenContext(LINK_LISTEN_OFF);
+    212              return SMPL_TIMEOUT;
+    213            }
+    214          
+    215            *linkID = locLinkID;
+    216          
+    217            return SMPL_SUCCESS;
+    218          }
+    219          
+    220          /******************************************************************************
+    221           * @fn          SMPL_Send
+    222           *
+    223           * @brief       Send a message to a peer application. Old API kept for
+    224           *              backward compatibility. Calls the new SMPL_SendOpt() with
+    225           *              no options.
+    226           *
+    227           * input parameters
+    228           * @param   lid     - Link ID (port) from application
+    229           * @param   msg     - pointer to message from app to be sent
+    230           * @param   len     - length of enclosed message
+    231           *
+    232           * output parameters
+    233           *
+    234           * @return   Status of operation. On a filaure the frame buffer is discarded
+    235           *           and the Send call must be redone by the app.
+    236           *             SMPL_SUCCESS
+    237           *             SMPL_BAD_PARAM    No valid Connection Table entry for Link ID
+    238           *                               Data in Connection Table entry bad
+    239           *                               No message or message too long
+    240           *             SMPL_NOMEM        No room in output frame queue
+    241           *             SMPL_TX_CCA_FAIL  CCA failure.
+    242           */
+    243          smplStatus_t SMPL_Send(linkID_t lid, uint8_t *msg, uint8_t len)
+    244          {
+    245            return SMPL_SendOpt(lid, msg, len, SMPL_TXOPTION_NONE);
+    246          }
+    247          
+    248          /******************************************************************************
+    249           * @fn          SMPL_SendOpt
+    250           *
+    251           * @brief       Send a message to a peer application.
+    252           *
+    253           * input parameters
+    254           * @param   lid     - Link ID (port) from application
+    255           * @param   msg     - pointer to message from app to be sent
+    256           * @param   len     - length of enclosed message
+    257           * @param   options - Transmit options (bit map)
+    258           *
+    259           * output parameters
+    260           *
+    261           * @return   Status of operation. On a filaure the frame buffer is discarded
+    262           *           and the Send call must be redone by the app.
+    263           *             SMPL_SUCCESS
+    264           *             SMPL_BAD_PARAM    No valid Connection Table entry for Link ID
+    265           *                               Data in Connection Table entry bad
+    266           *                               No message or message too long
+    267           *             SMPL_NOMEM        No room in output frame queue
+    268           *             SMPL_TX_CCA_FAIL  CCA failure.
+    269           *             SMPL_NO_ACK       If application auto acknowledgement enabled
+    270           *                               and no acknowledgement is received
+    271           */
+    272          smplStatus_t SMPL_SendOpt(linkID_t lid, uint8_t *msg, uint8_t len, txOpt_t options)
+    273          {
+    274            frameInfo_t  *pFrameInfo;
+    275            connInfo_t   *pCInfo     = nwk_getConnInfo(lid);
+    276            smplStatus_t  rc         = SMPL_BAD_PARAM;
+    277            uint8_t       radioState = MRFI_GetRadioState();
+    278            uint8_t       ackreq     = 0;
+    279          #if defined(ACCESS_POINT)
+    280            uint8_t  loc;
+    281          #endif
+    282          
+    283            /* we have the connection info for this Link ID. make sure it is valid. */
+    284             if (!pCInfo || ((rc=nwk_checkConnInfo(pCInfo, CHK_TX)) != SMPL_SUCCESS))
+    285            {
+    286              return rc;
+    287            }
+    288          
+    289            /* parameter sanity check... */
+    290            if (!msg || (len > MAX_APP_PAYLOAD))
+    291            {
+    292              return rc;
+    293            }
+    294          
+    295            /* Build an outgoing message frame destined for the port from the
+    296             * connection info using the destination address also from the
+    297             * connection info.
+    298             */
+    299            if (SMPL_TXOPTION_NONE == options)
+    300            {
+    301              pFrameInfo = nwk_buildFrame(pCInfo->portTx, msg, len, pCInfo->hops2target);
+    302            }
+    303          #if defined(APP_AUTO_ACK)
+    304            else if (options & SMPL_TXOPTION_ACKREQ)
+    305            {
+    306              if (SMPL_LINKID_USER_UUD != lid)
+    307              {
+    308                pFrameInfo = nwk_buildAckReqFrame(pCInfo->portTx, msg, len, pCInfo->hops2target, &pCInfo->ackTID);
+    309                ackreq     = 1;
+    310              }
+    311              else
+    312              {
+    313                /* can't request an ack on the UUD link ID */
+    314                return SMPL_BAD_PARAM;
+    315              }
+    316            }
+    317          #endif  /* APP_AUTO_ACK */
+    318            else
+    319            {
+    320              return SMPL_BAD_PARAM;
+    321            }
+    322          
+    323            if (!pFrameInfo)
+    324            {
+    325              return SMPL_NOMEM;
+    326            }
+    327            memcpy(MRFI_P_DST_ADDR(&pFrameInfo->mrfiPkt), pCInfo->peerAddr, NET_ADDR_SIZE);
+    328          
+    329          #if defined(SMPL_SECURE)
+    330            {
+    331              uint32_t *pUL = 0;
+    332          
+    333              if (pCInfo->thisLinkID != SMPL_LINKID_USER_UUD)
+    334              {
+    335                pUL = &pCInfo->connTxCTR;
+    336              }
+    337              nwk_setSecureFrame(&pFrameInfo->mrfiPkt, len, pUL);
+    338            }
+    339          #endif  /* SMPL_SECURE */
+    340          
+    341          #if defined(ACCESS_POINT)
+    342            /* If we are an AP trying to send to a polling device, don't do it.
+    343             * See if the target is a store-and-forward client.
+    344             */
+    345            if (nwk_isSandFClient(MRFI_P_DST_ADDR(&pFrameInfo->mrfiPkt), &loc))
+    346            {
+    347               pFrameInfo->fi_usage = FI_INUSE_UNTIL_FWD;
+    348               return SMPL_SUCCESS;
+    349            }
+    350            else
+    351          #endif  /* ACCESS_POINT */
+    352            {
+    353              rc = nwk_sendFrame(pFrameInfo, MRFI_TX_TYPE_CCA);
+    354            }
+    355          
+    356          #if !defined(APP_AUTO_ACK)
+    357            /* save a little code space with this #if */
+    358            (void) ackreq;    /* keep compiler happy */
+    359            return rc;
+    360          #else
+    361            /* we're done if the send failed or no ack requested. */
+    362            if (SMPL_SUCCESS != rc || !ackreq)
+    363            {
+    364              return rc;
+    365            }
+    366          
+    367            NWK_CHECK_FOR_SETRX(radioState);
+    368            NWK_REPLY_DELAY();
+    369            NWK_CHECK_FOR_RESTORE_STATE(radioState);
+    370          
+    371            {
+    372              bspIState_t intState;
+    373          
+    374              /* If the saved TID hasn't been reset then we never got the ack. */
+    375              BSP_ENTER_CRITICAL_SECTION(intState);
+    376              if (pCInfo->ackTID)
+    377              {
+    378                pCInfo->ackTID = 0;
+    379                rc = SMPL_NO_ACK;
+    380              }
+    381              BSP_EXIT_CRITICAL_SECTION(intState);
+    382            }
+    383          
+    384            return rc;
+    385          #endif  /* APP_AUTO_ACK */
+    386          }
+    387          
+    388          /**************************************************************************************
+    389           * @fn          SMPL_Receive
+    390           *
+    391           * @brief       Receive a message from a peer application.
+    392           *
+    393           * input parameters
+    394           * @param   lid     - Link ID (port) from application
+    395           *
+    396           *
+    397           * output parameters
+    398           * @param   msg     - pointer to where received message should be copied.
+    399           *                    buffer should be of size == MAX_APP_PAYLOAD
+    400           * @param   len     - pointer to receive length of received message
+    401           *
+    402           * @return    Status of operation.
+    403           *            Caller should not use the value returned in 'len' to decide
+    404           *            whether there is a frame or not. It could be useful to the
+    405           *            Caller to distinguish between no frame and a frame with no data.
+    406           *            For example, in the polling case a frame with no application payload
+    407           *            is the way the AP conveys that there are no frames waiting.
+    408           *
+    409           *              SMPL_SUCCESS
+    410           *
+    411           *              SMPL_BAD_PARAM  No valid Connection Table entry for Link ID
+    412           *                              Data in Connection Table entry bad
+    413           *              SMPL_NO_FRAME   No frame received.
+    414           *              SMPL_NO_PAYLOAD Frame received with no payload (not necessarily
+    415           *                              an error and could be deduced by application
+    416           *                              because the returned length will be 0)
+    417           *
+    418           *            Polling device only:
+    419           *
+    420           *              SMPL_TIMEOUT        No response from Access Point
+    421           *              SMPL_NO_AP_ADDRESS  Access Point address unknown
+    422           *              SMPL_TX_CCA_FAIL    Could not send poll frame
+    423           *              SMPL_NOMEM          No memory in output frame queue
+    424           *              SMPL_NO_CHANNEL     Frequency Agility enabled and could not find channel
+    425           */
+    426          smplStatus_t SMPL_Receive(linkID_t lid, uint8_t *msg, uint8_t *len)
+    427          {
+    428            connInfo_t  *pCInfo = nwk_getConnInfo(lid);
+    429            smplStatus_t rc = SMPL_BAD_PARAM;
+    430            rcvContext_t rcv;
+    431          
+    432            if (!pCInfo || ((rc=nwk_checkConnInfo(pCInfo, CHK_RX)) != SMPL_SUCCESS))
+    433            {
+    434              return rc;
+    435            }
+    436          
+    437            rcv.type  = RCV_APP_LID;
+    438            rcv.t.lid = lid;
+    439          
+    440          #if defined(RX_POLLS)
+    441            {
+    442              uint8_t numChans  = 1;
+    443          #if defined(FREQUENCY_AGILITY)
+    444              freqEntry_t chans[NWK_FREQ_TBL_SIZE];
+    445              uint8_t     scannedB4 = 0;
+    446          #endif
+    447          
+    448              do
+    449              {
+    450                uint8_t radioState = MRFI_GetRadioState();
+    451          
+    452                /* I'm polling. Do the poll to stimulate the sending of a frame. If the
+    453                 * frame has application length of 0 it means there were no frames.  If
+    454                 * no reply is received infer that the channel is changed. We then need
+    455                 * to scan and then retry the poll on each channel returned.
+    456                 */
+    457                if (SMPL_SUCCESS != (rc=nwk_poll(pCInfo->portRx, pCInfo->peerAddr)))
+    458                {
+    459                  /* for some reason couldn't send the poll out. */
+    460                  return rc;
+    461                }
+    462          
+    463                /* do this before code block below which may reset it. */
+    464                numChans--;
+    465          
+    466                /* Wait until there's a frame. if the len is 0 then return SMPL_NO_FRAME
+    467                 * to the caller. In the poll case the AP always sends something.
+    468                 */
+    469                NWK_CHECK_FOR_SETRX(radioState);
+    470                NWK_REPLY_DELAY();
+    471                NWK_CHECK_FOR_RESTORE_STATE(radioState);
+    472          
+    473                /* TODO: deal with pending */
+    474                rc = nwk_retrieveFrame(&rcv, msg, len, 0, 0);
+    475          
+    476          #if defined(FREQUENCY_AGILITY)
+    477                if (SMPL_SUCCESS == rc)
+    478                {
+    479                  /* we received something... */
+    480                  return (*len) ? SMPL_SUCCESS : SMPL_NO_PAYLOAD;
+    481                }
+    482          
+    483                /* No reply. scan for other channel(s) if we haven't already. Then set
+    484                 * one and try again.
+    485                 */
+    486                if (!scannedB4)
+    487                {
+    488                  numChans  = nwk_scanForChannels(chans);
+    489                  scannedB4 = 1;
+    490                }
+    491                if (numChans)
+    492                {
+    493                  nwk_setChannel(&chans[numChans-1]);
+    494                }
+    495          #else /*  FREQUENCY_AGILITY */
+    496                return (*len) ? rc : ((SMPL_SUCCESS == rc) ? SMPL_NO_PAYLOAD : SMPL_TIMEOUT);
+    497          #endif
+    498              } while (numChans);
+    499            }
+    500          
+    501          #if defined(FREQUENCY_AGILITY)
+    502            return SMPL_NO_CHANNEL;
+    503          #endif
+    504          
+    505          #else  /* RX_POLLS */
+    506            return nwk_retrieveFrame(&rcv, msg, len, 0, 0);
+    507          #endif  /* RX_POLLS */
+    508          }
+    509          
+    510          
+    511          /******************************************************************************
+    512           * @fn          SMPL_Link
+    513           *
+    514           * @brief       Link to a peer.
+    515           *
+    516           * input parameters
+    517           *
+    518           * output parameters
+    519           * @param   lid     - pointer to where we should write the link ID to which the
+    520           *                    application will read and write.
+    521           *
+    522           * @return   Status of operation.
+    523           *             SMPL_SUCCESS
+    524           *             SMPL_NOMEM         No room to allocate local Rx port, no more
+    525           *                                room in Connection Table, or no room in
+    526           *                                output frame queue.
+    527           *             SMPL_NO_LINK       No reply frame during wait window.
+    528           *             SMPL_TX_CCA_FAIL   Could not send Link frame.
+    529           */
+    530          smplStatus_t SMPL_Link(linkID_t *lid)
+    531          {
+    532            return nwk_link(lid);
+    533          }
+    534          
+    535          #if defined(EXTENDED_API)
+    536          /**************************************************************************************
+    537           * @fn          SMPL_Unlink
+    538           *
+    539           * @brief       Tear down connection to a peer.
+    540           *
+    541           * input parameters
+    542           * @param   lid     - Link ID whose connection is to be terminated.
+    543           *
+    544           * output parameters
+    545           *
+    546           * @return   Status of operation. The Connection Table entry for the Link ID
+    547           *           is always freed successfuly. The returned status value is the
+    548           *           status of the _peer's_ connection tear-down as a result of the
+    549           *           message sent here.
+    550           *           SMPL_SUCCESS         Local and remote connection destroyed.
+    551           *           SMPL_BAD_PARAM       No local connection table entry for this Link ID
+    552           *           SMPL_TIMEOUT         No reply from peer.
+    553           *           SMPL_NO_PEER_UNLINK  Peer did not have a Connection Table entry for me.
+    554           */
+    555          smplStatus_t SMPL_Unlink(linkID_t lid)
+    556          {
+    557            return nwk_unlink(lid);
+    558          }
+    559          
+    560          /**************************************************************************************
+    561           * @fn          SMPL_Ping
+    562           *
+    563           * @brief       Ping a peer. Synchronous call. Although a link ID is used it is the
+    564           *              NWK Ping application that is pinged, not the peer of this Link ID. The
+    565           *              peer is not expected to be the responder to the frame sent from here.
+    566           *              This API is a proxy for a real ping since the application doesn't
+    567           *              have direct access to SimpliciTI device addresses. Kind of hokey but a
+    568           *              useful keep-alive mechanism without having to support it with
+    569           *              user application service.
+    570           *
+    571           * input parameters
+    572           * @param   lid  - The link ID whose peer device address is used to direct the NWK Ping
+    573           *
+    574           * output parameters
+    575           *
+    576           * @return   Status of operation.
+    577           */
+    578          smplStatus_t SMPL_Ping(linkID_t lid)
+    579          {
+    580            return nwk_ping(lid);
+    581          }
+    582          
+    583          /**************************************************************************************
+    584           * @fn          SMPL_Commission
+    585           *
+    586           * @brief       Commission a connection.
+    587           *
+    588           * input parameters
+    589           * @param   peerAddr  - Pointer to address of the peer for this connection
+    590           * @param    locPort  - Port on which to listen for messages from the peer
+    591           * @param    rmtPort  - Port on which to send messages to the peer.
+    592           * @param        lid  - Pointer to Link ID object. If content of location is
+    593           *                      non-zero on input the value is placed in the Connection
+    594           *                      object.
+    595           *
+    596           * output parameters
+    597           * @param        lid  - Pointer to Link ID object. If content of location is zero
+    598           *                      on input the value in the Connection object is stored there.
+    599           *
+    600           * @return   SMPL_SUCCESS
+    601           *           SMPL_NOMEM     - No room left in Connection table.
+    602           *           SMPL_BAD_PARAM - A pointer to a Link object was not supplied.
+    603           */
+    604          smplStatus_t SMPL_Commission(addr_t *peerAddr, uint8_t locPort, uint8_t rmtPort, linkID_t *lid)
+    605          {
+    606            connInfo_t   *pCInfo = nwk_getNextConnection();
+    607            smplStatus_t  rc     = SMPL_BAD_PARAM;
+    608          
+    609            do {
+    610              if (pCInfo)
+    611              {
+    612                /* sanity checks... */
+    613          
+    614                /* Check port info. */
+    615                if ((locPort > SMPL_PORT_STATIC_MAX) || (locPort < (SMPL_PORT_STATIC_MAX - PORT_USER_STATIC_NUM + 1)))
+    616                {
+    617                  continue;
+    618                }
+    619          
+    620                if ((rmtPort > SMPL_PORT_STATIC_MAX) || (rmtPort < (SMPL_PORT_STATIC_MAX - PORT_USER_STATIC_NUM + 1)))
+    621                {
+    622                  continue;
+    623                }
+    624          
+    625                /* Must supply a pointer to the Link ID object */
+    626                if (!lid)
+    627                {
+    628                  /* No Link ID pointer supplied */
+    629                  continue;
+    630                }
+    631          
+    632                /* we're sane */
+    633          
+    634                /* Use the value generated at connection object assign time. */
+    635                *lid = pCInfo->thisLinkID;
+    636          
+    637                /* store peer's address */
+    638                memcpy(pCInfo->peerAddr, peerAddr, NET_ADDR_SIZE);
+    639          
+    640                /* store port info */
+    641                pCInfo->portRx = locPort;
+    642                pCInfo->portTx = rmtPort;
+    643          
+    644                pCInfo->hops2target = MAX_HOPS;
+    645          
+    646                rc = SMPL_SUCCESS;
+    647              }
+    648              else
+    649              {
+    650                /* No room in Connection table */
+    651                rc = SMPL_NOMEM;
+    652              }
+    653            } while (0);
+    654          
+    655            if ((SMPL_SUCCESS != rc) && pCInfo)
+    656            {
+    657              nwk_freeConnection(pCInfo);
+    658            }
+    659          
+    660            return rc;
+    661          }
+    662          #endif   /* EXTENDED_API */
+    663          
+    664          /******************************************************************************
+    665           * @fn          SMPL_Ioctl
+    666           *
+    667           * @brief       This routine supplies the SimpliciTI IOCTL support.
+    668           *
+    669           * input parameters
+    670           * @param   object   - The IOCTL target object
+    671           * @param   action   - The IOCTL target action on the object
+    672           * @param   val      - pointer to value. exact forn depends on object type.
+    673           *
+    674           * output parameters
+    675           *
+    676           * @return   Status of action. Value depends on object, action, and result.
+    677           *
+    678           *           SMPL_BAD_PARAM is returned if this API is called before
+    679           *                          initialization and the object is not one of
+    680           *                          the valid exceptions.
+    681           */
+    682          smplStatus_t SMPL_Ioctl(ioctlObject_t object, ioctlAction_t action, void *val)
+    683          {
+    684            smplStatus_t rc;
+    685          
+    686            /* if init hasn't occurred see if access is still valid */
+    687            if (!sInit_done && !ioctlPreInitAccessIsOK(object))
+    688            {
+    689              return SMPL_BAD_PARAM;
+    690            }
+    691          
+    692            switch (object)
+    693            {
+    694          #if defined(EXTENDED_API)
+    695              case IOCTL_OBJ_TOKEN:
+    696                {
+    697                  ioctlToken_t *t = (ioctlToken_t *)val;
+    698          
+    699                  rc = SMPL_SUCCESS;
+    700                  if (TT_LINK == t->tokenType)
+    701                  {
+    702                    if (IOCTL_ACT_SET == action)
+    703                    {
+    704                      nwk_setLinkToken(t->token.linkToken);
+    705                    }
+    706                    else if (IOCTL_ACT_GET == action)
+    707                    {
+    708                      nwk_getLinkToken(&t->token.linkToken);
+    709                    }
+    710                    else
+    711                    {
+    712                      rc = SMPL_BAD_PARAM;
+    713                    }
+    714                  }
+    715                  else if (TT_JOIN == t->tokenType)
+    716                  {
+    717                    if (IOCTL_ACT_SET == action)
+    718                    {
+    719                      nwk_setJoinToken(t->token.joinToken);
+    720                    }
+    721                    else if (IOCTL_ACT_GET == action)
+    722                    {
+    723                      nwk_getJoinToken(&t->token.joinToken);
+    724                    }
+    725                    else
+    726                    {
+    727                      rc = SMPL_BAD_PARAM;
+    728                    }
+    729                  }
+    730                  else
+    731                  {
+    732                    rc = SMPL_BAD_PARAM;
+    733                  }
+    734                }
+    735                break;
+    736          
+    737              case IOCTL_OBJ_NVOBJ:
+    738                rc = nwk_NVObj(action, (ioctlNVObj_t *)val);
+    739                break;
+    740          #endif  /* EXTENDED_API */
+    741          
+    742              case IOCTL_OBJ_CONNOBJ:
+    743                rc = nwk_connectionControl(action, val);
+    744                break;
+    745          
+    746              case IOCTL_OBJ_ADDR:
+    747                if ((IOCTL_ACT_GET == action) || (IOCTL_ACT_SET == action))
+    748                {
+    749                  rc = nwk_deviceAddress(action, (addr_t *)val);
+    750                }
+    751                else
+    752                {
+    753                  rc = SMPL_BAD_PARAM;
+    754                }
+    755                break;
+    756          
+    757              case IOCTL_OBJ_RAW_IO:
+    758                if (IOCTL_ACT_WRITE == action)
+    759                {
+    760                  rc = nwk_rawSend((ioctlRawSend_t *)val);
+    761                }
+    762                else if (IOCTL_ACT_READ == action)
+    763                {
+    764                  rc = nwk_rawReceive((ioctlRawReceive_t *)val);
+    765                }
+    766                else
+    767                {
+    768                  rc = SMPL_BAD_PARAM;
+    769                }
+    770                break;
+    771          
+    772              case IOCTL_OBJ_RADIO:
+    773                rc = nwk_radioControl(action, val);
+    774                break;
+    775          
+    776          #if defined(ACCESS_POINT)
+    777              case IOCTL_OBJ_AP_JOIN:
+    778                rc = nwk_joinContext(action);
+    779                break;
+    780          #endif
+    781          #if defined(FREQUENCY_AGILITY)
+    782              case IOCTL_OBJ_FREQ:
+    783                rc = nwk_freqControl(action, val);
+    784                break;
+    785          #endif
+    786              case IOCTL_OBJ_FWVER:
+    787                if (IOCTL_ACT_GET == action)
+    788                {
+    789                  memcpy(val, nwk_getFWVersion(), SMPL_FWVERSION_SIZE);
+    790                  rc = SMPL_SUCCESS;
+    791                }
+    792                else
+    793                {
+    794                  rc = SMPL_BAD_PARAM;
+    795                }
+    796                break;
+    797          
+    798              case IOCTL_OBJ_PROTOVER:
+    799                if (IOCTL_ACT_GET == action)
+    800                {
+    801                  *((uint8_t *)val) = nwk_getProtocolVersion();
+    802                  rc = SMPL_SUCCESS;
+    803                }
+    804                else
+    805                {
+    806                  rc = SMPL_BAD_PARAM;
+    807                }
+    808                break;
+    809          
+    810              default:
+    811                rc = SMPL_BAD_PARAM;
+    812                break;
+    813            }
+    814          
+    815            return rc;
+    816          }
+    817          
+    818          /******************************************************************************
+    819           * @fn          ioctlPreInitAccessIsOK
+    820           *
+    821           * @brief       Is the request legal yet? Most requests are not legal before
+    822           *              SMPL_Init().
+    823           *
+    824           * input parameters
+    825           * @param   object   - The IOCTL target object
+    826           *
+    827           * output parameters
+    828           *
+    829           * @return   Returns non-zero if request should be honored for further
+    830           *           processing, otherwise returns 0. This function does not
+    831           *           determine of the object-action pair are valid. It only knows
+    832           *           about exceptions, i.e., those that are valid before the
+    833           *           SMPL_Init() call.
+    834           *
+    835           */
+    836          static uint8_t ioctlPreInitAccessIsOK(ioctlObject_t object)
+    837          {
+    838            uint8_t rc;
+    839          
+    840            /* Currently the only legal pre-init accesses are the address and
+    841             * the token objects.
+    842             */
+    843            switch (object)
+    844            {
+    845              case IOCTL_OBJ_ADDR:
+    846              case IOCTL_OBJ_TOKEN:
+    847                rc = 1;   /* legal */
+    848                break;
+    849          
+    850              default:
+    851                rc = 0;   /* not legal when init not done */
+    852                break;
+    853            }
+    854          
+    855            return rc;
+    856          }
+
+   Maximum stack usage in bytes:
+
+     Function                     CSTACK
+     --------                     ------
+     SMPL_Init                        4
+       -> MRFI_Init                   4
+       -> nwk_nwkInit                 4
+       -> MRFI_WakeUp                 4
+       -> nwk_getMyAddress            4
+       -> MRFI_SetRxAddrFilter        4
+       -> MRFI_EnableRxAddrFilter     4
+       -> nwk_join                    4
+     SMPL_Ioctl                       4
+       -> nwk_connectionControl       4
+       -> nwk_deviceAddress           4
+       -> nwk_rawSend                 4
+       -> nwk_rawReceive              4
+       -> nwk_radioControl            4
+       -> nwk_getFWVersion            4
+       -> memcpy                      4
+       -> nwk_getProtocolVersion      4
+     SMPL_Link                        2
+       -> nwk_link                    2
+     SMPL_LinkListen                 10
+       -> MRFI_GetRadioState         10
+       -> nwk_setListenContext       10
+       -> MRFI_WakeUp                10
+       -> MRFI_RxOn                  10
+       -> nwk_getLocalLinkID         10
+       -> MRFI_DelayMs               10
+       -> MRFI_Sleep                 10
+       -> MRFI_RxIdle                10
+       -> nwk_setListenContext       10
+     SMPL_Receive                    14
+       -> nwk_getConnInfo            12
+       -> nwk_checkConnInfo          12
+       -> nwk_retrieveFrame          14
+     SMPL_Send                        2
+       -> SMPL_SendOpt                2
+     SMPL_SendOpt                    12
+       -> nwk_getConnInfo            12
+       -> MRFI_GetRadioState         12
+       -> nwk_checkConnInfo          12
+       -> nwk_buildFrame             12
+       -> memcpy                     12
+       -> nwk_sendFrame              12
+
+
+   Segment part sizes:
+
+     Function/Label  Bytes
+     --------------  -----
+     sInit_done         1
+     SMPL_Init         52
+     SMPL_LinkListen  112
+     SMPL_Send          6
+     SMPL_SendOpt     124
+     SMPL_Receive      70
+     SMPL_Link          4
+     SMPL_Ioctl       154
+
+ 
+ 522 bytes in segment CODE
+   1 byte  in segment DATA16_Z
+ 
+ 522 bytes of CODE memory
+   1 byte  of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,521 @@
+###############################################################################
+#                                                                             #
+#                                                       13/May/2009  06:55:11 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\si #
+#                     mpliciti\nwk\nwk_QMgmt.c                                #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\ #
+#                     nwk\nwk_QMgmt.c" -D MRFI_CC2500 -lcN "C:\Texas          #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\List\"    #
+#                     -o "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkLis #
+#                     ten\Obj\" --require_prototypes --debug                  #
+#                     -D__MSP430F2274__ -e --double=32 -I "C:\Texas           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proj #
+#                     ects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\ #
+#                     ..\..\Components\bsp\drivers\" -I "C:\Texas             #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\boards\EZ430RF\" -I "C:\Texas                        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\m #
+#                     rfi\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Pro #
+#                     jects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\.. #
+#                     \..\..\Components\SimpliciTI\nwk\" -I "C:\Texas         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     List\nwk_QMgmt.lst                                      #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     Obj\nwk_QMgmt.r43                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk\nwk_QMgmt.c
+      1          /**************************************************************************************************
+      2            Filename:       nwk_QMgmt.c
+      3            Revised:        $Date: 2009-03-10 17:01:56 -0700 (Tue, 10 Mar 2009) $
+      4            Revision:       $Revision: 19372 $
+      5            Author:         $Author: lfriedman $
+      6          
+      7            Description:    This file supports the SimpliciTI input and output frame queues
+      8          
+      9            Copyright 2007-2008 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     12            the terms of a software license agreement between the user who downloaded the software,
+     13            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     14            "License"). You may not use this Software unless you agree to abide by the terms of the
+     15            License. The License limits your use, and you acknowledge, that the Software may not be
+     16            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     18            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     19            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     20            perform, display or sell this Software and/or its documentation for any purpose.
+     21          
+     22            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     23            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     24            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     25            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     26            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     27            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     28            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     29            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     30            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     31          
+     32            Should you have any questions regarding your right to use this Software,
+     33            contact Texas Instruments Incorporated at www.TI.com.
+     34          **************************************************************************************************/
+     35          
+     36          
+     37          /******************************************************************************
+     38           * INCLUDES
+     39           */
+     40          #include <intrinsics.h>
+     41          #include <string.h>
+     42          #include "bsp.h"
+     43          #include "mrfi.h"
+     44          #include "nwk_types.h"
+     45          #include "nwk.h"
+     46          #include "nwk_frame.h"
+     47          #include "nwk_QMgmt.h"
+     48          #include "nwk_mgmt.h"     /* need offsets for poll frames */
+     49          
+     50          /******************************************************************************
+     51           * MACROS
+     52           */
+     53          
+     54          /******************************************************************************
+     55           * CONSTANTS AND DEFINES
+     56           */
+     57          
+     58          /******************************************************************************
+     59           * TYPEDEFS
+     60           */
+     61          
+     62          /******************************************************************************
+     63           * LOCAL VARIABLES
+     64           */
+     65          
+     66          #if SIZE_INFRAME_Q > 0
+     67          static frameInfo_t   sInFrameQ[SIZE_INFRAME_Q];
+     68          #else
+     69          static frameInfo_t  *sInFrameQ = NULL;
+     70          #endif  /* SIZE_INFRAME_Q > 0 */
+     71          
+     72          static frameInfo_t   sOutFrameQ[SIZE_OUTFRAME_Q];
+     73          
+     74          /******************************************************************************
+     75           * LOCAL FUNCTIONS
+     76           */
+     77          
+     78          /******************************************************************************
+     79           * GLOBAL VARIABLES
+     80           */
+     81          
+     82          /******************************************************************************
+     83           * GLOBAL FUNCTIONS
+     84           */
+     85          
+     86          /******************************************************************************
+     87          * @fn          nwk_QInit
+     88          * 
+     89          * @brief     Initialize the input and output frame queues to hold no packets. 
+     90          * 
+     91          * input parameters
+     92          * 
+     93          * output parameters
+     94          * 
+     95          * @return   void
+     96          */
+     97          void nwk_QInit(void)
+     98          {
+     99          #if SIZE_INFRAME_Q > 0
+    100            memset(sInFrameQ, 0, sizeof(sInFrameQ));
+    101          #endif  // SIZE_INFRAME_Q > 0
+    102            memset(sOutFrameQ, 0, sizeof(sOutFrameQ));
+    103          }
+    104           
+    105          /******************************************************************************
+    106           * @fn          nwk_QfindSlot
+    107           *
+    108           * @brief       Finds a slot to use to retrieve the frame from the radio. It
+    109           *              uses a LRU cast-out scheme. It is possible that this routine
+    110           *              finds no slot. This can happen if the queue is of size 1 or 2
+    111           *              and the Rx interrupt occurs during a retrieval call from an
+    112           *              application. There are meta-states for frames as the application
+    113           *              looks for the oldest frame on the port being requested.
+    114           *
+    115           *              This routine is running in interrupt context.
+    116           *
+    117           * input parameters
+    118           * @param   which   - INQ or OUTQ to search
+    119           *
+    120           * output parameters
+    121           *
+    122           * @return      Pointer to oldest available frame in the queue
+    123           */
+    124          frameInfo_t *nwk_QfindSlot(uint8_t which)
+    125          {
+    126            frameInfo_t *pFI, *oldest= 0, *newFI = 0;
+    127            uint8_t        i, num, newOrder = 0, orderTest;
+    128          
+    129            if (INQ == which)
+    130            {
+    131              pFI  = sInFrameQ;
+    132              num  = SIZE_INFRAME_Q;
+    133            }
+    134            else
+    135            {
+    136              pFI  = sOutFrameQ;
+    137              num  = SIZE_OUTFRAME_Q;
+    138            }
+    139          
+    140            orderTest = num + 1;
+    141          
+    142            for (i=0; i<num; ++i, ++pFI)
+    143            {
+    144              /* if frame is available it's a candidate. */
+    145              if (pFI->fi_usage != FI_AVAILABLE)
+    146              {
+    147                if (INQ == which)  /* TODO: do cast-out for Tx as well */
+    148                {
+    149          
+    150                  /* need to know the number of occupied slots so we know the age value
+    151                   * for the unoccupied slot (if there is one).
+    152                   */
+    153                  newOrder++;
+    154          
+    155                  /* make sure nwk_retrieveFrame() is not processing this frame */
+    156                  if (FI_INUSE_TRANSITION == pFI->fi_usage)
+    157                  {
+    158                    continue;
+    159                  }
+    160                  /* is this frame older than any we've seen? */
+    161                  if (orderTest > pFI->orderStamp)
+    162                  {
+    163                    /* yes. */
+    164                    oldest    = pFI;
+    165                    orderTest = pFI->orderStamp;
+    166                  }
+    167                }
+    168              }
+    169              else
+    170              {
+    171                if (OUTQ == which)  /* TODO: do cast-out for Tx as well */
+    172                {
+    173                  return pFI;
+    174                }
+    175                newFI = pFI;
+    176              }
+    177            }
+    178          
+    179            /* did we find anything? */
+    180            if (!newFI)
+    181            {
+    182              /* queue was full. cast-out happens here...unless... */
+    183              if (!oldest)
+    184              {
+    185                /* This can happen if the queue is only of size 1 or 2 and all
+    186                 * the frames are in transition when the Rx interrupt occurs.
+    187                 */
+    188                return (frameInfo_t *)0;
+    189              }
+    190              newFI = oldest;
+    191              nwk_QadjustOrder(which, newFI->orderStamp);
+    192              newFI->orderStamp = i;
+    193            }
+    194            else
+    195            {
+    196              /* mark the available slot. */
+    197              newFI->orderStamp = ++newOrder;
+    198            }
+    199          
+    200            return newFI;
+    201          }
+    202          
+    203          /******************************************************************************
+    204           * @fn          nwk_QadjustOrder
+    205           *
+    206           * @brief       Adjusts the age of everyone in the queue newer than the frame
+    207           *              being removed.
+    208           *
+    209           * input parameters
+    210           * @param   which   - INQ or OUTQ to adjust
+    211           * @param   stamp   - value of frame being removed
+    212           *
+    213           * output parameters
+    214           *
+    215           * @return      void
+    216           */
+    217          void nwk_QadjustOrder(uint8_t which, uint8_t stamp)
+    218          {
+    219            frameInfo_t *pFI;
+    220            uint8_t      i, num;
+    221            bspIState_t  intState;
+    222          
+    223            if (INQ == which)
+    224            {
+    225              pFI  = sInFrameQ;
+    226              num  = SIZE_INFRAME_Q;
+    227            }
+    228            else
+    229            {
+    230          /*    pFI  = sOutFrameQ; */
+    231          /*    num  = SIZE_OUTFRAME_Q; */
+    232              return;
+    233            }
+    234          
+    235            BSP_ENTER_CRITICAL_SECTION(intState);
+    236          
+    237            for (i=0; i<num; ++i, ++pFI)
+    238            {
+    239              if ((pFI->fi_usage != FI_AVAILABLE) && (pFI->orderStamp > stamp))
+    240              {
+    241                pFI->orderStamp--;
+    242              }
+    243            }
+    244          
+    245            BSP_EXIT_CRITICAL_SECTION(intState);
+    246          
+    247            return;
+    248          }
+    249          
+    250          /******************************************************************************
+    251           * @fn          nwk_QfindOldest
+    252           *
+    253           * @brief       Look through frame queue and find the oldest available frame
+    254           *              in the context in question. Supports connection-based (user),
+    255           *              non-connection based (NWK applications), and the special case
+    256           *              of store-and-forward.
+    257           *
+    258           * input parameters
+    259           * @param   which      - INQ or OUTQ to adjust
+    260           * @param   rcvContext - context information for finding the oldest
+    261           * @param   usage      - normal usage or store-and-forward usage
+    262           *
+    263           * output parameters
+    264           *
+    265           * @return      Pointer to frame that is the oldsest on the requested port, or
+    266           *              0 if there are none.
+    267           */
+    268          frameInfo_t *nwk_QfindOldest(uint8_t which, rcvContext_t *rcv, uint8_t fi_usage)
+    269          {
+    270            uint8_t      i, oldest, num, port;
+    271            uint8_t      uType, addr12Compare;
+    272            bspIState_t  intState;
+    273            frameInfo_t *fPtr = 0, *wPtr;
+    274            connInfo_t  *pCInfo = 0;
+    275            uint8_t     *pAddr1, *pAddr2, *pAddr3 = 0;
+    276          
+    277            if (INQ == which)
+    278            {
+    279              wPtr   = sInFrameQ;
+    280              num    = SIZE_INFRAME_Q;
+    281              oldest = SIZE_INFRAME_Q+1;
+    282            }
+    283            else
+    284            {
+    285          /*    pFI  = sOutFrameQ; */
+    286          /*    num  = SIZE_OUTFRAME_Q; */
+    287              return 0;
+    288            }
+    289          
+    290            if (RCV_APP_LID == rcv->type)
+    291            {
+    292              pCInfo = nwk_getConnInfo(rcv->t.lid);
+    293              if (!pCInfo)
+    294              {
+    295                return (frameInfo_t *)0;
+    296              }
+    297              port   = pCInfo->portRx;
+    298              pAddr2 = pCInfo->peerAddr;
+    299            }
+    300            else if (RCV_NWK_PORT == rcv->type)
+    301            {
+    302              port = rcv->t.port;
+    303            }
+    304          #ifdef ACCESS_POINT
+    305            else if (RCV_RAW_POLL_FRAME == rcv->type)
+    306            {
+    307              port   = *(MRFI_P_PAYLOAD(rcv->t.pkt)+F_APP_PAYLOAD_OS+M_POLL_PORT_OS);
+    308              pAddr2 = MRFI_P_SRC_ADDR(rcv->t.pkt);
+    309              pAddr3 = MRFI_P_PAYLOAD(rcv->t.pkt)+F_APP_PAYLOAD_OS+M_POLL_ADDR_OS;
+    310            }
+    311          #endif
+    312            else
+    313            {
+    314              return (frameInfo_t *)0;
+    315            }
+    316          
+    317            uType = (USAGE_NORMAL == fi_usage) ? FI_INUSE_UNTIL_DEL : FI_INUSE_UNTIL_FWD;
+    318          
+    319            for (i=0; i<num; ++i, ++wPtr)
+    320            {
+    321          
+    322              BSP_ENTER_CRITICAL_SECTION(intState);   /* protect the frame states */
+    323          
+    324              /* only check entries in use and waiting for this port */
+    325              if (uType == wPtr->fi_usage)
+    326              {
+    327                wPtr->fi_usage = FI_INUSE_TRANSITION;
+    328          
+    329                BSP_EXIT_CRITICAL_SECTION(intState);  /* release hold */
+    330                /* message sent to this device? */
+    331                if (GET_FROM_FRAME(MRFI_P_PAYLOAD(&wPtr->mrfiPkt), F_PORT_OS) == port)
+    332                {
+    333                  /* Port matches. If the port of interest is a NWK applicaiton we're a
+    334                   * match...the NWK applications are not connection-based. If it is a
+    335                   * NWK application we need to check the source address for disambiguation.
+    336                   * Also need to check source address if it's a raw frame lookup (S&F frame)
+    337                   */
+    338                  if (RCV_APP_LID == rcv->type)
+    339                  {
+    340                    if (SMPL_PORT_USER_BCAST == port)
+    341                    {
+    342                      /* guarantee a match... */
+    343                      pAddr1 = pCInfo->peerAddr;
+    344                    }
+    345                    else
+    346                    {
+    347                      pAddr1 = MRFI_P_SRC_ADDR(&wPtr->mrfiPkt);
+    348                    }
+    349                  }
+    350          #ifdef ACCESS_POINT
+    351                  else if (RCV_RAW_POLL_FRAME == rcv->type)
+    352                  {
+    353                    pAddr1 = MRFI_P_DST_ADDR(&wPtr->mrfiPkt);
+    354                  }
+    355          #endif
+    356          
+    357                  addr12Compare = memcmp(pAddr1, pAddr2, NET_ADDR_SIZE);
+    358                  if (  (RCV_NWK_PORT == rcv->type) ||
+    359                        (!pAddr3 && !addr12Compare) ||
+    360                        (pAddr3 && !memcmp(pAddr3, MRFI_P_SRC_ADDR(&wPtr->mrfiPkt), NET_ADDR_SIZE))
+    361                     )
+    362                  {
+    363                    if (wPtr->orderStamp < oldest)
+    364                    {
+    365                      if (fPtr)
+    366                      {
+    367                        /* restore previous oldest one */
+    368                        fPtr->fi_usage = uType;
+    369                      }
+    370                      oldest = wPtr->orderStamp;
+    371                      fPtr   = wPtr;
+    372                      continue;
+    373                    }
+    374                    else
+    375                    {
+    376                      /* not oldest. restore state */
+    377                      wPtr->fi_usage = uType;
+    378                    }
+    379                  }
+    380                  else
+    381                  {
+    382                    /* not a match. restore state */
+    383                    wPtr->fi_usage = uType;
+    384                  }
+    385                }
+    386                else
+    387                {
+    388                  /* wrong port. restore state */
+    389                  wPtr->fi_usage = uType;
+    390                }
+    391              }
+    392              else
+    393              {
+    394                BSP_EXIT_CRITICAL_SECTION(intState);
+    395              }
+    396            }
+    397          
+    398            return fPtr;
+    399          }
+    400          
+    401          /******************************************************************************
+    402           * @fn          nwk_getQ
+    403           *
+    404           * @brief       Get location of teh specified frame queue.
+    405           *
+    406           * input parameters
+    407           * @param   which   - INQ or OUTQ to get
+    408           *
+    409           * output parameters
+    410           *
+    411           * @return      Pointer to frame queue
+    412           */
+    413          frameInfo_t *nwk_getQ(uint8_t which)
+    414          {
+    415            return (INQ == which) ? sInFrameQ : sOutFrameQ;
+    416          }
+    417          
+
+   Maximum stack usage in bytes:
+
+     Function              CSTACK
+     --------              ------
+     nwk_QInit                 2
+       -> memset               2
+       -> memset               2
+     nwk_QadjustOrder          2
+     nwk_QfindOldest          20
+       -> nwk_getConnInfo     20
+       -> memcmp              20
+     nwk_QfindSlot            10
+       -> nwk_QadjustOrder    10
+     nwk_getQ                  2
+
+
+   Segment part sizes:
+
+     Function/Label   Bytes
+     --------------   -----
+     sInFrameQ          52
+     sOutFrameQ         52
+     nwk_QInit          28
+     nwk_QfindSlot     126
+     nwk_QadjustOrder   44
+     nwk_QfindOldest   224
+     nwk_getQ           16
+
+ 
+ 438 bytes in segment CODE
+ 104 bytes in segment DATA16_Z
+ 
+ 438 bytes of CODE memory
+ 104 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>Polling_with_AP/CC2500-Access Point</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>311</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>723</ColumnWidth1><ColumnWidth2>193</ColumnWidth2><ColumnWidth3>48</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-15071-28241</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>Polling_with_AP</ExpandedNode><ExpandedNode>Polling_with_AP/peer applications</ExpandedNode><ExpandedNode>Polling_with_AP/peer applications/application</ExpandedNode><ExpandedNode>Polling_with_AP/peer applications/application/Access Point</ExpandedNode><ExpandedNode>Polling_with_AP/peer applications/application/Access Point/main_AP_RE.c</ExpandedNode><ExpandedNode>Polling_with_AP/peer applications/application/End Device</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-25297-28254</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\bsp\bsp.c</Filename><XPos>0</XPos><YPos>52</YPos><SelStart>3353</SelStart><SelEnd>3353</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\Applications\main_2EDOnePolls.c</Filename><XPos>0</XPos><YPos>170</YPos><SelStart>6914</SelStart><SelEnd>6918</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\bsp\bsp_macros.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\mrfi\mrfi.c</Filename><XPos>0</XPos><YPos>44</YPos><SelStart>2984</SelStart><SelEnd>3001</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ430RF\Polling_with_AP\IAR\Configuration\smpl_nwk_config.dat</Filename><XPos>0</XPos><YPos>26</YPos><SelStart>835</SelStart><SelEnd>835</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk_applications\nwk_security.c</Filename><XPos>0</XPos><YPos>240</YPos><SelStart>10035</SelStart><SelEnd>10035</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\Applications\main_AP_RE.c</Filename><XPos>0</XPos><YPos>35</YPos><SelStart>2556</SelStart><SelEnd>2556</SelEnd></Tab><ActiveTab>6</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00c5a418><key>iaridepm.enu1</key></Toolbar-00c5a418></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes/></Row3><Row4><Sizes/></Row4><Row5><Sizes/></Row5><Row6><Sizes/></Row6></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>448</Bottom><Right>402</Right><x>-2</x><y>-2</y><xscreen>199</xscreen><yscreen>201</yscreen><sizeHorzCX>194336</sizeHorzCX><sizeHorzCY>290462</sizeHorzCY><sizeVertCX>394531</sizeVertCX><sizeVertCY>650289</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>199</Bottom><Right>1026</Right><x>-2</x><y>-2</y><xscreen>1028</xscreen><yscreen>201</yscreen><sizeHorzCX>1003906</sizeHorzCX><sizeHorzCY>290462</sizeHorzCY><sizeVertCX>194336</sizeVertCX><sizeVertCY>290462</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

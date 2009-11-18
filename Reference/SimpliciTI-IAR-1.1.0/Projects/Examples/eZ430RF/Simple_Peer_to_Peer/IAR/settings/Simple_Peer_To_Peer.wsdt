@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>Simple_Peer_To_Peer/CC2500-LinkListen</Project><Project>mySPtP/Debug</Project></CurrentConfigs><CurrentProj>Simple_Peer_To_Peer</CurrentProj><OverviewSelected>1</OverviewSelected></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>278</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>723</ColumnWidth1><ColumnWidth2>193</ColumnWidth2><ColumnWidth3>48</ColumnWidth3></Build>
+    <TerminalIO/></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-26793-4163</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>&lt;ws></ExpandedNode><ExpandedNode>&lt;ws>/Simple_Peer_To_Peer</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer/Components</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer/Output</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer/peer applications</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer/peer applications/Configuration</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer/peer applications/application</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer/peer applications/application/LinkListen</ExpandedNode><ExpandedNode>Simple_Peer_To_Peer/peer applications/application/LinkTo</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11863-4238</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\Applications\main_LinkListen.c</Filename><XPos>0</XPos><YPos>53</YPos><SelStart>3090</SelStart><SelEnd>3090</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\Applications\main_LinkTo.c</Filename><XPos>0</XPos><YPos>54</YPos><SelStart>2771</SelStart><SelEnd>2771</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\bsp\boards\EZ430RF\bsp_board.c</Filename><XPos>0</XPos><YPos>161</YPos><SelStart>6916</SelStart><SelEnd>6916</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00c5a430><key>iaridepm.enu1</key></Toolbar-00c5a430></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2><Row3><Sizes/></Row3><Row4><Sizes/></Row4><Row5><Sizes/></Row5><Row6><Sizes/></Row6><Row7><Sizes/></Row7><Row8><Sizes/></Row8><Row9><Sizes/></Row9><Row10><Sizes/></Row10><Row11><Sizes/></Row11><Row12><Sizes/></Row12></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>522</Bottom><Right>352</Right><x>-2</x><y>-2</y><xscreen>269</xscreen><yscreen>291</yscreen><sizeHorzCX>262695</sizeHorzCX><sizeHorzCY>420520</sizeHorzCY><sizeVertCX>345703</sizeVertCX><sizeVertCY>757225</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>125</Bottom><Right>1026</Right><x>-2</x><y>-2</y><xscreen>1028</xscreen><yscreen>127</yscreen><sizeHorzCX>1003906</sizeHorzCX><sizeHorzCY>183526</sizeHorzCY><sizeVertCX>262695</sizeVertCX><sizeVertCY>420520</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

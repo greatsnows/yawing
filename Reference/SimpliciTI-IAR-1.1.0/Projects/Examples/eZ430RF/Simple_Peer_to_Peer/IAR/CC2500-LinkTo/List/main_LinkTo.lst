@@ -1,0 +1,327 @@
+###############################################################################
+#                                                                             #
+#                                                       18/Nov/2009  12:44:07 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\Applications\main_LinkTo.c                         #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\Appl #
+#                     ications\main_LinkTo.c" -D MRFI_CC2500 -lcN "C:\Texas   #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List\" -o     #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj #
+#                     \" --require_prototypes --debug -D__MSP430F2274__ -e    #
+#                     --double=32 -I "C:\Texas Instruments\SimpliciTI-IAR-1.1 #
+#                     .0\Projects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\.. #
+#                     \..\..\..\..\Components\bsp\" -I "C:\Texas              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\drivers\" -I "C:\Texas Instruments\SimpliciTI-IAR-1. #
+#                     1.0\Projects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\. #
+#                     .\..\..\..\..\Components\bsp\boards\EZ430RF\" -I        #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Co #
+#                     mponents\mrfi\" -I "C:\Texas                            #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk\" -I "C:\Texas                            #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List #
+#                     \main_LinkTo.lst                                        #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj\ #
+#                     main_LinkTo.r43                                         #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\Applications\main_LinkTo.c
+      1          /*----------------------------------------------------------------------------
+      2           *  Demo Application for SimpliciTI 
+      3           * 
+      4           *  L. Friedman 
+      5           *  Texas Instruments, Inc.
+      6           *---------------------------------------------------------------------------- */
+      7          
+      8          /********************************************************************************************
+      9            Copyright 2007-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     12            the terms of a software license agreement between the user who downloaded the software,
+     13            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     14            "License"). You may not use this Software unless you agree to abide by the terms of the
+     15            License. The License limits your use, and you acknowledge, that the Software may not be
+     16            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     18            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     19            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     20            perform, display or sell this Software and/or its documentation for any purpose.
+     21          
+     22            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS?  WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     23            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     24            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     25            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     26            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     27            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     28            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     29            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     30          
+     31            Should you have any questions regarding your right to use this Software,
+     32            contact Texas Instruments Incorporated at www.TI.com.
+     33          **************************************************************************************************/
+     34          
+     35          #include "bsp.h"
+     36          #include "mrfi.h"
+     37          #include "nwk_types.h"
+     38          #include "nwk_api.h"
+     39          #include "bsp_leds.h"
+     40          #include "bsp_buttons.h"
+     41          
+     42          #include "app_remap_led.h"
+     43          
+     44          static void linkTo(void);
+     45          
+     46          void toggleLED(uint8_t);
+     47          
+     48          static uint8_t  sTxTid=0, sRxTid=0;
+     49          static linkID_t sLinkID1 = 0;
+     50          
+     51          /* application Rx frame handler. */
+     52          static uint8_t sRxCallback(linkID_t);
+     53          
+     54          #define SPIN_ABOUT_A_SECOND  NWK_DELAY(1000)
+     55          
+     56          void main (void)
+     57          {
+     58            BSP_Init();
+     59          
+     60            /* If an on-the-fly device address is generated it must be done before the
+     61             * call to SMPL_Init(). If the address is set here the ROM value will not 
+     62             * be used. If SMPL_Init() runs before this IOCTL is used the IOCTL call 
+     63             * will not take effect. One shot only. The IOCTL call below is conformal. 
+     64             */
+     65          #ifdef I_WANT_TO_CHANGE_DEFAULT_ROM_DEVICE_ADDRESS_PSEUDO_CODE
+     66            {
+     67              addr_t lAddr;
+     68          
+     69              createRandomAddress(&lAddr);
+     70              SMPL_Ioctl(IOCTL_OBJ_ADDR, IOCTL_ACT_SET, &lAddr);
+     71            }
+     72          #endif /* I_WANT_TO_CHANGE_DEFAULT_ROM_DEVICE_ADDRESS_PSEUDO_CODE */
+     73          
+     74            /* This call will fail because the join will fail since there is no Access Point 
+     75             * in this scenario. But we don't care -- just use the default link token later. 
+     76             * We supply a callback pointer to handle the message returned by the peer. 
+     77             */
+     78            SMPL_Init(sRxCallback);
+     79          
+     80            /* turn on LEDs. */
+     81            if (!BSP_LED2_IS_ON())
+     82            {
+     83              toggleLED(2);
+     84            }
+     85            if (!BSP_LED1_IS_ON())
+     86            {
+     87              toggleLED(1);
+     88            }
+     89          
+     90            /* wait for a button press... */
+     91            do {
+     92              if (BSP_BUTTON1() || BSP_BUTTON2())
+     93              {
+     94                break;
+     95              }
+     96            } while (1);
+     97          
+     98            /* never coming back... */
+     99            linkTo();
+    100          
+    101            /* but in case we do... */
+    102            while (1) ;
+    103          }
+    104          
+    105          static void linkTo()
+    106          {
+    107            uint8_t  msg[2], delay = 0;
+    108          
+    109            while (SMPL_SUCCESS != SMPL_Link(&sLinkID1))
+    110            {
+    111              /* blink LEDs until we link successfully */
+    112              toggleLED(1);
+    113              toggleLED(2);
+    114              SPIN_ABOUT_A_SECOND;
+    115            }
+    116          
+    117            /* we're linked. turn off red LED. received messages will toggle the green LED. */
+    118            if (BSP_LED2_IS_ON())
+    119            {
+    120              toggleLED(2);
+    121            }
+    122          
+    123            /* turn on RX. default is RX off. */
+    124            SMPL_Ioctl( IOCTL_OBJ_RADIO, IOCTL_ACT_RADIO_RXON, 0);
+    125          
+    126            /* put LED to toggle in the message */
+    127            msg[0] = 2;  /* toggle red */
+    128            while (1)
+    129            {
+    130              SPIN_ABOUT_A_SECOND;
+    131              if (delay > 0x00)
+    132              {
+    133                SPIN_ABOUT_A_SECOND;
+    134              }
+    135              if (delay > 0x01)
+    136              {
+    137                SPIN_ABOUT_A_SECOND;
+    138              }
+    139              if (delay > 0x02)
+    140              {
+    141                SPIN_ABOUT_A_SECOND;
+    142              }
+    143          
+    144              /* delay longer and longer -- then start over */
+    145              delay = (delay+1) & 0x03;
+    146              /* put the sequence ID in the message */
+    147              msg[1] = ++sTxTid;
+    148              SMPL_Send(sLinkID1, msg, sizeof(msg));
+    149            }
+    150          }
+    151          
+    152          
+    153          void toggleLED(uint8_t which)
+    154          {
+    155            if (1 == which)
+    156            {
+    157              BSP_TOGGLE_LED1();
+    158            }
+    159            else if (2 == which)
+    160            {
+    161              BSP_TOGGLE_LED2();
+    162            }
+    163            return;
+    164          }
+    165          
+    166          /* handle received frames. */
+    167          static uint8_t sRxCallback(linkID_t port)
+    168          {
+    169            uint8_t msg[2], len, tid;
+    170          
+    171            /* is the callback for the link ID we want to handle? */
+    172            if (port == sLinkID1)
+    173            {
+    174              /* yes. go get the frame. we know this call will succeed. */
+    175               if ((SMPL_SUCCESS == SMPL_Receive(sLinkID1, msg, &len)) && len)
+    176               {
+    177                 /* Check the application sequence number to detect
+    178                  * late or missing frames... 
+    179                  */
+    180                 tid = *(msg+1);
+    181                 if (tid)
+    182                 {
+    183                   if (tid > sRxTid)
+    184                   {
+    185                     /* we're good. toggle LED in the message */
+    186                     toggleLED(*msg);
+    187                     sRxTid = tid;
+    188                   }
+    189                 }
+    190                 else
+    191                 {
+    192                   /* the wrap case... */
+    193                   if (sRxTid)
+    194                   {
+    195                     /* we're good. toggle LED in the message */
+    196                     toggleLED(*msg);
+    197                     sRxTid = tid;
+    198                   }
+    199                 }
+    200                 /* drop frame. we're done with it. */
+    201                 return 1;
+    202               }
+    203            }
+    204            /* keep frame for later handling. */
+    205            return 0;
+    206          }
+    207          
+
+   Maximum stack usage in bytes:
+
+     Function             CSTACK
+     --------             ------
+     linkTo                  10
+       -> toggleLED          10
+       -> toggleLED          10
+       ->   Indirect call    10
+       -> SMPL_Link          10
+       -> toggleLED          10
+       -> SMPL_Ioctl         10
+       ->   Indirect call    10
+       ->   Indirect call    10
+       ->   Indirect call    10
+       ->   Indirect call    10
+       -> SMPL_Send          10
+     main                     2
+       -> BSP_Init            2
+       -> SMPL_Init           2
+       -> toggleLED           2
+       -> toggleLED           2
+       -> linkTo              2
+     sRxCallback              6
+       -> SMPL_Receive        6
+       -> toggleLED           6
+       -> toggleLED           6
+     toggleLED                2
+
+
+   Segment part sizes:
+
+     Function/Label Bytes
+     -------------- -----
+     P1IN              1
+     P1OUT             1
+     sTxTid            1
+     sRxTid            1
+     sLinkID1          1
+     main             48
+     linkTo          136
+     toggleLED        20
+     sRxCallback      88
+
+ 
+ 292 bytes in segment CODE
+   2 bytes in segment DATA16_AN
+   3 bytes in segment DATA16_Z
+ 
+ 292 bytes of CODE memory
+   3 bytes of DATA memory (+ 2 bytes shared)
+
+Errors: none
+Warnings: none

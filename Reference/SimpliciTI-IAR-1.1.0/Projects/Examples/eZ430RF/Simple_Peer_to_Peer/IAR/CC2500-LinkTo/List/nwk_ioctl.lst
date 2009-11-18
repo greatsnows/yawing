@@ -1,0 +1,463 @@
+###############################################################################
+#                                                                             #
+#                                                       11/May/2009  06:36:08 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+# Time limited license: 29 days left                                          #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\si #
+#                     mpliciti\nwk_applications\nwk_ioctl.c                   #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\ #
+#                     nwk_applications\nwk_ioctl.c" -D MRFI_CC2500 -lcN       #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Lis #
+#                     t\" -o "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proje #
+#                     cts\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-Lin #
+#                     kTo\Obj\" --require_prototypes --debug                  #
+#                     -D__MSP430F2274__ -e --double=32 -I "C:\Texas           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proj #
+#                     ects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\ #
+#                     ..\..\Components\bsp\drivers\" -I "C:\Texas             #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\boards\EZ430RF\" -I "C:\Texas                        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\m #
+#                     rfi\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Pro #
+#                     jects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\.. #
+#                     \..\..\Components\SimpliciTI\nwk\" -I "C:\Texas         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\List #
+#                     \nwk_ioctl.lst                                          #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkTo\Obj\ #
+#                     nwk_ioctl.r43                                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk_applications\nwk_ioctl.c
+      1          
+      2          /**************************************************************************************************
+      3            Filename:       nwk_ioctl.c
+      4            Revised:        $Date: 2009-01-13 11:31:14 -0800 (Tue, 13 Jan 2009) $
+      5            Revision:       $Revision: 18744 $
+      6            Author:         $Author: lfriedman $
+      7          
+      8            Description:    This file supports the SimpliciTI IOCTL implmentation. This interface
+      9                            gives applications access to the "driver" network level functions
+     10                            when necessary.
+     11          
+     12            Copyright 2004-2007 Texas Instruments Incorporated. All rights reserved.
+     13          
+     14            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     15            the terms of a software license agreement between the user who downloaded the software,
+     16            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     17            "License"). You may not use this Software unless you agree to abide by the terms of the
+     18            License. The License limits your use, and you acknowledge, that the Software may not be
+     19            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     20            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     21            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     22            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     23            perform, display or sell this Software and/or its documentation for any purpose.
+     24          
+     25            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     26            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     27            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     28            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     30            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     31            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     32            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     33            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     34          
+     35            Should you have any questions regarding your right to use this Software,
+     36            contact Texas Instruments Incorporated at www.TI.com.
+     37          **************************************************************************************************/
+     38          
+     39          
+     40          /******************************************************************************
+     41           * INCLUDES
+     42           */
+     43          #include <string.h>
+     44          #include "bsp.h"
+     45          #include "mrfi.h"
+     46          #include "nwk_types.h"
+     47          #include "nwk_frame.h"
+     48          #include "nwk.h"
+     49          #include "nwk_ioctl.h"
+     50          #include "nwk_globals.h"
+     51          #include "nwk_security.h"
+     52          #ifdef ACCESS_POINT
+     53          #include "nwk_join.h"
+     54          #endif
+     55          
+     56          /******************************************************************************
+     57           * MACROS
+     58           */
+     59          
+     60          /******************************************************************************
+     61           * CONSTANTS AND DEFINES
+     62           */
+     63          
+     64          /******************************************************************************
+     65           * TYPEDEFS
+     66           */
+     67          
+     68          /******************************************************************************
+     69           * LOCAL VARIABLES
+     70           */
+     71          
+     72          /******************************************************************************
+     73           * LOCAL FUNCTIONS
+     74           */
+     75          
+     76          /******************************************************************************
+     77           * GLOBAL VARIABLES
+     78           */
+     79          
+     80          /******************************************************************************
+     81           * GLOBAL FUNCTIONS
+     82           */
+     83          
+     84          
+     85          /******************************************************************************
+     86           * @fn          nwk_rawSend
+     87           *
+     88           * @brief       Builds an outut frame based on information provided by the
+     89           *              caller. This function allows a raw transmission to the target
+     90           *              if the network address is known. this function is used a lot
+     91           *              to support NWK applications.
+     92           *
+     93           * input parameters
+     94           * @param   info    - pointer to strcuture containing info on how to build
+     95           *                    the outgoing frame.
+     96           * output parameters
+     97           *
+     98           * @return         SMPL_SUCCESS
+     99           *                 SMPL_NOMEM       - no room in output frame queue
+    100           *                 SMPL_TX_CCA_FAIL - CCA failure
+    101           */
+    102          smplStatus_t nwk_rawSend(ioctlRawSend_t *info)
+    103          {
+    104            frameInfo_t *pOutFrame;
+    105            uint8_t      hops;
+    106          
+    107            /* If we know frame is going to or from the AP then we can reduce the hop
+    108             * count.
+    109             */
+    110            switch (info->port)
+    111            {
+    112              case SMPL_PORT_JOIN:
+    113              case SMPL_PORT_FREQ:
+    114              case SMPL_PORT_MGMT:
+    115                hops = MAX_HOPS_FROM_AP;
+    116                break;
+    117          
+    118              default:
+    119                hops = MAX_HOPS;
+    120                break;
+    121            }
+    122          
+    123            if (pOutFrame = nwk_buildFrame(info->port, info->msg, info->len, hops))
+    124            {
+    125              memcpy(MRFI_P_DST_ADDR(&pOutFrame->mrfiPkt), info->addr, NET_ADDR_SIZE);
+    126          #ifdef SMPL_SECURE
+    127              nwk_setSecureFrame(&pOutFrame->mrfiPkt, info->len, 0);
+    128          #endif  /* SMPL_SECURE */
+    129              return nwk_sendFrame(pOutFrame, MRFI_TX_TYPE_CCA);
+    130            }
+    131            return SMPL_NOMEM;
+    132          }
+    133          
+    134          /******************************************************************************
+    135           * @fn          nwk_rawReceive
+    136           *
+    137           * @brief       Retriievs specified from from the input frame queue. Additional
+    138           *              information such as source address and hop count may also be
+    139           *              retrieved
+    140           *
+    141           * input parameters
+    142           * @param   info    - pointer to structure containing info on what to retrieve
+    143           *
+    144           * output parameters - actually populated by nwk_retrieveFrame()
+    145           *      info->msg      - application payload copied here
+    146           *      info->len      - length of received application payload
+    147           *      info->addr     - if non-NULL points to memory to be populated with
+    148           *                       source address of retrieved frame.
+    149           *      info->hopCount - if non-NULL points to memory to be populated with
+    150           *                       hop count of retrieved frame.
+    151           *
+    152           * @return   Status of operation.
+    153           */
+    154          smplStatus_t nwk_rawReceive(ioctlRawReceive_t *info)
+    155          {
+    156            rcvContext_t rcv;
+    157          
+    158            rcv.type   = RCV_NWK_PORT;
+    159            rcv.t.port = info->port;
+    160          
+    161            return nwk_retrieveFrame(&rcv, info->msg, &info->len, info->addr, &info->hopCount);
+    162          }
+    163          
+    164          /******************************************************************************
+    165           * @fn          nwk_radioControl
+    166           *
+    167           * @brief       Handle radio control functions.
+    168           *
+    169           * input parameters
+    170           * @param   action   - radio operation to perform. currently suppoerted:
+    171           *                         sleep/unsleep
+    172           * output parameters
+    173           *
+    174           * @return   Status of operation.
+    175           */
+    176          smplStatus_t nwk_radioControl(ioctlAction_t action, void *val)
+    177          {
+    178            smplStatus_t rc = SMPL_SUCCESS;
+    179          
+    180            if (IOCTL_ACT_RADIO_SLEEP == action)
+    181            {
+    182              /* go to sleep mode. */
+    183              MRFI_RxIdle();
+    184              MRFI_Sleep();
+    185            }
+    186            else if (IOCTL_ACT_RADIO_AWAKE == action)
+    187            {
+    188              MRFI_WakeUp();
+    189          
+    190          #if !defined( END_DEVICE )
+    191              MRFI_RxOn();
+    192          #endif
+    193          
+    194            }
+    195            else if (IOCTL_ACT_RADIO_SIGINFO == action)
+    196            {
+    197              ioctlRadioSiginfo_t *pSigInfo = (ioctlRadioSiginfo_t *)val;
+    198              connInfo_t          *pCInfo   = nwk_getConnInfo(pSigInfo->lid);
+    199          
+    200              if (!pCInfo)
+    201              {
+    202                return SMPL_BAD_PARAM;
+    203              }
+    204              memcpy(&pSigInfo->sigInfo, &pCInfo->sigInfo, sizeof(pCInfo->sigInfo));
+    205            }
+    206            else if (IOCTL_ACT_RADIO_RSSI == action)
+    207            {
+    208              *((rssi_t *)val) = MRFI_Rssi();
+    209            }
+    210            else if (IOCTL_ACT_RADIO_RXON == action)
+    211            {
+    212              MRFI_RxOn();
+    213            }
+    214            else if (IOCTL_ACT_RADIO_RXIDLE == action)
+    215            {
+    216              MRFI_RxIdle();
+    217            }
+    218          #ifdef EXTENDED_API
+    219            else if (IOCTL_ACT_RADIO_SETPWR)
+    220            {
+    221              uint8_t idx;
+    222          
+    223              switch (*(ioctlLevel_t *)val)
+    224              {
+    225                case IOCTL_LEVEL_2:
+    226                  idx = 2;
+    227                  break;
+    228          
+    229                case IOCTL_LEVEL_1:
+    230                  idx = 1;
+    231                  break;
+    232          
+    233                case IOCTL_LEVEL_0:
+    234                  idx = 0;
+    235                  break;
+    236          
+    237                default:
+    238                  return SMPL_BAD_PARAM;
+    239              }
+    240              MRFI_SetRFPwr(idx);
+    241              return SMPL_SUCCESS;
+    242            }
+    243          #endif  /* EXTENDED_API */
+    244            else
+    245            {
+    246              rc = SMPL_BAD_PARAM;
+    247            }
+    248            return rc;
+    249          }
+    250          
+    251          /******************************************************************************
+    252           * @fn          nwk_joinContext
+    253           *
+    254           * @brief       For Access Points we need a way to support changing the Join
+    255           *              context. This will allow arbitration bewteen potentially nearby
+    256           *              Access Points when a new device is joining.
+    257           *
+    258           * input parameters
+    259           * @param   action  - Join context is either on or off.
+    260           *
+    261           * output parameters
+    262           *
+    263           * @return   Status of operation. Currently always succeeds.
+    264           */
+    265          #ifdef ACCESS_POINT
+    266          smplStatus_t nwk_joinContext(ioctlAction_t action)
+    267          {
+    268            nwk_setJoinContext((IOCTL_ACT_ON == action) ? JOIN_CONTEXT_ON : JOIN_CONTEXT_OFF);
+    269          
+    270            return SMPL_SUCCESS;
+    271          }
+    272          #endif
+    273          
+    274          /******************************************************************************
+    275           * @fn          nwk_deviceAddress
+    276           *
+    277           * @brief       Set or Get this device address. The Set must be done before
+    278           *              SMPL_Init() for it to take effect. The Get is always legal but
+    279           *              the value could be invalid if it is called before a valid set
+    280           *              call is made.
+    281           *
+    282           * input parameters
+    283           * @param   action  - Gte or Set
+    284           * @param   addr    - pointer to address object containing value on Set
+    285           *
+    286           * output parameters
+    287           * @param   addr    - pointer to address object to receive value on Get.
+    288           *
+    289           * @return   SMPL_SUCCESS
+    290           *           SMPL_BAD_PARAM  Action request illegal or a Set request
+    291           *                           was not respected.
+    292           */
+    293          smplStatus_t nwk_deviceAddress(ioctlAction_t action, addr_t *addr)
+    294          {
+    295            smplStatus_t rc = SMPL_BAD_PARAM;
+    296          
+    297            if (IOCTL_ACT_GET == action)
+    298            {
+    299              memcpy(addr, nwk_getMyAddress(), sizeof(addr_t));
+    300              rc = SMPL_SUCCESS;
+    301            }
+    302            else if (IOCTL_ACT_SET == action)
+    303            {
+    304              if (nwk_setMyAddress(addr))
+    305              {
+    306                rc = SMPL_SUCCESS;
+    307              }
+    308            }
+    309          
+    310            return rc;
+    311          }
+    312          
+    313          /******************************************************************************
+    314           * @fn          nwk_connectionControl
+    315           *
+    316           * @brief       Access to connection table. Currently supports only deleting
+    317           *              a connection from the table.
+    318           *
+    319           * input parameters
+    320           * @param   action  - Connection control action (only delete is curently valid).
+    321           * @param   val     - pointer to Link ID of connection on which to operate.
+    322           *
+    323           * output parameters
+    324           *
+    325           * @return   SMPL_SUCCESS
+    326           *           SMPL_BAD_PARAM  Action is not delete
+    327           *                           Link ID is the UUD Link ID
+    328           *                           No connection table info for Link ID
+    329           */
+    330          smplStatus_t nwk_connectionControl(ioctlAction_t action, void *val)
+    331          {
+    332            connInfo_t *pCInfo;
+    333            linkID_t    lid = *((linkID_t *)val);
+    334          
+    335            if (IOCTL_ACT_DELETE != action)
+    336            {
+    337              return SMPL_BAD_PARAM;
+    338            }
+    339          
+    340            if ((SMPL_LINKID_USER_UUD == lid) ||
+    341                (!(pCInfo=nwk_getConnInfo(lid))))
+    342            {
+    343              return SMPL_BAD_PARAM;
+    344            }
+    345          
+    346            nwk_freeConnection(pCInfo);
+    347          
+    348            return SMPL_SUCCESS;
+    349          }
+
+   Maximum stack usage in bytes:
+
+     Function                CSTACK
+     --------                ------
+     nwk_connectionControl       2
+       -> nwk_getConnInfo        2
+       -> nwk_freeConnection     2
+     nwk_deviceAddress           6
+       -> nwk_getMyAddress       6
+       -> memcpy                 6
+       -> nwk_setMyAddress       6
+     nwk_radioControl            6
+       -> MRFI_RxIdle            6
+       -> MRFI_Sleep             6
+       -> MRFI_WakeUp            6
+       -> nwk_getConnInfo        6
+       -> memcpy                 6
+       -> MRFI_Rssi              6
+       -> MRFI_RxOn              6
+       -> MRFI_RxIdle            6
+     nwk_rawReceive              8
+       -> nwk_retrieveFrame      8
+     nwk_rawSend                 6
+       -> nwk_buildFrame         6
+       -> memcpy                 6
+       -> nwk_sendFrame          6
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     ?Subroutine0             6
+     nwk_rawSend             80
+     nwk_rawReceive          44
+     nwk_radioControl       116
+     nwk_deviceAddress       46
+     nwk_connectionControl   34
+
+ 
+ 326 bytes in segment CODE
+ 
+ 326 bytes of CODE memory
+
+Errors: none
+Warnings: none

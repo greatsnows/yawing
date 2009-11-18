@@ -1,0 +1,694 @@
+###############################################################################
+#                                                                             #
+#                                                       13/May/2009  06:55:12 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\si #
+#                     mpliciti\nwk_applications\nwk_join.c                    #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\ #
+#                     nwk_applications\nwk_join.c" -D MRFI_CC2500 -lcN        #
+#                     "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exa #
+#                     mples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen #
+#                     \List\" -o "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\P #
+#                     rojects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500 #
+#                     -LinkListen\Obj\" --require_prototypes --debug          #
+#                     -D__MSP430F2274__ -e --double=32 -I "C:\Texas           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proj #
+#                     ects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\ #
+#                     ..\..\Components\bsp\drivers\" -I "C:\Texas             #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\boards\EZ430RF\" -I "C:\Texas                        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\m #
+#                     rfi\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Pro #
+#                     jects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\.. #
+#                     \..\..\Components\SimpliciTI\nwk\" -I "C:\Texas         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     List\nwk_join.lst                                       #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     Obj\nwk_join.r43                                        #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\simpliciti\nwk_applications\nwk_join.c
+      1          /**************************************************************************************************
+      2            Filename:       nwk_join.c
+      3            Revised:        $Date: 2009-01-06 15:45:54 -0800 (Tue, 06 Jan 2009) $
+      4            Revision:       $Revision: 18697 $
+      5            Author:         $Author: lfriedman $
+      6          
+      7            Description:    This file supports the SimpliciTI Join network application.
+      8          
+      9            Copyright 2007-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+     12            the terms of a software license agreement between the user who downloaded the software,
+     13            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     14            "License"). You may not use this Software unless you agree to abide by the terms of the
+     15            License. The License limits your use, and you acknowledge, that the Software may not be
+     16            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     18            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     19            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     20            perform, display or sell this Software and/or its documentation for any purpose.
+     21          
+     22            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     23            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     24            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     25            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     26            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     27            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     28            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     29            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     30            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     31          
+     32            Should you have any questions regarding your right to use this Software,
+     33            contact Texas Instruments Incorporated at www.TI.com.
+     34          **************************************************************************************************/
+     35          
+     36          
+     37          /******************************************************************************
+     38           * INCLUDES
+     39           */
+     40          #include <string.h>
+     41          #include "bsp.h"
+     42          #include "mrfi.h"
+     43          #include "nwk_types.h"
+     44          #include "nwk_api.h"
+     45          #include "nwk_frame.h"
+     46          #include "nwk.h"
+     47          #include "nwk_link.h"
+     48          #include "nwk_join.h"
+     49          #include "nwk_globals.h"
+     50          #include "nwk_freq.h"
+     51          #include "nwk_security.h"
+     52          #include "nwk_mgmt.h"
+     53          
+     54          /******************************************************************************
+     55           * MACROS
+     56           */
+     57          
+     58          /******************************************************************************
+     59           * CONSTANTS AND DEFINES
+     60           */
+     61          
+     62          /******************************************************************************
+     63           * TYPEDEFS
+     64           */
+     65          
+     66          /******************************************************************************
+     67           * LOCAL VARIABLES
+     68           */
+     69          
+     70          static          uint32_t sJoinToken = 0;
+     71          static          uint8_t (*spCallback)(linkID_t) = NULL;
+     72          static volatile uint8_t  sTid = 0;
+     73          
+     74          #ifdef ACCESS_POINT
+     75          static sfInfo_t *spSandFContext = NULL;
+     76          static uint8_t   sJoinOK = 0;
+     77          #endif /* ACCESS_POINT */
+     78          
+     79          /******************************************************************************
+     80           * LOCAL FUNCTIONS
+     81           */
+     82          #ifdef ACCESS_POINT
+     83          static void     smpl_send_join_reply(mrfiPacket_t *frame);
+     84          static uint32_t generateLinkToken(void);
+     85          static void     handleJoinRequest(mrfiPacket_t *);
+     86          #endif  /*  ACCESS_POINT */
+     87          
+     88          /******************************************************************************
+     89           * GLOBAL VARIABLES
+     90           */
+     91          
+     92          /******************************************************************************
+     93           * GLOBAL FUNCTIONS
+     94           */
+     95          
+     96          /******************************************************************************
+     97           * @fn          nwk_joinInit
+     98           *
+     99           * @brief       Initialize Join application.
+    100           *
+    101           * input parameters
+    102           *
+    103           * output parameters
+    104           *
+    105           * @return   void
+    106           */
+    107          void nwk_joinInit(uint8_t (*pf)(linkID_t))
+    108          {
+    109            sJoinToken = DEFAULT_JOIN_TOKEN;
+    110            spCallback = pf;
+    111            (void) spCallback;  /* keep compiler happy if we don't use this */
+    112          
+    113            sTid = MRFI_RandomByte() ;
+    114          
+    115          #ifdef ACCESS_POINT
+    116            /* set link token to something other than deafult if desired */
+    117            nwk_setLinkToken(generateLinkToken());
+    118          #if defined(STARTUP_JOINCONTEXT_ON)
+    119            sJoinOK = 1;
+    120          #elif defined(STARTUP_JOINCONTEXT_OFF)
+    121            sJoinOK = 0;
+    122          #else
+    123          #error ERROR: Must define either STARTUP_JOINCONTEXT_ON or STARTUP_JOINCONTEXT_OFF
+    124          #endif
+    125            spSandFContext = nwk_getSFInfoPtr();
+    126          #endif
+    127          
+    128            return;
+    129          }
+    130          
+    131          /******************************************************************************
+    132           * @fn          nwk_setJoinToken
+    133           *
+    134           * @brief       Sets the join token.
+    135           *
+    136           * input parameters
+    137           * @param   token   - join token to be used on this network.
+    138           *
+    139           * output parameters
+    140           *         no room in output queue.
+    141           *
+    142           * @return   void
+    143           */
+    144          void nwk_setJoinToken(uint32_t token)
+    145          {
+    146            /* only set if the supplied token is non-zero. */
+    147            if (token)
+    148            {
+    149              sJoinToken = token;
+    150            }
+    151          
+    152            return;
+    153          }
+    154          
+    155          /******************************************************************************
+    156           * @fn          nwk_getJoinToken
+    157           *
+    158           * @brief       Gets the current join token.
+    159           *
+    160           * input parameters
+    161           *
+    162           * output parameters
+    163           * @param   pToken   - pointer to the returned value.
+    164           *
+    165           * @return   Current link token
+    166           */
+    167          void nwk_getJoinToken(uint32_t *pToken)
+    168          {
+    169            /* only set if the supplied token is non-zero. */
+    170            if (pToken)
+    171            {
+    172              *pToken = sJoinToken;
+    173            }
+    174          
+    175            return;
+    176          }
+    177          
+    178          /******************************************************************************
+    179           * @fn          generateLinkToken
+    180           *
+    181           * @brief       Generate the link token to be used for the network controlled
+    182           *              by this Access Point.
+    183           *
+    184           * input parameters
+    185           *
+    186           * output parameters
+    187           *
+    188           * @return   void
+    189           */
+    190          #ifdef ACCESS_POINT
+    191          static uint32_t generateLinkToken(void)
+    192          {
+    193            return 0xDEADBEEF;
+    194          }
+    195          
+    196          /******************************************************************************
+    197           * @fn          smpl_send_join_reply
+    198           *
+    199           * @brief       Send the Join reply. Include the Link token. If the device is
+    200           *              a polling sleeper put it into the list of store-and-forward
+    201           *              clients.
+    202           *
+    203           * input parameters
+    204           * @param   frame     - join frame for which a reply is needed...maybe
+    205           *
+    206           * output parameters
+    207           *
+    208           * @return   void
+    209           */
+    210          static void smpl_send_join_reply(mrfiPacket_t *frame)
+    211          {
+    212            frameInfo_t *pOutFrame;
+    213            uint8_t      msg[JOIN_REPLY_FRAME_SIZE];
+    214          
+    215            /* Is this a legacy frame? If so continue. Otherwise check verion.*/
+    216            if ((MRFI_GET_PAYLOAD_LEN(frame) - F_APP_PAYLOAD_OS) > JOIN_LEGACY_MSG_LENGTH)
+    217            {
+    218              /* see if protocol version is correct... */
+    219              if (*(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+J_PROTOCOL_VERSION_OS) != nwk_getProtocolVersion())
+    220              {
+    221                /* Accommodation of protocol version differences can be noted or accomplished here.
+    222                 * Otherwise, no match and the board goes back
+    223                 */
+    224                return;
+    225              }
+    226            }
+    227          
+    228          
+    229            /* see if join token is correct */
+    230            {
+    231              uint32_t jt;
+    232          
+    233              nwk_getNumObjectFromMsg(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+J_JOIN_TOKEN_OS, &jt, sizeof(jt));
+    234              if (jt != sJoinToken)
+    235              {
+    236                return;
+    237              }
+    238            }
+    239          
+    240            /* send reply with tid, the link token, and the encryption context */
+    241            {
+    242              uint32_t linkToken;
+    243          
+    244              nwk_getLinkToken(&linkToken);
+    245              nwk_putNumObjectIntoMsg((void *)&linkToken, msg+JR_LINK_TOKEN_OS, sizeof(linkToken));
+    246            }
+    247            msg[JR_CRYPTKEY_SIZE_OS] = SEC_CRYPT_KEY_SIZE;
+    248            msg[JB_REQ_OS]           = JOIN_REQ_JOIN | NWK_APP_REPLY_BIT;
+    249            /* sender's tid... */
+    250            msg[JB_TID_OS]           = *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+JB_TID_OS);
+    251          
+    252            if (pOutFrame = nwk_buildFrame(SMPL_PORT_JOIN, msg, sizeof(msg), MAX_HOPS_FROM_AP))
+    253            {
+    254              /* destination address is the source adddress of the received frame. */
+    255              memcpy(MRFI_P_DST_ADDR(&pOutFrame->mrfiPkt), MRFI_P_SRC_ADDR(frame), NET_ADDR_SIZE);
+    256          
+    257          #ifdef AP_IS_DATA_HUB
+    258              /* if source device supports ED objects save source address to detect duplicate joins */
+    259              if (*(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS+J_NUMCONN_OS))
+    260              {
+    261                if (nwk_saveJoinedDevice(frame) && spCallback)
+    262                {
+    263                  spCallback(0);
+    264                }
+    265              }
+    266          #endif
+    267            }
+    268            else
+    269            {
+    270              /* oops -- no room left for Tx frame. Don't send reply. */
+    271              return;
+    272            }
+    273          
+    274            /* If this device polls we need to provide store-and-forward support */
+    275            if (GET_FROM_FRAME(MRFI_P_PAYLOAD(frame),F_RX_TYPE) == F_RX_TYPE_POLLS)
+    276            {
+    277              uint8_t loc;
+    278          
+    279              /* Check duplicate status */
+    280              if (!nwk_isSandFClient(MRFI_P_SRC_ADDR(frame), &loc))
+    281              {
+    282                uint8_t        *pNumc   = &spSandFContext->curNumSFClients;
+    283                sfClientInfo_t *pClient = &spSandFContext->sfClients[*pNumc];
+    284          
+    285                /* It's not a duplicate. Save it if there's room */
+    286                if (*pNumc < NUM_STORE_AND_FWD_CLIENTS)
+    287                {
+    288                  memcpy(pClient->clientAddr.addr, MRFI_P_SRC_ADDR(frame), NET_ADDR_SIZE);
+    289                  *pNumc = *pNumc + 1;
+    290                }
+    291                else
+    292                {
+    293                  /* No room left. Just return and don't send reply. */
+    294                  return;
+    295                }
+    296              }
+    297              else
+    298              {
+    299                /* We get here if it's a duplicate. We drop through and send reply.
+    300                 * Reset the S&F marker in the Management application -- we should
+    301                 * assume that the Client reset so the TID will be random. If this is
+    302                 * simply a duplicate frame it causes no harm.
+    303                 */
+    304                nwk_resetSFMarker(loc);
+    305              }
+    306            }
+    307          
+    308          #ifdef SMPL_SECURE
+    309              nwk_setSecureFrame(&pOutFrame->mrfiPkt, sizeof(msg), 0);
+    310          #endif  /* SMPL_SECURE */
+    311          
+    312            /* It's not S&F or it is but we're OK to send reply. */
+    313            nwk_sendFrame(pOutFrame, MRFI_TX_TYPE_FORCED);
+    314          
+    315            return;
+    316          }
+    317          
+    318          /******************************************************************************
+    319           * @fn          nwk_join
+    320           *
+    321           * @brief       Stub Join function for Access Points.
+    322           *
+    323           * input parameters
+    324           *
+    325           * output parameters
+    326           *
+    327           * @return   Always returns SMPL_SUCCESS.
+    328           */
+    329          smplStatus_t nwk_join(void)
+    330          {
+    331            return SMPL_SUCCESS;
+    332          }
+    333          
+    334          /******************************************************************************
+    335           * @fn          nwk_isSandFClient
+    336           *
+    337           * @brief       Helper function to see if the destination of a frame we have is
+    338           *              one of AP's store-and-forward clients.
+    339           *
+    340           * input parameters
+    341           * @param   fPtr     - pointer to address in frame in question
+    342           *
+    343           * output parameters
+    344           * @param   entLoc   - pointer to receive entry location in array of clients.
+    345           *
+    346           * @return   Returns client info structure pointer if the destination is a
+    347           *           store-and-forward client, else 0.
+    348           */
+    349          sfClientInfo_t *nwk_isSandFClient(uint8_t *pAddr, uint8_t *entLoc)
+    350          {
+    351            uint8_t i;
+    352            sfClientInfo_t *pSFClient = spSandFContext->sfClients;
+    353          
+    354            for (i=0; i<spSandFContext->curNumSFClients; ++i, ++pSFClient)
+    355            {
+    356              if (!memcmp(&pSFClient->clientAddr.addr, pAddr, NET_ADDR_SIZE))
+    357              {
+    358                *entLoc = i;
+    359                return pSFClient;
+    360              }
+    361            }
+    362          
+    363            return 0;
+    364          }
+    365          
+    366          /******************************************************************************
+    367           * @fn          nwk_setJoinContext
+    368           *
+    369           * @brief       Helper function to set Join context for Access Point. This will
+    370           *              allow arbitration bewteen potentially nearby Access Points when
+    371           *              a new device is joining.
+    372           *
+    373           * input parameters
+    374           * @param   which   - Join context is either off or on
+    375           *
+    376           * output parameters
+    377           *
+    378           * @return   void
+    379           */
+    380          void nwk_setJoinContext(uint8_t which)
+    381          {
+    382            sJoinOK = (JOIN_CONTEXT_ON == which) ? 1 : 0;
+    383          
+    384            return;
+    385          }
+    386          
+    387          /******************************************************************************
+    388           * @fn          handleJoinRequest
+    389           *
+    390           * @brief       Dispatches handler for specfic join request
+    391           *
+    392           * input parameters
+    393           *
+    394           * @param   frame - Join frame received
+    395           *
+    396           * output parameters
+    397           *
+    398           * @return   void
+    399           */
+    400          static void handleJoinRequest(mrfiPacket_t *frame)
+    401          {
+    402            if (JOIN_LEGACY_MSG_LENGTH == (MRFI_GET_PAYLOAD_LEN(frame) - F_APP_PAYLOAD_OS))
+    403            {
+    404              /* Legacy frame. Spoof a join request */
+    405              *(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS) = JOIN_REQ_JOIN;
+    406            }
+    407          
+    408            switch (*(MRFI_P_PAYLOAD(frame)+F_APP_PAYLOAD_OS))
+    409            {
+    410              case JOIN_REQ_JOIN:
+    411                smpl_send_join_reply(frame);
+    412                break;
+    413          
+    414              default:
+    415                break;
+    416            }
+    417          
+    418            return;
+    419          }
+    420          
+    421          #else  /* ACCESS_POINT */
+    422          
+    423          /******************************************************************************
+    424           * @fn          nwk_join
+    425           *
+    426           * @brief       Join functioanlity for non-AP devices. Send the Join token
+    427           *              and wait for the reply.
+    428           *
+    429           * input parameters
+    430           *
+    431           * output parameters
+    432           *
+    433           * @return   Status of operation.
+    434           */
+    435          smplStatus_t nwk_join(void)
+    436          {
+    437            uint8_t      msg[JOIN_FRAME_SIZE];
+    438            uint32_t     linkToken;
+    439            addr_t       apAddr;
+    440            uint8_t      radioState = MRFI_GetRadioState();
+    441            smplStatus_t rc = SMPL_NO_JOIN;
+    442            union
+    443            {
+    444              ioctlRawSend_t    send;
+    445              ioctlRawReceive_t recv;
+    446            } ioctl_info;
+    447          
+    448          #if defined( FREQUENCY_AGILITY )
+    449            uint8_t  i, numChan;
+    450            freqEntry_t channels[NWK_FREQ_TBL_SIZE];
+    451          
+    452            if (!(numChan=nwk_scanForChannels(channels)))
+    453            {
+    454              return SMPL_NO_CHANNEL;
+    455            }
+    456          
+    457            for (i=0; i<numChan; ++i)
+    458            {
+    459              nwk_setChannel(&channels[i]);
+    460          #else
+    461            {
+    462          #endif
+    463          
+    464              ioctl_info.send.addr = (addr_t *)nwk_getBCastAddress();
+    465              ioctl_info.send.msg  = msg;
+    466              ioctl_info.send.len  = sizeof(msg);
+    467              ioctl_info.send.port = SMPL_PORT_JOIN;
+    468          
+    469              /* Put join token in */
+    470              nwk_putNumObjectIntoMsg((void *)&sJoinToken, msg+J_JOIN_TOKEN_OS, sizeof(sJoinToken));
+    471              /* set app info byte */
+    472              msg[JB_REQ_OS] = JOIN_REQ_JOIN;
+    473              msg[JB_TID_OS] = sTid;
+    474              /* Set number of connections supported. Used only by AP if it is
+    475               * a data hub.
+    476               */
+    477              msg[J_NUMCONN_OS] = NUM_CONNECTIONS;
+    478              /* protocol version number */
+    479              msg[J_PROTOCOL_VERSION_OS] = nwk_getProtocolVersion();
+    480          
+    481              SMPL_Ioctl(IOCTL_OBJ_RAW_IO, IOCTL_ACT_WRITE, &ioctl_info.send);
+    482          
+    483              ioctl_info.recv.port = SMPL_PORT_JOIN;
+    484              ioctl_info.recv.msg  = msg;
+    485              ioctl_info.recv.addr = &apAddr;    /* save AP address from reply */
+    486          
+    487              NWK_CHECK_FOR_SETRX(radioState);
+    488              NWK_REPLY_DELAY();
+    489              NWK_CHECK_FOR_RESTORE_STATE(radioState);
+    490          
+    491              if (SMPL_SUCCESS == SMPL_Ioctl(IOCTL_OBJ_RAW_IO, IOCTL_ACT_READ, &ioctl_info.recv))
+    492              {
+    493                uint8_t firstByte = msg[JB_REQ_OS] & (~NWK_APP_REPLY_BIT);
+    494          
+    495                /* Sanity check for correct reply frame. Older version
+    496                 * has the length instead of the request as the first byte.
+    497                 */
+    498                if ((firstByte == JOIN_REQ_JOIN) ||
+    499                    (firstByte == JOIN_REPLY_LEGACY_MSG_LENGTH)
+    500                   )
+    501                {
+    502                  /* join reply returns link token */
+    503                  memcpy(&linkToken, msg+JR_LINK_TOKEN_OS, sizeof(linkToken));
+    504          
+    505                  nwk_setLinkToken(linkToken);
+    506                  /* save AP address */
+    507                  nwk_setAPAddress(&apAddr);
+    508                  sTid++;   /* guard against duplicates */
+    509                  rc = SMPL_SUCCESS;
+    510                }
+    511              }
+    512              /* TODO: process encryption stuff */
+    513            }
+    514          
+    515            return rc;
+    516          
+    517          }
+    518          
+    519          #endif /* ACCESS_POINT */
+    520          
+    521          /******************************************************************************
+    522           * @fn          nwk_processJoin
+    523           *
+    524           * @brief       Processes a Join frame. If this is a reply let it go to the
+    525           *              application. Otherwise generate and send the reply.
+    526           *
+    527           * input parameters
+    528           * @param   frame     - Pointer to Join frame
+    529           *
+    530           * output parameters
+    531           *
+    532           * @return   Keep frame for application, release frame, or replay frame.
+    533           */
+    534          fhStatus_t nwk_processJoin(mrfiPacket_t *frame)
+    535          {
+    536            fhStatus_t rc = FHS_RELEASE;
+    537            uint8_t    replyType;
+    538          
+    539            /* Make sure this is a reply and see if we sent this. Validate the
+    540             * packet for reception by client app.
+    541             */
+    542            if (SMPL_MY_REPLY == (replyType=nwk_isValidReply(frame, sTid, JB_REQ_OS, JB_TID_OS)))
+    543            {
+    544              /* It's a match and it's a reply. Validate the received packet by
+    545               * returning a 1 so it can be received by the client app.
+    546               */
+    547              MRFI_PostKillSem();
+    548              rc = FHS_KEEP;
+    549            }
+    550          #if defined(ACCESS_POINT)
+    551            else if (SMPL_A_REPLY == replyType)
+    552            {
+    553              /* No match. If I'm not an ED this is a reply that should be passed on. */
+    554              rc = FHS_REPLAY;
+    555            }
+    556            else
+    557            {
+    558              /* Send reply if we're an Access Point otherwise ignore the frame. */
+    559              if ((SMPL_NOT_REPLY == replyType) && sJoinOK)
+    560              {
+    561                handleJoinRequest(frame);
+    562              }
+    563            }
+    564          #elif defined(RANGE_EXTENDER)
+    565            else
+    566            {
+    567              /* Either a reply that has to be replayed or a request that
+    568               * also must be replayed.
+    569               */
+    570              rc = FHS_REPLAY;
+    571            }
+    572          #endif /* not END_DEVICE */
+    573          
+    574            (void) replyType;  /* keep compiler happy */
+    575          
+    576            return rc;
+    577          }
+
+   Maximum stack usage in bytes:
+
+     Function                     CSTACK
+     --------                     ------
+     nwk_getJoinToken                 2
+     nwk_join                        34
+       -> MRFI_GetRadioState         34
+       -> nwk_getBCastAddress        34
+       -> nwk_putNumObjectIntoMsg    34
+       -> nwk_getProtocolVersion     34
+       -> SMPL_Ioctl                 34
+       -> MRFI_WakeUp                34
+       -> MRFI_RxOn                  34
+       -> MRFI_ReplyDelay            34
+       -> MRFI_Sleep                 34
+       -> MRFI_RxIdle                34
+       -> SMPL_Ioctl                 34
+       -> memcpy                     34
+       -> nwk_setLinkToken           34
+       -> nwk_setAPAddress           34
+     nwk_joinInit                     2
+       -> MRFI_RandomByte             2
+     nwk_processJoin                  4
+       -> nwk_isValidReply            4
+       -> MRFI_PostKillSem            4
+     nwk_setJoinToken                 2
+
+
+   Segment part sizes:
+
+     Function/Label   Bytes
+     --------------   -----
+     sJoinToken          4
+     spCallback          2
+     sTid                1
+     nwk_joinInit       26
+     nwk_setJoinToken   18
+     nwk_getJoinToken   18
+     nwk_join          236
+     nwk_processJoin    32
+
+ 
+ 330 bytes in segment CODE
+   7 bytes in segment DATA16_Z
+ 
+ 330 bytes of CODE memory
+   7 bytes of DATA memory
+
+Errors: none
+Warnings: none

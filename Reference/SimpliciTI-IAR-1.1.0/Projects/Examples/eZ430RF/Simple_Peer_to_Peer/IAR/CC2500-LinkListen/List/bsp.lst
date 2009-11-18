@@ -1,0 +1,218 @@
+###############################################################################
+#                                                                             #
+#                                                       13/May/2009  06:55:09 #
+# IAR C/C++ Compiler V4.20.1.20017/W32, Evaluation edition for MSP430         #
+# Copyright 1996-2008 IAR Systems AB.                                         #
+#                                                                             #
+#    __rt_version  =  3                                                       #
+#    __double_size =  32                                                      #
+#    __reg_r4      =  free                                                    #
+#    __reg_r5      =  free                                                    #
+#    __pic         =  no                                                      #
+#    __core        =  430                                                     #
+#    Source file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\bs #
+#                     p\bsp.c                                                 #
+#    Command line  =  -f "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\Configuration\ #
+#                     End_Device\smpl_config.dat" (-DNUM_CONNECTIONS=2        #
+#                     -DSIZE_INFRAME_Q=2 -DSIZE_OUTFRAME_Q=2                  #
+#                     "-DTHIS_DEVICE_ADDRESS={0x79, 0x56, 0x34, 0x12}"        #
+#                     -DEND_DEVICE) -f "C:\Texas                              #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\Configuration\smpl_nwk_conf #
+#                     ig.dat" (-DMAX_HOPS=3 -DMAX_HOPS_FROM_AP=1              #
+#                     -DMAX_NWK_PAYLOAD=9 -DMAX_APP_PAYLOAD=10                #
+#                     -DDEFAULT_LINK_TOKEN=0x01020304                         #
+#                     -DDEFAULT_JOIN_TOKEN=0x05060708 -DxFREQUENCY_AGILITY    #
+#                     -DxAPP_AUTO_ACK -DxEXTENDED_API -DxSMPL_SECURE          #
+#                     -DxNVOBJECT_SUPPORT -DSW_TIMER) "C:\Texas               #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Components\bsp\bsp.c"  #
+#                     -D MRFI_CC2500 -lcN "C:\Texas                           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\List\"    #
+#                     -o "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\ #
+#                     Examples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkLis #
+#                     ten\Obj\" --require_prototypes --debug                  #
+#                     -D__MSP430F2274__ -e --double=32 -I "C:\Texas           #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Proj #
+#                     ects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\..\ #
+#                     ..\..\Components\bsp\drivers\" -I "C:\Texas             #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\b #
+#                     sp\boards\EZ430RF\" -I "C:\Texas                        #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\m #
+#                     rfi\" -I "C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Pro #
+#                     jects\Examples\eZ430RF\Simple_Peer_to_Peer\IAR\..\..\.. #
+#                     \..\..\Components\SimpliciTI\nwk\" -I "C:\Texas         #
+#                     Instruments\SimpliciTI-IAR-1.1.0\Projects\Examples\eZ43 #
+#                     0RF\Simple_Peer_to_Peer\IAR\..\..\..\..\..\Components\S #
+#                     impliciTI\nwk_applications\" -I "C:\Program Files\IAR   #
+#                     Systems\Embedded Workbench 5.3 Evaluation\430\INC\" -I  #
+#                     "C:\Program Files\IAR Systems\Embedded Workbench 5.3    #
+#                     Evaluation\430\INC\CLIB\" -Ohz                          #
+#    List file     =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     List\bsp.lst                                            #
+#    Object file   =  C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Projects\Exam #
+#                     ples\eZ430RF\Simple_Peer_to_Peer\IAR\CC2500-LinkListen\ #
+#                     Obj\bsp.r43                                             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Texas Instruments\SimpliciTI-IAR-1.1.0\Components\bsp\bsp.c
+      1          /**************************************************************************************************
+      2            Revised:        $Date: 2007-07-06 11:19:00 -0700 (Fri, 06 Jul 2007) $
+      3            Revision:       $Revision: 13579 $
+      4          
+      5            Copyright 2007 Texas Instruments Incorporated.  All rights reserved.
+      6          
+      7            IMPORTANT: Your use of this Software is limited to those specific rights granted under
+      8            the terms of a software license agreement between the user who downloaded the software,
+      9            his/her employer (which must be your employer) and Texas Instruments Incorporated (the
+     10            "License"). You may not use this Software unless you agree to abide by the terms of the
+     11            License. The License limits your use, and you acknowledge, that the Software may not be
+     12            modified, copied or distributed unless embedded on a Texas Instruments microcontroller
+     13            or used solely and exclusively in conjunction with a Texas Instruments radio frequency
+     14            transceiver, which is integrated into your product. Other than for the foregoing purpose,
+     15            you may not use, reproduce, copy, prepare derivative works of, modify, distribute,
+     16            perform, display or sell this Software and/or its documentation for any purpose.
+     17          
+     18            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE PROVIDED “AS IS”
+     19            WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY
+     20            WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
+     21            IN NO EVENT SHALL TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     22            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+     23            THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED TO ANY
+     24            INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST
+     25            DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY
+     26            THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     27          
+     28            Should you have any questions regarding your right to use this Software,
+     29            contact Texas Instruments Incorporated at www.TI.com.
+     30          **************************************************************************************************/
+     31          
+     32          /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+     33           *   BSP (Board Support Package)
+     34           *   Top-level BSP code file.
+     35           * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+     36           */
+     37          
+     38          /* ------------------------------------------------------------------------------------------------
+     39           *                                            Includes
+     40           * ------------------------------------------------------------------------------------------------
+     41           */
+     42          #include "bsp.h"
+     43          #include "bsp_driver_defs.h"
+     44          
+     45          
+     46          /**************************************************************************************************
+     47           * @fn          BSP_Init
+     48           *
+     49           * @brief       Initialize the board and drivers.
+     50           *
+     51           * @param       none
+     52           *
+     53           * @return      none
+     54           **************************************************************************************************
+     55           */
+     56          void BSP_Init(void)
+     57          {
+     58            BSP_INIT_BOARD();
+     59            BSP_INIT_DRIVERS();
+     60          
+     61            /*-------------------------------------------------------------
+     62             *  Run time integrity checks.  Perform only if asserts
+     63             *  are enabled.
+     64             */
+     65          #ifdef BSP_ASSERTS_ARE_ON
+     66            /* verify endianess is correctly specified */
+     67            {
+     68              uint16_t test = 0x00AA; /* first storage byte of 'test' is non-zero for little endian */
+     69              BSP_ASSERT(!(*((uint8_t *)&test)) == !BSP_LITTLE_ENDIAN); /* endianess mismatch */
+     70            }
+     71          #endif
+     72          }
+     73          
+     74          
+     75          /* ================================================================================================
+     76           *                                        C Code Includes
+     77           * ================================================================================================
+     78           */
+     79          #ifdef BSP_BOARD_C
+     80          #include BSP_BOARD_C
+     81          #endif
+     82          
+     83          #ifdef BSP_DRIVERS_C
+     84          #include BSP_DRIVERS_C
+     85          #endif
+     86          
+     87          
+     88          /* ************************************************************************************************
+     89           *                                   Compile Time Integrity Checks
+     90           * ************************************************************************************************
+     91           */
+     92          BSP_STATIC_ASSERT( sizeof(  uint8_t ) == 1 );
+     93          BSP_STATIC_ASSERT( sizeof(   int8_t ) == 1 );
+     94          BSP_STATIC_ASSERT( sizeof( uint16_t ) == 2 );
+     95          BSP_STATIC_ASSERT( sizeof(  int16_t ) == 2 );
+     96          BSP_STATIC_ASSERT( sizeof( uint32_t ) == 4 );
+     97          BSP_STATIC_ASSERT( sizeof(  int32_t ) == 4 );
+     98          
+     99          
+    100          /**************************************************************************************************
+    101           */
+
+   Maximum stack usage in bytes:
+
+     Function             CSTACK
+     --------             ------
+     BSP_Delay                4
+     BSP_Init                 4
+       -> BSP_InitBoard       4
+       -> BSP_InitLeds        4
+       -> BSP_InitButtons     4
+     BSP_InitBoard            2
+     BSP_InitButtons          2
+     BSP_InitDrivers          2
+       -> BSP_InitLeds        2
+       -> BSP_InitButtons     2
+     BSP_InitLeds             2
+     __low_level_init         2
+
+
+   Segment part sizes:
+
+     Function/Label     Bytes
+     --------------     -----
+     DCOCTL                1
+     BCSCTL1               1
+     P1OUT                 1
+     P1DIR                 1
+     P1REN                 1
+     TACTL                 2
+     WDTCTL                2
+     CALDCO_8MHZ           1
+     CALBC1_8MHZ           1
+     BSP_Init             24
+     sIterationsPerUsec    1
+     __low_level_init     10
+     BSP_InitBoard        32
+     BSP_Delay            34
+     BSP_InitDrivers       8
+     BSP_InitLeds         18
+     BSP_InitButtons      10
+
+ 
+ 136 bytes in segment CODE
+  11 bytes in segment DATA16_AN
+   1 byte  in segment DATA16_Z
+ 
+ 136 bytes of CODE memory
+   1 byte  of DATA memory (+ 11 bytes shared)
+
+Errors: none
+Warnings: none
