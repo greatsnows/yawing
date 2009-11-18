@@ -22,9 +22,10 @@
 
 #define TI_CC_SW_PxIN           P1IN
 #define TI_CC_SW_PxIE           P1IE
+#define TI_CC_SW_PxREN          P1REN
 #define TI_CC_SW_PxIES          P1IES
 #define TI_CC_SW_PxIFG          P1IFG
-#define TI_CC_SW1               0x30
+#define TI_CC_SW1               0x04
 
 
 #define TI_CC_GDO0_PxOUT        P2OUT
@@ -33,6 +34,7 @@
 #define TI_CC_GDO0_PxIE         P2IE
 #define TI_CC_GDO0_PxIES        P2IES
 #define TI_CC_GDO0_PxIFG        P2IFG
+#define TI_CC_GDO0_PxREN        P2REN
 #define TI_CC_GDO0_PIN          0x40
 
 #define TI_CC_GDO1_PxOUT        P5OUT

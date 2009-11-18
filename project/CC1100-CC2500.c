@@ -432,9 +432,9 @@ void RFSendPacket(char *txBuffer, char size)
     TI_CC_SPIStrobe(TI_CCxxx0_STX);         // Change state to TX, initiating
                                             // data transfer
 
-    while (!(TI_CC_GDO0_PxIN&TI_CC_GDO0_PIN));
+    //while (!(TI_CC_GDO0_PxIN&TI_CC_GDO0_PIN));
                                             // Wait GDO0 to go hi -> sync TX'ed
-    while (TI_CC_GDO0_PxIN&TI_CC_GDO0_PIN);
+   // while (TI_CC_GDO0_PxIN&TI_CC_GDO0_PIN);
                                             // Wait GDO0 to clear -> end of pkt
 }
 
