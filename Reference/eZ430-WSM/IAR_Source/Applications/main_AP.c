@@ -380,11 +380,13 @@ void toggleLED(uint8_t which)
 /* application thread not in the ISR thread. */
 static uint8_t sCB(linkID_t lid)
 {
+	/* data translation, not join request */
   if (lid)
   {
     sPeerFrameSem++;
     sBlinky = 0;
   }
+  /* join request */
   else
   {
     sJoinSem++;

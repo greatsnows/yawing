@@ -254,6 +254,7 @@ static void linkTo()
         for (misses=0; misses < MISSES_IN_A_ROW; ++misses)
         {
           if (SMPL_SUCCESS == (rc=SMPL_SendOpt(sLinkID1, msg, sizeof(msg), SMPL_TXOPTION_ACKREQ)))
+		//if (SMPL_SUCCESS == (rc=SMPL_Send(sLinkID1, msg, sizeof(msg))))
           {
             /* Message acked. We're done. Toggle LED 1 to indicate ack received. */
             toggleLED(1);  // Toggle On LED1
